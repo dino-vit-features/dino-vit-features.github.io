@@ -2,8 +2,188 @@
 <!-- saved from url=(0045)http://6.869.csail.mit.edu/fa19/schedule.html -->
 <html xmlns="http://www.w3.org/1999/xhtml"><head><meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
   <title>20214182 Schedule</title>
+   <title>Deep ViT Features as Dense Visual Descriptors</title>
+  <link href="style.css" rel="stylesheet" type="text/css">
+
+
+  <meta name="description" content="Project page for &#39;Deep ViT Features as Dense Visual Descriptors.&#39;">
   <link rel="icon" href="pics/waic_logo.png">
-</head><body>
-  Hello World
- </body>
+</head>
+	
+<body>
+  <p class="title">Deep ViT Features as Dense Visual Descriptors</p>
+<p class="author">
+    <span class="author"><a target="_blank" href="https://www.linkedin.com/in/shir-amir-859537138">Shir Amir</a>&nbsp;<sup>1</sup></span>
+    <span class="author"><a target="_blank" href="https://yossigandelsman.github.io/">Yossi Gandelsman&nbsp;</a><sup>2</sup></span>
+	<span class="author"><a target="_blank" href="https://www.weizmann.ac.il/math/bagon/home">Shai Bagon</a>&nbsp;<sup>1</sup></span>
+    <span class="author"><a target="_blank" href="https://www.weizmann.ac.il/math/dekel/">Tali Dekel</a>&nbsp;<sup>1</sup></span>
+  </p>
+  <table border="0" align="center" class="affiliations" width="1200px">
+      <tbody align="center">
+    <tr>
+        <td style="text-align: right; width: 22%"><img src="./pics/wis_logo.jpg" height="48" alt=""></td>
+        <td style="text-align: left; width:20%; ">&nbsp;<sup>1</sup>&nbsp;<a href="https://www.weizmann.ac.il/pages/">Weizmann Institute of Science</a></td>
+		<td style="text-align: right; width:20%"><img src="./pics/BAIR_Logo_BlueType_Tag.png" height="48" alt=""></td>
+        <td style="text-align: left">&nbsp;<sup>2</sup>&nbsp;<a href="https://bair.berkeley.edu/">Berkeley Artificial Intelligence Research</a></td>
+      </tr>
+    </tbody></table>
+    <table width="999" border="0" align="center" class="menu">
+      <tbody>
+        <tr>
+          <td align="center">| <a href="#paper">Paper</a> | <a href="#sm">Supplementary Material</a> | <a href="#code">Code</a> |</td>
+        </tr>
+      </tbody>
+    </table>
+<div class="container">
+      <table width="1000" border="0" align="center">
+        <tbody>
+			<tr>&nbsp; </tr>
+          <!--<tr>
+			<td colspan="5" align="center"><video width="1000" playsinline autoplay muted loop><source src="./sm/assets/videos/arctic_fox_1_concat.mp4" type="video/mp4"></video></td>
+          </tr>
+			<tr>
+				  <td align="center"> <img src="./pics/216_left_corresp.png" width="224"></td> 
+				  <td align="center"> <img src="./pics/216_right_corresp.png" width="224"></td> 
+				  <td align="center"> &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; </td> 
+				  <td align="center"> <img src="./pics/24_left_corresp.png" width="224"></td> 
+				  <td align="center"> <img src="./pics/24_right_corresp.png" width="224"></td> 
+          </tr>-->
+			<tr align="center"><img src="./pics/teaser.png" width="1000"></tr>
+			
+			<tr>&nbsp; </tr>
+        </tbody></table>
+		
+          <p><span class="section"><b>Abstract</b></span> </p>
+          <p>We leverage Deep Features extracted from a pre-trained Vision Transformer (ViT) as dense visual descriptors. We demonstrate that such features, when extracted from a self-supervised ViT model (DINO-ViT), exhibit several striking properties: (i) the features encode powerful high level information at high spatial resolution--i.e., capture semantic object parts at fine spatial granularity, and (ii) the encoded semantic information is shared across related, yet different object categories (i.e. super-categories).  These properties allow us to design powerful dense ViT Descriptors that facilitate a variety of applications, including co-segmentation, part co-segmentation and correspondences -- all achieved by applying lightweight methodologies to deep ViT features (e.g., binning / clustering).   Our methods, extensively evaluated  qualitatively and quantitatively, achieve state-of-the-art part segmentation results,  and competitive results with recent supervised methods trained specifically for co-segmentation and correspondences.
+          We take these applications further to the realm of inter-class object co-segmentation and part co-segmentation -- demonstrating how objects from related categories can be commonly segmented into semantic parts, under significant  pose and appearance changes.<br>
+          </p>
+          
+          <!--<p class="section">&nbsp;</p>
+          <table width="200" border="0" align="center" id="video">
+            <tbody>
+              <tr>
+                <td><iframe width="900" height="506" src="https://www.youtube.com/embed/aQhakPFC4oQ" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
+                </td>
+              </tr>
+            </tbody>
+          </table>
+          <p class="section" id="recresults">Video Decomposition</p>
+          <table width="940" border="0">
+            <tbody>
+				<tr> Our model successfully manages to decompose the videos and produce foreground and background atlases which can be used later for editing. </tr>
+				
+				<tr>
+	            <td colspan="4" align="center"><img src="./Layered_Neural_Atlases_for_Consistent_Video_Editing_files/results/boat.gif" width="940" alt="" style="margin-top:10px"></td>
+	          </tr>
+				<tr>
+	            <td colspan="4" align="center"><img src="./Layered_Neural_Atlases_for_Consistent_Video_Editing_files/results/motorbike.gif" width="940" alt="" style="margin-top:30px"></td>
+	          </tr>
+				
+	      </tbody>
+          </table>-->
+		
+		<p class="section">&nbsp;</p>
+	    <p class="section"><b>Part Co-segmentation examples</b></p>
+		<table width="940" border="0">
+            <tbody>
+				<tr>We leverage Deep ViT spatial features to co-segment common objects among a set of images, and then further co-segment the common regions into parts. The parts remain consistent under variations in appearance, pose, scale, and under different yet related classes.</tr>
+				<tr>
+				  <td colspan="4" align="center">  <img src="./pics/part_co_seg.png" width="1050" alt="" style="margin-top:10px"></td> 
+	          </tr>
+	      </tbody>
+      </table>
+		<p> &nbsp; &nbsp; &nbsp; &nbsp;&nbsp;</p>
+		
+	<table>
+        <tbody>
+				<tr>The method can be applied on as little as a pair of images and as much as thousands of images. </tr>
+				<tr>
+				  <td align="center"> <img src="./pics/flickr_cat_000372.png" width="128"></td> 
+				  <td align="center"> <img src="./pics/flickr_cat_000372_crf_recolored_checker.png" width="128"></td> 
+				  <td align="center"> <img src="./pics/flickr_dog_000467.png" width="128"></td> 
+				  <td align="center"> <img src="./pics/flickr_dog_000467_crf_recolored_checker.png" width="128"></td> 
+				  <td align="center"> <img src="./pics/flickr_wild_000075.png" width="128"></td> 
+				  <td align="center"> <img src="./pics/flickr_wild_000075_crf_recolored_checker.png" width="128"></td>
+				 <td align="center"> <img src="./pics/flickr_wild_000836.png" width="128"></td> 
+				  <td align="center"> <img src="./pics/flickr_wild_000836_crf_recolored_checker.png" width="128"></td> 
+	            </tr>
+				<tr>
+				  <td align="center"> <img src="./pics/flickr_wild_001397.png" width="128"></td> 
+				  <td align="center"> <img src="./pics/flickr_wild_001397_crf_recolored_checker.png" width="128"></td> 
+				  <td align="center"> <img src="./pics/flickr_wild_000836.png" width="128"></td> 
+				  <td align="center"> <img src="./pics/flickr_wild_000836_crf_recolored_checker.png" width="128"></td> 
+				  <td align="center"> <img src="./pics/pixabay_dog_000045.png" width="128"></td> 
+				  <td align="center"> <img src="./pics/pixabay_dog_000045_crf_recolored_checker.png" width="128"></td>
+				 <td align="center"> <img src="./pics/pixabay_wild_000393.png" width="128"></td> 
+				  <td align="center"> <img src="./pics/pixabay_wild_000393_crf_recolored_checker.png" width="128"></td> 
+	            </tr>
+	      </tbody>
+      </table>
+		
+	<p class="section"><b>Point Correpondences examples</b></p>
+		<table>
+            <tbody>
+				<tr>We leverage Deep ViT features to find semantically corresponding points between images from different classes, under significant variations in appearance, pose and scale.</tr>
+				<tr>
+				  <td align="center"> <img src="./pics/24_left_corresp.png" width="224"></td> 
+				  <td align="center"> <img src="./pics/24_right_corresp.png" width="224"></td> 
+				  <td align="center"> &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; </td> 
+				  <td align="center"> <img src="./pics/23_left_corresp.png" width="224"></td> 
+				  <td align="center"> <img src="./pics/23_right_corresp.png" width="224"></td> 
+	            </tr>
+				<tr>
+				  <td align="center"> <img src="./pics/216_left_corresp.png" width="224"></td> 
+				  <td align="center"> <img src="./pics/216_right_corresp.png" width="224"></td> 
+				  <td align="center"> &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; </td> 
+				  <td align="center"> <img src="./pics/183_left_corresp.png" width="224"></td> 
+				  <td align="center"> <img src="./pics/183_right_corresp.png" width="224"></td> 
+	            </tr>
+	      </tbody>
+      </table>
+		
+		<p class="section">&nbsp;</p>
+          <p class="section" id="paper"><b>Paper</b></p>
+          <table width="940" border="0">
+            <tbody>
+              <tr>
+                <td height="100"><a href="paper.pdf" target="_blank" rel="noopener noreferrer"><img src="./pics/paper_illustration.png" alt="" width="140" height="167"></a></td>
+                <td width="750"><p><b>Deep ViT Features as Dense Visual Descriptors</b><br>
+                  Shir Amir, Yossi Gandelsman, Shai Bagon, Tali Dekel.<br>
+                  <em>Arxiv. 2021.</em><br><br>
+                  [<a href="https://arxiv.org/" target="_blank" rel="noopener noreferrer">paper</a>]</p>
+                </td>
+              </tr>
+            </tbody>
+          </table>
+          <p class="section">&nbsp;</p>
+          <p class="section" id="sm"><b>Supplementary Material</b></p>
+          <table width="587" height="136" border="0">
+            <tbody>
+              <tr>
+                <td width="250"><img src="./pics/sm_illustration.png" alt="" height="150"></td>
+                <td align="left">
+                  <p>[<a href="./sm/index.html" target="_blank" rel="noopener noreferrer">supplementary page</a>]</p>
+                </td>
+              </tr>
+            </tbody>
+          </table>
+          <p class="section">&nbsp;</p>
+          <p class="section" id="code"><b>Code</b></p>
+          <table border="0">
+            <tbody>
+              <tr>
+                <td width="80"><img src="./pics/github_logo.png" alt="" height="50"></td>
+                <td align="left">
+                  <p>(coming soon)</p>
+                </td>
+              </tr>
+            </tbody>
+          </table>
+          <p class="section">&nbsp;</p>          
+          <p>&nbsp;</p>
+</div>
+
+
+      
+</body>
 </html>

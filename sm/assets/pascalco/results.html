@@ -1,0 +1,1300 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml"><head><meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
+
+<title>Deep ViT Features as Dense Visual Descriptors: Supplementary Material</title>
+<link href="../style.css" rel="stylesheet" type="text/css">
+</head>
+	
+<body>
+<div class="container">
+  <button type="button"><a href="../../index.html">Back to home</a></button> 
+  <h1 name="top" align="center">Co-segmentation on PASCAL- Co</h1>
+   <p align="left">We present results on 20 randomly chosen sets from our&nbsp; PASCAL CO dataset (see Fig. 8). We compare unsupervised method (Faktor etal. [1]), supervised methods (DOCS [2], SSNM [3]), saliency baseline, and our results.</p>
+    <p>&nbsp;</p>
+	
+		<h2>set_35</h2>
+        <table align="center">
+          <tr>
+            <th align="center">Image</th>
+            <th align="center"><img height="128" src="./checkerboard_results/set_35/2009_001674.jpg"></th>
+            <th align="center"><img height="128" src="./checkerboard_results/set_35/2010_000376.jpg"></th>
+            <th align="center"><img height="128" src="./checkerboard_results/set_35/2009_001744.jpg"></th>
+            <th align="center"><img height="128" src="./checkerboard_results/set_35/2008_006818.jpg"></th>
+            <th align="center"><img height="128" src="./checkerboard_results/set_35/2010_005506.jpg"></th>
+            <th align="center"><img height="128" src="./checkerboard_results/set_35/2008_005234.jpg"></th>
+          </tr>
+             <tr>
+            <th align="center">GT</th>
+            <th align="center"><img height="128" src="./checkerboard_results/set_35/img_2009_001674_checkboard_GT.png"></th>
+            <th align="center"><img height="128" src="./checkerboard_results/set_35/img_2010_000376_checkboard_GT.png"></th>
+            <th align="center"><img height="128" src="./checkerboard_results/set_35/img_2009_001744_checkboard_GT.png"></th>
+            <th align="center"><img height="128" src="./checkerboard_results/set_35/img_2008_006818_checkboard_GT.png"></th>
+            <th align="center"><img height="128" src="./checkerboard_results/set_35/img_2010_005506_checkboard_GT.png"></th>
+            <th align="center"><img height="128" src="./checkerboard_results/set_35/img_2008_005234_checkboard_GT.png"></th>
+            </tr>
+			<tr style="border-bottom:10px dashed white" >
+				 <th colspan="100%"><hr style="border-bottom:1px dashed white"  ></th>
+            </tr>
+			<tr>
+            <th align="center">SSNM</th>
+            <th align="center"><img height="128" src="./checkerboard_results/set_35/img_2009_001674_checkboard_SSNM.png"></th>
+            <th align="center"><img height="128" src="./checkerboard_results/set_35/img_2010_000376_checkboard_SSNM.png"></th>
+            <th align="center"><img height="128" src="./checkerboard_results/set_35/img_2009_001744_checkboard_SSNM.png"></th>
+            <th align="center"><img height="128" src="./checkerboard_results/set_35/img_2008_006818_checkboard_SSNM.png"></th>
+            <th align="center"><img height="128" src="./checkerboard_results/set_35/img_2010_005506_checkboard_SSNM.png"></th>
+            <th align="center"><img height="128" src="./checkerboard_results/set_35/img_2008_005234_checkboard_SSNM.png"></th>
+            </tr>
+            <tr>
+            <th align="center">DOCS</th>
+            <th align="center"><img height="128" src="./checkerboard_results/set_35/img_2009_001674_checkboard_DOCS.png"></th>
+            <th align="center"><img height="128" src="./checkerboard_results/set_35/img_2010_000376_checkboard_DOCS.png"></th>
+            <th align="center"><img height="128" src="./checkerboard_results/set_35/img_2009_001744_checkboard_DOCS.png"></th>
+            <th align="center"><img height="128" src="./checkerboard_results/set_35/img_2008_006818_checkboard_DOCS.png"></th>
+            <th align="center"><img height="128" src="./checkerboard_results/set_35/img_2010_005506_checkboard_DOCS.png"></th>
+            <th align="center"><img height="128" src="./checkerboard_results/set_35/img_2008_005234_checkboard_DOCS.png"></th>
+            </tr>
+            <tr>
+            <th align="center">Faktor etal.</th>
+            <th align="center"><img height="128" src="./checkerboard_results/set_35/img_2009_001674_checkboard_faktoretal.png"></th>
+            <th align="center"><img height="128" src="./checkerboard_results/set_35/img_2010_000376_checkboard_faktoretal.png"></th>
+            <th align="center"><img height="128" src="./checkerboard_results/set_35/img_2009_001744_checkboard_faktoretal.png"></th>
+            <th align="center"><img height="128" src="./checkerboard_results/set_35/img_2008_006818_checkboard_faktoretal.png"></th>
+            <th align="center"><img height="128" src="./checkerboard_results/set_35/img_2010_005506_checkboard_faktoretal.png"></th>
+            <th align="center"><img height="128" src="./checkerboard_results/set_35/img_2008_005234_checkboard_faktoretal.png"></th>
+            </tr>
+            <tr>
+            <th align="center">Ours</th>
+            <th align="center"><img height="128" src="./checkerboard_results/set_35/img_2009_001674_checkboard_ours.png"></th>
+            <th align="center"><img height="128" src="./checkerboard_results/set_35/img_2010_000376_checkboard_ours.png"></th>
+            <th align="center"><img height="128" src="./checkerboard_results/set_35/img_2009_001744_checkboard_ours.png"></th>
+            <th align="center"><img height="128" src="./checkerboard_results/set_35/img_2008_006818_checkboard_ours.png"></th>
+            <th align="center"><img height="128" src="./checkerboard_results/set_35/img_2010_005506_checkboard_ours.png"></th>
+            <th align="center"><img height="128" src="./checkerboard_results/set_35/img_2008_005234_checkboard_ours.png"></th>
+            </tr>
+        </table>
+        <button style="float: right;" type="button"><a href="#top">Back to Top</a></button> 
+        <hr>        
+		
+        <h2>set_66</h2>
+        <table align="center">
+          <tr>
+            <th align="center">Image</th>
+            <th align="center"><img height="128" src="./checkerboard_results/set_66/2008_006999.jpg"></th>
+            <th align="center"><img height="128" src="./checkerboard_results/set_66/2010_001994.jpg"></th>
+            <th align="center"><img height="128" src="./checkerboard_results/set_66/2008_000222.jpg"></th>
+            <th align="center"><img height="128" src="./checkerboard_results/set_66/2008_007513.jpg"></th>
+            <th align="center"><img height="128" src="./checkerboard_results/set_66/2009_004465.jpg"></th>
+            <th align="center"><img height="128" src="./checkerboard_results/set_66/2010_001659.jpg"></th>
+          </tr>
+             <tr>
+            <th align="center">GT</th>
+            <th align="center"><img height="128" src="./checkerboard_results/set_66/img_2008_006999_checkboard_GT.png"></th>
+            <th align="center"><img height="128" src="./checkerboard_results/set_66/img_2010_001994_checkboard_GT.png"></th>
+            <th align="center"><img height="128" src="./checkerboard_results/set_66/img_2008_000222_checkboard_GT.png"></th>
+            <th align="center"><img height="128" src="./checkerboard_results/set_66/img_2008_007513_checkboard_GT.png"></th>
+            <th align="center"><img height="128" src="./checkerboard_results/set_66/img_2009_004465_checkboard_GT.png"></th>
+            <th align="center"><img height="128" src="./checkerboard_results/set_66/img_2010_001659_checkboard_GT.png"></th>
+            </tr>
+		  <tr style="border-bottom:10px solid white" >
+		    <th colspan="100%"><hr style="border-bottom:1px dashed white"  ></th>
+            </tr>
+			<tr>
+            <th align="center">SSNM</th>
+            <th align="center"><img height="128" src="./checkerboard_results/set_66/img_2008_006999_checkboard_SSNM.png"></th>
+            <th align="center"><img height="128" src="./checkerboard_results/set_66/img_2010_001994_checkboard_SSNM.png"></th>
+            <th align="center"><img height="128" src="./checkerboard_results/set_66/img_2008_000222_checkboard_SSNM.png"></th>
+            <th align="center"><img height="128" src="./checkerboard_results/set_66/img_2008_007513_checkboard_SSNM.png"></th>
+            <th align="center"><img height="128" src="./checkerboard_results/set_66/img_2009_004465_checkboard_SSNM.png"></th>
+            <th align="center"><img height="128" src="./checkerboard_results/set_66/img_2010_001659_checkboard_SSNM.png"></th>
+            </tr>
+            <tr>
+            <th align="center">DOCS</th>
+            <th align="center"><img height="128" src="./checkerboard_results/set_66/img_2008_006999_checkboard_DOCS.png"></th>
+            <th align="center"><img height="128" src="./checkerboard_results/set_66/img_2010_001994_checkboard_DOCS.png"></th>
+            <th align="center"><img height="128" src="./checkerboard_results/set_66/img_2008_000222_checkboard_DOCS.png"></th>
+            <th align="center"><img height="128" src="./checkerboard_results/set_66/img_2008_007513_checkboard_DOCS.png"></th>
+            <th align="center"><img height="128" src="./checkerboard_results/set_66/img_2009_004465_checkboard_DOCS.png"></th>
+            <th align="center"><img height="128" src="./checkerboard_results/set_66/img_2010_001659_checkboard_DOCS.png"></th>
+            </tr>
+            <tr>
+            <th align="center">Faktor etal.</th>
+            <th align="center"><img height="128" src="./checkerboard_results/set_66/img_2008_006999_checkboard_faktoretal.png"></th>
+            <th align="center"><img height="128" src="./checkerboard_results/set_66/img_2010_001994_checkboard_faktoretal.png"></th>
+            <th align="center"><img height="128" src="./checkerboard_results/set_66/img_2008_000222_checkboard_faktoretal.png"></th>
+            <th align="center"><img height="128" src="./checkerboard_results/set_66/img_2008_007513_checkboard_faktoretal.png"></th>
+            <th align="center"><img height="128" src="./checkerboard_results/set_66/img_2009_004465_checkboard_faktoretal.png"></th>
+            <th align="center"><img height="128" src="./checkerboard_results/set_66/img_2010_001659_checkboard_faktoretal.png"></th>
+            </tr>
+            <tr>
+            <th align="center">Ours</th>
+            <th align="center"><img height="128" src="./checkerboard_results/set_66/img_2008_006999_checkboard_ours.png"></th>
+            <th align="center"><img height="128" src="./checkerboard_results/set_66/img_2010_001994_checkboard_ours.png"></th>
+            <th align="center"><img height="128" src="./checkerboard_results/set_66/img_2008_000222_checkboard_ours.png"></th>
+            <th align="center"><img height="128" src="./checkerboard_results/set_66/img_2008_007513_checkboard_ours.png"></th>
+            <th align="center"><img height="128" src="./checkerboard_results/set_66/img_2009_004465_checkboard_ours.png"></th>
+            <th align="center"><img height="128" src="./checkerboard_results/set_66/img_2010_001659_checkboard_ours.png"></th>
+            </tr>
+        </table>
+        <button style="float: right;" type="button"><a href="#top">Back to Top</a></button> 
+        <hr> 	
+         
+ 
+		<h2>set_27</h2>
+        <table align="center">
+          <tr>
+            <th align="center">Image</th>
+            <th align="center"><img height="128" src="./checkerboard_results/set_27/2010_002758.jpg"></th>
+            <th align="center"><img height="128" src="./checkerboard_results/set_27/2008_001842.jpg"></th>
+            <th align="center"><img height="128" src="./checkerboard_results/set_27/2010_001080.jpg"></th>
+            <th align="center"><img height="128" src="./checkerboard_results/set_27/2010_002697.jpg"></th>
+            <th align="center"><img height="128" src="./checkerboard_results/set_27/2009_001291.jpg"></th>
+            <th align="center"><img height="128" src="./checkerboard_results/set_27/2008_002327.jpg"></th>
+          </tr>
+             <tr>
+            <th align="center">GT</th>
+            <th align="center"><img height="128" src="./checkerboard_results/set_27/img_2010_002758_checkboard_GT.png"></th>
+            <th align="center"><img height="128" src="./checkerboard_results/set_27/img_2008_001842_checkboard_GT.png"></th>
+            <th align="center"><img height="128" src="./checkerboard_results/set_27/img_2010_001080_checkboard_GT.png"></th>
+            <th align="center"><img height="128" src="./checkerboard_results/set_27/img_2010_002697_checkboard_GT.png"></th>
+            <th align="center"><img height="128" src="./checkerboard_results/set_27/img_2009_001291_checkboard_GT.png"></th>
+            <th align="center"><img height="128" src="./checkerboard_results/set_27/img_2008_002327_checkboard_GT.png"></th>
+            </tr>
+					<tr style="border-bottom:10px solid white" >
+				 <th colspan="100%"><hr style="border-bottom:1px dashed white"  ></th>
+            </tr>
+		  <tr>
+            <th align="center">SSNM</th>
+            <th align="center"><img height="128" src="./checkerboard_results/set_27/img_2010_002758_checkboard_SSNM.png"></th>
+            <th align="center"><img height="128" src="./checkerboard_results/set_27/img_2008_001842_checkboard_SSNM.png"></th>
+            <th align="center"><img height="128" src="./checkerboard_results/set_27/img_2010_001080_checkboard_SSNM.png"></th>
+            <th align="center"><img height="128" src="./checkerboard_results/set_27/img_2010_002697_checkboard_SSNM.png"></th>
+            <th align="center"><img height="128" src="./checkerboard_results/set_27/img_2009_001291_checkboard_SSNM.png"></th>
+            <th align="center"><img height="128" src="./checkerboard_results/set_27/img_2008_002327_checkboard_SSNM.png"></th>
+            </tr>
+            <tr>
+            <th align="center">DOCS</th>
+            <th align="center"><img height="128" src="./checkerboard_results/set_27/img_2010_002758_checkboard_DOCS.png"></th>
+            <th align="center"><img height="128" src="./checkerboard_results/set_27/img_2008_001842_checkboard_DOCS.png"></th>
+            <th align="center"><img height="128" src="./checkerboard_results/set_27/img_2010_001080_checkboard_DOCS.png"></th>
+            <th align="center"><img height="128" src="./checkerboard_results/set_27/img_2010_002697_checkboard_DOCS.png"></th>
+            <th align="center"><img height="128" src="./checkerboard_results/set_27/img_2009_001291_checkboard_DOCS.png"></th>
+            <th align="center"><img height="128" src="./checkerboard_results/set_27/img_2008_002327_checkboard_DOCS.png"></th>
+            </tr>
+            <tr>
+            <th align="center">Faktor etal.</th>
+            <th align="center"><img height="128" src="./checkerboard_results/set_27/img_2010_002758_checkboard_faktoretal.png"></th>
+            <th align="center"><img height="128" src="./checkerboard_results/set_27/img_2008_001842_checkboard_faktoretal.png"></th>
+            <th align="center"><img height="128" src="./checkerboard_results/set_27/img_2010_001080_checkboard_faktoretal.png"></th>
+            <th align="center"><img height="128" src="./checkerboard_results/set_27/img_2010_002697_checkboard_faktoretal.png"></th>
+            <th align="center"><img height="128" src="./checkerboard_results/set_27/img_2009_001291_checkboard_faktoretal.png"></th>
+            <th align="center"><img height="128" src="./checkerboard_results/set_27/img_2008_002327_checkboard_faktoretal.png"></th>
+            </tr>
+            <tr>
+            <th align="center">Ours</th>
+            <th align="center"><img height="128" src="./checkerboard_results/set_27/img_2010_002758_checkboard_ours.png"></th>
+            <th align="center"><img height="128" src="./checkerboard_results/set_27/img_2008_001842_checkboard_ours.png"></th>
+            <th align="center"><img height="128" src="./checkerboard_results/set_27/img_2010_001080_checkboard_ours.png"></th>
+            <th align="center"><img height="128" src="./checkerboard_results/set_27/img_2010_002697_checkboard_ours.png"></th>
+            <th align="center"><img height="128" src="./checkerboard_results/set_27/img_2009_001291_checkboard_ours.png"></th>
+            <th align="center"><img height="128" src="./checkerboard_results/set_27/img_2008_002327_checkboard_ours.png"></th>
+            </tr>
+        </table>
+        <button style="float: right;" type="button"><a href="#top">Back to Top</a></button> 
+        <hr> 
+
+		<h2>set_12</h2>
+        <table align="center">
+          <tr>
+            <th align="center">Image</th>
+            <th align="center"><img height="128" src="./checkerboard_results/set_12/2008_002710.jpg"></th>
+            <th align="center"><img height="128" src="./checkerboard_results/set_12/2010_000770.jpg"></th>
+            <th align="center"><img height="128" src="./checkerboard_results/set_12/2010_000376.jpg"></th>
+            <th align="center"><img height="128" src="./checkerboard_results/set_12/2008_006818.jpg"></th>
+            <th align="center"><img height="128" src="./checkerboard_results/set_12/2010_005506.jpg"></th>
+            <th align="center"><img height="128" src="./checkerboard_results/set_12/2008_003415.jpg"></th>
+          </tr>
+             <tr>
+            <th align="center">GT</th>
+            <th align="center"><img height="128" src="./checkerboard_results/set_12/img_2008_002710_checkboard_GT.png"></th>
+            <th align="center"><img height="128" src="./checkerboard_results/set_12/img_2010_000770_checkboard_GT.png"></th>
+            <th align="center"><img height="128" src="./checkerboard_results/set_12/img_2010_000376_checkboard_GT.png"></th>
+            <th align="center"><img height="128" src="./checkerboard_results/set_12/img_2008_006818_checkboard_GT.png"></th>
+            <th align="center"><img height="128" src="./checkerboard_results/set_12/img_2010_005506_checkboard_GT.png"></th>
+            <th align="center"><img height="128" src="./checkerboard_results/set_12/img_2008_003415_checkboard_GT.png"></th>
+            </tr>
+					<tr style="border-bottom:10px solid white" >
+				 <th colspan="100%"><hr style="border-bottom:1px dashed white"  ></th>
+            </tr>
+		  <tr>
+            <th align="center">SSNM</th>
+            <th align="center"><img height="128" src="./checkerboard_results/set_12/img_2008_002710_checkboard_SSNM.png"></th>
+            <th align="center"><img height="128" src="./checkerboard_results/set_12/img_2010_000770_checkboard_SSNM.png"></th>
+            <th align="center"><img height="128" src="./checkerboard_results/set_12/img_2010_000376_checkboard_SSNM.png"></th>
+            <th align="center"><img height="128" src="./checkerboard_results/set_12/img_2008_006818_checkboard_SSNM.png"></th>
+            <th align="center"><img height="128" src="./checkerboard_results/set_12/img_2010_005506_checkboard_SSNM.png"></th>
+            <th align="center"><img height="128" src="./checkerboard_results/set_12/img_2008_003415_checkboard_SSNM.png"></th>
+            </tr>
+            <tr>
+            <th align="center">DOCS</th>
+            <th align="center"><img height="128" src="./checkerboard_results/set_12/img_2008_002710_checkboard_DOCS.png"></th>
+            <th align="center"><img height="128" src="./checkerboard_results/set_12/img_2010_000770_checkboard_DOCS.png"></th>
+            <th align="center"><img height="128" src="./checkerboard_results/set_12/img_2010_000376_checkboard_DOCS.png"></th>
+            <th align="center"><img height="128" src="./checkerboard_results/set_12/img_2008_006818_checkboard_DOCS.png"></th>
+            <th align="center"><img height="128" src="./checkerboard_results/set_12/img_2010_005506_checkboard_DOCS.png"></th>
+            <th align="center"><img height="128" src="./checkerboard_results/set_12/img_2008_003415_checkboard_DOCS.png"></th>
+            </tr>
+            <tr>
+            <th align="center">Faktor etal.</th>
+            <th align="center"><img height="128" src="./checkerboard_results/set_12/img_2008_002710_checkboard_faktoretal.png"></th>
+            <th align="center"><img height="128" src="./checkerboard_results/set_12/img_2010_000770_checkboard_faktoretal.png"></th>
+            <th align="center"><img height="128" src="./checkerboard_results/set_12/img_2010_000376_checkboard_faktoretal.png"></th>
+            <th align="center"><img height="128" src="./checkerboard_results/set_12/img_2008_006818_checkboard_faktoretal.png"></th>
+            <th align="center"><img height="128" src="./checkerboard_results/set_12/img_2010_005506_checkboard_faktoretal.png"></th>
+            <th align="center"><img height="128" src="./checkerboard_results/set_12/img_2008_003415_checkboard_faktoretal.png"></th>
+            </tr>
+            <tr>
+            <th align="center">Ours</th>
+            <th align="center"><img height="128" src="./checkerboard_results/set_12/img_2008_002710_checkboard_ours.png"></th>
+            <th align="center"><img height="128" src="./checkerboard_results/set_12/img_2010_000770_checkboard_ours.png"></th>
+            <th align="center"><img height="128" src="./checkerboard_results/set_12/img_2010_000376_checkboard_ours.png"></th>
+            <th align="center"><img height="128" src="./checkerboard_results/set_12/img_2008_006818_checkboard_ours.png"></th>
+            <th align="center"><img height="128" src="./checkerboard_results/set_12/img_2010_005506_checkboard_ours.png"></th>
+            <th align="center"><img height="128" src="./checkerboard_results/set_12/img_2008_003415_checkboard_ours.png"></th>
+            </tr>
+        </table>
+        <button style="float: right;" type="button"><a href="#top">Back to Top</a></button> 
+        <hr> 
+         
+        
+  <h2>set_164</h2>
+        <table align="center">
+          <tr>
+            <th align="center">Image</th>
+            <th align="center"><img height="128" src="./checkerboard_results/set_164/2009_001203.jpg"></th>
+            <th align="center"><img height="128" src="./checkerboard_results/set_164/2008_000499.jpg"></th>
+            <th align="center"><img height="128" src="./checkerboard_results/set_164/2009_001172.jpg"></th>
+            <th align="center"><img height="128" src="./checkerboard_results/set_164/2010_000808.jpg"></th>
+            <th align="center"><img height="128" src="./checkerboard_results/set_164/2008_004539.jpg"></th>
+            <th align="center"><img height="128" src="./checkerboard_results/set_164/2008_007014.jpg"></th>
+            </tr>
+             <tr>
+            <th align="center">GT</th>
+            <th align="center"><img height="128" src="./checkerboard_results/set_164/img_2009_001203_checkboard_GT.png"></th>
+            <th align="center"><img height="128" src="./checkerboard_results/set_164/img_2008_000499_checkboard_GT.png"></th>
+            <th align="center"><img height="128" src="./checkerboard_results/set_164/img_2009_001172_checkboard_GT.png"></th>
+            <th align="center"><img height="128" src="./checkerboard_results/set_164/img_2010_000808_checkboard_GT.png"></th>
+            <th align="center"><img height="128" src="./checkerboard_results/set_164/img_2008_004539_checkboard_GT.png"></th>
+            <th align="center"><img height="128" src="./checkerboard_results/set_164/img_2008_007014_checkboard_GT.png"></th>
+            </tr>
+					<tr style="border-bottom:10px solid white" >
+				 <th colspan="100%"><hr style="border-bottom:1px dashed white"  ></th>
+            </tr>
+		  <tr>
+            <th align="center">SSNM</th>
+            <th align="center"><img height="128" src="./checkerboard_results/set_164/img_2009_001203_checkboard_SSNM.png"></th>
+            <th align="center"><img height="128" src="./checkerboard_results/set_164/img_2008_000499_checkboard_SSNM.png"></th>
+            <th align="center"><img height="128" src="./checkerboard_results/set_164/img_2009_001172_checkboard_SSNM.png"></th>
+            <th align="center"><img height="128" src="./checkerboard_results/set_164/img_2010_000808_checkboard_SSNM.png"></th>
+            <th align="center"><img height="128" src="./checkerboard_results/set_164/img_2008_004539_checkboard_SSNM.png"></th>
+            <th align="center"><img height="128" src="./checkerboard_results/set_164/img_2008_007014_checkboard_SSNM.png"></th>
+            </tr>
+            <tr>
+            <th align="center">DOCS</th>
+            <th align="center"><img height="128" src="./checkerboard_results/set_164/img_2009_001203_checkboard_DOCS.png"></th>
+            <th align="center"><img height="128" src="./checkerboard_results/set_164/img_2008_000499_checkboard_DOCS.png"></th>
+            <th align="center"><img height="128" src="./checkerboard_results/set_164/img_2009_001172_checkboard_DOCS.png"></th>
+            <th align="center"><img height="128" src="./checkerboard_results/set_164/img_2010_000808_checkboard_DOCS.png"></th>
+            <th align="center"><img height="128" src="./checkerboard_results/set_164/img_2008_004539_checkboard_DOCS.png"></th>
+            <th align="center"><img height="128" src="./checkerboard_results/set_164/img_2008_007014_checkboard_DOCS.png"></th>
+            </tr>
+            <tr>
+            <th align="center">Faktor etal.</th>
+            <th align="center"><img height="128" src="./checkerboard_results/set_164/img_2009_001203_checkboard_faktoretal.png"></th>
+            <th align="center"><img height="128" src="./checkerboard_results/set_164/img_2008_000499_checkboard_faktoretal.png"></th>
+            <th align="center"><img height="128" src="./checkerboard_results/set_164/img_2009_001172_checkboard_faktoretal.png"></th>
+            <th align="center"><img height="128" src="./checkerboard_results/set_164/img_2010_000808_checkboard_faktoretal.png"></th>
+            <th align="center"><img height="128" src="./checkerboard_results/set_164/img_2008_004539_checkboard_faktoretal.png"></th>
+            <th align="center"><img height="128" src="./checkerboard_results/set_164/img_2008_007014_checkboard_faktoretal.png"></th>
+            </tr>
+            <tr>
+            <th align="center">Ours</th>
+            <th align="center"><img height="128" src="./checkerboard_results/set_164/img_2009_001203_checkboard_ours.png"></th>
+            <th align="center"><img height="128" src="./checkerboard_results/set_164/img_2008_000499_checkboard_ours.png"></th>
+            <th align="center"><img height="128" src="./checkerboard_results/set_164/img_2009_001172_checkboard_ours.png"></th>
+            <th align="center"><img height="128" src="./checkerboard_results/set_164/img_2010_000808_checkboard_ours.png"></th>
+            <th align="center"><img height="128" src="./checkerboard_results/set_164/img_2008_004539_checkboard_ours.png"></th>
+            <th align="center"><img height="128" src="./checkerboard_results/set_164/img_2008_007014_checkboard_ours.png"></th>
+            </tr>
+        </table>
+        <button style="float: right;" type="button"><a href="#top">Back to Top</a></button> 
+        <hr> 
+         
+                       
+  <h2>set_87</h2>
+        <table align="center">
+          <tr>
+            <th align="center">Image</th>
+            <th align="center"><img height="128" src="./checkerboard_results/set_87/2008_004347.jpg"></th>
+            <th align="center"><img height="128" src="./checkerboard_results/set_87/2008_001350.jpg"></th>
+            <th align="center"><img height="128" src="./checkerboard_results/set_87/2009_000539.jpg"></th>
+            <th align="center"><img height="128" src="./checkerboard_results/set_87/2010_003439.jpg"></th>
+            <th align="center"><img height="128" src="./checkerboard_results/set_87/2010_006066.jpg"></th>
+            <th align="center"><img height="128" src="./checkerboard_results/set_87/2009_001198.jpg"></th>
+            </tr>
+             <tr>
+            <th align="center">GT</th>
+            <th align="center"><img height="128" src="./checkerboard_results/set_87/img_2008_004347_checkboard_GT.png"></th>
+            <th align="center"><img height="128" src="./checkerboard_results/set_87/img_2008_001350_checkboard_GT.png"></th>
+            <th align="center"><img height="128" src="./checkerboard_results/set_87/img_2009_000539_checkboard_GT.png"></th>
+            <th align="center"><img height="128" src="./checkerboard_results/set_87/img_2010_003439_checkboard_GT.png"></th>
+            <th align="center"><img height="128" src="./checkerboard_results/set_87/img_2010_006066_checkboard_GT.png"></th>
+            <th align="center"><img height="128" src="./checkerboard_results/set_87/img_2009_001198_checkboard_GT.png"></th>
+            </tr>
+					<tr style="border-bottom:10px solid white" >
+				 <th colspan="100%"><hr style="border-bottom:1px dashed white"  ></th>
+            </tr>
+		  <tr>
+            <th align="center">SSNM</th>
+            <th align="center"><img height="128" src="./checkerboard_results/set_87/img_2008_004347_checkboard_SSNM.png"></th>
+            <th align="center"><img height="128" src="./checkerboard_results/set_87/img_2008_001350_checkboard_SSNM.png"></th>
+            <th align="center"><img height="128" src="./checkerboard_results/set_87/img_2009_000539_checkboard_SSNM.png"></th>
+            <th align="center"><img height="128" src="./checkerboard_results/set_87/img_2010_003439_checkboard_SSNM.png"></th>
+            <th align="center"><img height="128" src="./checkerboard_results/set_87/img_2010_006066_checkboard_SSNM.png"></th>
+            <th align="center"><img height="128" src="./checkerboard_results/set_87/img_2009_001198_checkboard_SSNM.png"></th>
+            </tr>
+            <tr>
+            <th align="center">DOCS</th>
+            <th align="center"><img height="128" src="./checkerboard_results/set_87/img_2008_004347_checkboard_DOCS.png"></th>
+            <th align="center"><img height="128" src="./checkerboard_results/set_87/img_2008_001350_checkboard_DOCS.png"></th>
+            <th align="center"><img height="128" src="./checkerboard_results/set_87/img_2009_000539_checkboard_DOCS.png"></th>
+            <th align="center"><img height="128" src="./checkerboard_results/set_87/img_2010_003439_checkboard_DOCS.png"></th>
+            <th align="center"><img height="128" src="./checkerboard_results/set_87/img_2010_006066_checkboard_DOCS.png"></th>
+            <th align="center"><img height="128" src="./checkerboard_results/set_87/img_2009_001198_checkboard_DOCS.png"></th>
+            </tr>
+            <tr>
+            <th align="center">Faktor etal.</th>
+            <th align="center"><img height="128" src="./checkerboard_results/set_87/img_2008_004347_checkboard_faktoretal.png"></th>
+            <th align="center"><img height="128" src="./checkerboard_results/set_87/img_2008_001350_checkboard_faktoretal.png"></th>
+            <th align="center"><img height="128" src="./checkerboard_results/set_87/img_2009_000539_checkboard_faktoretal.png"></th>
+            <th align="center"><img height="128" src="./checkerboard_results/set_87/img_2010_003439_checkboard_faktoretal.png"></th>
+            <th align="center"><img height="128" src="./checkerboard_results/set_87/img_2010_006066_checkboard_faktoretal.png"></th>
+            <th align="center"><img height="128" src="./checkerboard_results/set_87/img_2009_001198_checkboard_faktoretal.png"></th>
+            </tr>
+            <tr>
+            <th align="center">Ours</th>
+            <th align="center"><img height="128" src="./checkerboard_results/set_87/img_2008_004347_checkboard_ours.png"></th>
+            <th align="center"><img height="128" src="./checkerboard_results/set_87/img_2008_001350_checkboard_ours.png"></th>
+            <th align="center"><img height="128" src="./checkerboard_results/set_87/img_2009_000539_checkboard_ours.png"></th>
+            <th align="center"><img height="128" src="./checkerboard_results/set_87/img_2010_003439_checkboard_ours.png"></th>
+            <th align="center"><img height="128" src="./checkerboard_results/set_87/img_2010_006066_checkboard_ours.png"></th>
+            <th align="center"><img height="128" src="./checkerboard_results/set_87/img_2009_001198_checkboard_ours.png"></th>
+            </tr>
+        </table>
+        <button style="float: right;" type="button"><a href="#top">Back to Top</a></button> 
+        <hr> 
+                      
+        
+  <h2>set_204</h2>
+        <table align="center">
+          <tr>
+            <th align="center">Image</th>
+            <th align="center"><img height="128" src="./checkerboard_results/set_204/2010_004026.jpg"></th>
+            <th align="center"><img height="128" src="./checkerboard_results/set_204/2008_007317.jpg"></th>
+            <th align="center"><img height="128" src="./checkerboard_results/set_204/2008_003049.jpg"></th>
+            <th align="center"><img height="128" src="./checkerboard_results/set_204/2008_002138.jpg"></th>
+            <th align="center"><img height="128" src="./checkerboard_results/set_204/2010_002019.jpg"></th>
+            <th align="center"><img height="128" src="./checkerboard_results/set_204/2008_007836.jpg"></th>
+            </tr>
+             <tr>
+            <th align="center">GT</th>
+            <th align="center"><img height="128" src="./checkerboard_results/set_204/img_2010_004026_checkboard_GT.png"></th>
+            <th align="center"><img height="128" src="./checkerboard_results/set_204/img_2008_007317_checkboard_GT.png"></th>
+            <th align="center"><img height="128" src="./checkerboard_results/set_204/img_2008_003049_checkboard_GT.png"></th>
+            <th align="center"><img height="128" src="./checkerboard_results/set_204/img_2008_002138_checkboard_GT.png"></th>
+            <th align="center"><img height="128" src="./checkerboard_results/set_204/img_2010_002019_checkboard_GT.png"></th>
+            <th align="center"><img height="128" src="./checkerboard_results/set_204/img_2008_007836_checkboard_GT.png"></th>
+            </tr>
+					<tr style="border-bottom:10px solid white" >
+				 <th colspan="100%"><hr style="border-bottom:1px dashed white"  ></th>
+            </tr>
+		  <tr>
+            <th align="center">SSNM</th>
+            <th align="center"><img height="128" src="./checkerboard_results/set_204/img_2010_004026_checkboard_SSNM.png"></th>
+            <th align="center"><img height="128" src="./checkerboard_results/set_204/img_2008_007317_checkboard_SSNM.png"></th>
+            <th align="center"><img height="128" src="./checkerboard_results/set_204/img_2008_003049_checkboard_SSNM.png"></th>
+            <th align="center"><img height="128" src="./checkerboard_results/set_204/img_2008_002138_checkboard_SSNM.png"></th>
+            <th align="center"><img height="128" src="./checkerboard_results/set_204/img_2010_002019_checkboard_SSNM.png"></th>
+            <th align="center"><img height="128" src="./checkerboard_results/set_204/img_2008_007836_checkboard_SSNM.png"></th>
+            </tr>
+            <tr>
+            <th align="center">DOCS</th>
+            <th align="center"><img height="128" src="./checkerboard_results/set_204/img_2010_004026_checkboard_DOCS.png"></th>
+            <th align="center"><img height="128" src="./checkerboard_results/set_204/img_2008_007317_checkboard_DOCS.png"></th>
+            <th align="center"><img height="128" src="./checkerboard_results/set_204/img_2008_003049_checkboard_DOCS.png"></th>
+            <th align="center"><img height="128" src="./checkerboard_results/set_204/img_2008_002138_checkboard_DOCS.png"></th>
+            <th align="center"><img height="128" src="./checkerboard_results/set_204/img_2010_002019_checkboard_DOCS.png"></th>
+            <th align="center"><img height="128" src="./checkerboard_results/set_204/img_2008_007836_checkboard_DOCS.png"></th>
+            </tr>
+            <tr>
+            <th align="center">Faktor etal.</th>
+            <th align="center"><img height="128" src="./checkerboard_results/set_204/img_2010_004026_checkboard_faktoretal.png"></th>
+            <th align="center"><img height="128" src="./checkerboard_results/set_204/img_2008_007317_checkboard_faktoretal.png"></th>
+            <th align="center"><img height="128" src="./checkerboard_results/set_204/img_2008_003049_checkboard_faktoretal.png"></th>
+            <th align="center"><img height="128" src="./checkerboard_results/set_204/img_2008_002138_checkboard_faktoretal.png"></th>
+            <th align="center"><img height="128" src="./checkerboard_results/set_204/img_2010_002019_checkboard_faktoretal.png"></th>
+            <th align="center"><img height="128" src="./checkerboard_results/set_204/img_2008_007836_checkboard_faktoretal.png"></th>
+            </tr>
+            <tr>
+            <th align="center">Ours</th>
+            <th align="center"><img height="128" src="./checkerboard_results/set_204/img_2010_004026_checkboard_ours.png"></th>
+            <th align="center"><img height="128" src="./checkerboard_results/set_204/img_2008_007317_checkboard_ours.png"></th>
+            <th align="center"><img height="128" src="./checkerboard_results/set_204/img_2008_003049_checkboard_ours.png"></th>
+            <th align="center"><img height="128" src="./checkerboard_results/set_204/img_2008_002138_checkboard_ours.png"></th>
+            <th align="center"><img height="128" src="./checkerboard_results/set_204/img_2010_002019_checkboard_ours.png"></th>
+            <th align="center"><img height="128" src="./checkerboard_results/set_204/img_2008_007836_checkboard_ours.png"></th>
+            </tr>
+        </table>
+        <button style="float: right;" type="button"><a href="#top">Back to Top</a></button> 
+        <hr> 
+       
+        
+  <h2>set_156</h2>
+        <table align="center">
+          <tr>
+            <th align="center">Image</th>
+            <th align="center"><img height="128" src="./checkerboard_results/set_156/2008_008109.jpg"></th>
+            <th align="center"><img height="128" src="./checkerboard_results/set_156/2009_002150.jpg"></th>
+            <th align="center"><img height="128" src="./checkerboard_results/set_156/2009_000709.jpg"></th>
+            <th align="center"><img height="128" src="./checkerboard_results/set_156/2008_008533.jpg"></th>
+            <th align="center"><img height="128" src="./checkerboard_results/set_156/2009_000727.jpg"></th>
+            <th align="center"><img height="128" src="./checkerboard_results/set_156/2008_008623.jpg"></th>
+            </tr>
+             <tr>
+            <th align="center">GT</th>
+            <th align="center"><img height="128" src="./checkerboard_results/set_156/img_2008_008109_checkboard_GT.png"></th>
+            <th align="center"><img height="128" src="./checkerboard_results/set_156/img_2009_002150_checkboard_GT.png"></th>
+            <th align="center"><img height="128" src="./checkerboard_results/set_156/img_2009_000709_checkboard_GT.png"></th>
+            <th align="center"><img height="128" src="./checkerboard_results/set_156/img_2008_008533_checkboard_GT.png"></th>
+            <th align="center"><img height="128" src="./checkerboard_results/set_156/img_2009_000727_checkboard_GT.png"></th>
+            <th align="center"><img height="128" src="./checkerboard_results/set_156/img_2008_008623_checkboard_GT.png"></th>
+            </tr>
+					<tr style="border-bottom:10px solid white" >
+				 <th colspan="100%"><hr style="border-bottom:1px dashed white"  ></th>
+            </tr>
+		  <tr>
+            <th align="center">SSNM</th>
+            <th align="center"><img height="128" src="./checkerboard_results/set_156/img_2008_008109_checkboard_SSNM.png"></th>
+            <th align="center"><img height="128" src="./checkerboard_results/set_156/img_2009_002150_checkboard_SSNM.png"></th>
+            <th align="center"><img height="128" src="./checkerboard_results/set_156/img_2009_000709_checkboard_SSNM.png"></th>
+            <th align="center"><img height="128" src="./checkerboard_results/set_156/img_2008_008533_checkboard_SSNM.png"></th>
+            <th align="center"><img height="128" src="./checkerboard_results/set_156/img_2009_000727_checkboard_SSNM.png"></th>
+            <th align="center"><img height="128" src="./checkerboard_results/set_156/img_2008_008623_checkboard_SSNM.png"></th>
+            </tr>
+            <tr>
+            <th align="center">DOCS</th>
+            <th align="center"><img height="128" src="./checkerboard_results/set_156/img_2008_008109_checkboard_DOCS.png"></th>
+            <th align="center"><img height="128" src="./checkerboard_results/set_156/img_2009_002150_checkboard_DOCS.png"></th>
+            <th align="center"><img height="128" src="./checkerboard_results/set_156/img_2009_000709_checkboard_DOCS.png"></th>
+            <th align="center"><img height="128" src="./checkerboard_results/set_156/img_2008_008533_checkboard_DOCS.png"></th>
+            <th align="center"><img height="128" src="./checkerboard_results/set_156/img_2009_000727_checkboard_DOCS.png"></th>
+            <th align="center"><img height="128" src="./checkerboard_results/set_156/img_2008_008623_checkboard_DOCS.png"></th>
+            </tr>
+            <tr>
+            <th align="center">Faktor etal.</th>
+            <th align="center"><img height="128" src="./checkerboard_results/set_156/img_2008_008109_checkboard_faktoretal.png"></th>
+            <th align="center"><img height="128" src="./checkerboard_results/set_156/img_2009_002150_checkboard_faktoretal.png"></th>
+            <th align="center"><img height="128" src="./checkerboard_results/set_156/img_2009_000709_checkboard_faktoretal.png"></th>
+            <th align="center"><img height="128" src="./checkerboard_results/set_156/img_2008_008533_checkboard_faktoretal.png"></th>
+            <th align="center"><img height="128" src="./checkerboard_results/set_156/img_2009_000727_checkboard_faktoretal.png"></th>
+            <th align="center"><img height="128" src="./checkerboard_results/set_156/img_2008_008623_checkboard_faktoretal.png"></th>
+            </tr>
+            <tr>
+            <th align="center">Ours</th>
+            <th align="center"><img height="128" src="./checkerboard_results/set_156/img_2008_008109_checkboard_ours.png"></th>
+            <th align="center"><img height="128" src="./checkerboard_results/set_156/img_2009_002150_checkboard_ours.png"></th>
+            <th align="center"><img height="128" src="./checkerboard_results/set_156/img_2009_000709_checkboard_ours.png"></th>
+            <th align="center"><img height="128" src="./checkerboard_results/set_156/img_2008_008533_checkboard_ours.png"></th>
+            <th align="center"><img height="128" src="./checkerboard_results/set_156/img_2009_000727_checkboard_ours.png"></th>
+            <th align="center"><img height="128" src="./checkerboard_results/set_156/img_2008_008623_checkboard_ours.png"></th>
+            </tr>
+        </table>
+        <button style="float: right;" type="button"><a href="#top">Back to Top</a></button> 
+        <hr> 
+          
+        
+        <h2>set_150</h2>
+        <table align="center">
+          <tr>
+            <th align="center">Image</th>
+            <th align="center"><img height="128" src="./checkerboard_results/set_150/2009_001203.jpg"></th>
+            <th align="center"><img height="128" src="./checkerboard_results/set_150/2010_001317.jpg"></th>
+            <th align="center"><img height="128" src="./checkerboard_results/set_150/2010_005784.jpg"></th>
+            <th align="center"><img height="128" src="./checkerboard_results/set_150/2008_004539.jpg"></th>
+            <th align="center"><img height="128" src="./checkerboard_results/set_150/2008_008744.jpg"></th>
+            <th align="center"><img height="128" src="./checkerboard_results/set_150/2008_007014.jpg"></th>
+            </tr>
+             <tr>
+            <th align="center">GT</th>
+            <th align="center"><img height="128" src="./checkerboard_results/set_150/img_2009_001203_checkboard_GT.png"></th>
+            <th align="center"><img height="128" src="./checkerboard_results/set_150/img_2010_001317_checkboard_GT.png"></th>
+            <th align="center"><img height="128" src="./checkerboard_results/set_150/img_2010_005784_checkboard_GT.png"></th>
+            <th align="center"><img height="128" src="./checkerboard_results/set_150/img_2008_004539_checkboard_GT.png"></th>
+            <th align="center"><img height="128" src="./checkerboard_results/set_150/img_2008_008744_checkboard_GT.png"></th>
+            <th align="center"><img height="128" src="./checkerboard_results/set_150/img_2008_007014_checkboard_GT.png"></th>
+            </tr>
+					<tr style="border-bottom:10px solid white" >
+				 <th colspan="100%"><hr style="border-bottom:1px dashed white"  ></th>
+            </tr>
+		  <tr>
+            <th align="center">SSNM</th>
+            <th align="center"><img height="128" src="./checkerboard_results/set_150/img_2009_001203_checkboard_SSNM.png"></th>
+            <th align="center"><img height="128" src="./checkerboard_results/set_150/img_2010_001317_checkboard_SSNM.png"></th>
+            <th align="center"><img height="128" src="./checkerboard_results/set_150/img_2010_005784_checkboard_SSNM.png"></th>
+            <th align="center"><img height="128" src="./checkerboard_results/set_150/img_2008_004539_checkboard_SSNM.png"></th>
+            <th align="center"><img height="128" src="./checkerboard_results/set_150/img_2008_008744_checkboard_SSNM.png"></th>
+            <th align="center"><img height="128" src="./checkerboard_results/set_150/img_2008_007014_checkboard_SSNM.png"></th>
+            </tr>
+            <tr>
+            <th align="center">DOCS</th>
+            <th align="center"><img height="128" src="./checkerboard_results/set_150/img_2009_001203_checkboard_DOCS.png"></th>
+            <th align="center"><img height="128" src="./checkerboard_results/set_150/img_2010_001317_checkboard_DOCS.png"></th>
+            <th align="center"><img height="128" src="./checkerboard_results/set_150/img_2010_005784_checkboard_DOCS.png"></th>
+            <th align="center"><img height="128" src="./checkerboard_results/set_150/img_2008_004539_checkboard_DOCS.png"></th>
+            <th align="center"><img height="128" src="./checkerboard_results/set_150/img_2008_008744_checkboard_DOCS.png"></th>
+            <th align="center"><img height="128" src="./checkerboard_results/set_150/img_2008_007014_checkboard_DOCS.png"></th>
+            </tr>
+            <tr>
+            <th align="center">Faktor etal.</th>
+            <th align="center"><img height="128" src="./checkerboard_results/set_150/img_2009_001203_checkboard_faktoretal.png"></th>
+            <th align="center"><img height="128" src="./checkerboard_results/set_150/img_2010_001317_checkboard_faktoretal.png"></th>
+            <th align="center"><img height="128" src="./checkerboard_results/set_150/img_2010_005784_checkboard_faktoretal.png"></th>
+            <th align="center"><img height="128" src="./checkerboard_results/set_150/img_2008_004539_checkboard_faktoretal.png"></th>
+            <th align="center"><img height="128" src="./checkerboard_results/set_150/img_2008_008744_checkboard_faktoretal.png"></th>
+            <th align="center"><img height="128" src="./checkerboard_results/set_150/img_2008_007014_checkboard_faktoretal.png"></th>
+            </tr>
+            <tr>
+            <th align="center">Ours</th>
+            <th align="center"><img height="128" src="./checkerboard_results/set_150/img_2009_001203_checkboard_ours.png"></th>
+            <th align="center"><img height="128" src="./checkerboard_results/set_150/img_2010_001317_checkboard_ours.png"></th>
+            <th align="center"><img height="128" src="./checkerboard_results/set_150/img_2010_005784_checkboard_ours.png"></th>
+            <th align="center"><img height="128" src="./checkerboard_results/set_150/img_2008_004539_checkboard_ours.png"></th>
+            <th align="center"><img height="128" src="./checkerboard_results/set_150/img_2008_008744_checkboard_ours.png"></th>
+            <th align="center"><img height="128" src="./checkerboard_results/set_150/img_2008_007014_checkboard_ours.png"></th>
+            </tr>
+        </table>
+        <button style="float: right;" type="button"><a href="#top">Back to Top</a></button> 
+        <hr> 
+                 
+        
+        <h2>set_15</h2>
+        <table align="center">
+          <tr>
+            <th align="center">Image</th>
+            <th align="center"><img height="128" src="./checkerboard_results/set_15/2010_003478.jpg"></th>
+            <th align="center"><img height="128" src="./checkerboard_results/set_15/2010_003854.jpg"></th>
+            <th align="center"><img height="128" src="./checkerboard_results/set_15/2008_005269.jpg"></th>
+            <th align="center"><img height="128" src="./checkerboard_results/set_15/2008_000657.jpg"></th>
+            <th align="center"><img height="128" src="./checkerboard_results/set_15/2008_008748.jpg"></th>
+            <th align="center"><img height="128" src="./checkerboard_results/set_15/2010_002438.jpg"></th>
+            </tr>
+             <tr>
+            <th align="center">GT</th>
+            <th align="center"><img height="128" src="./checkerboard_results/set_15/img_2010_003478_checkboard_GT.png"></th>
+            <th align="center"><img height="128" src="./checkerboard_results/set_15/img_2010_003854_checkboard_GT.png"></th>
+            <th align="center"><img height="128" src="./checkerboard_results/set_15/img_2008_005269_checkboard_GT.png"></th>
+            <th align="center"><img height="128" src="./checkerboard_results/set_15/img_2008_000657_checkboard_GT.png"></th>
+            <th align="center"><img height="128" src="./checkerboard_results/set_15/img_2008_008748_checkboard_GT.png"></th>
+            <th align="center"><img height="128" src="./checkerboard_results/set_15/img_2010_002438_checkboard_GT.png"></th>
+            </tr>
+					<tr style="border-bottom:10px solid white" >
+				 <th colspan="100%"><hr style="border-bottom:1px dashed white"  ></th>
+            </tr>
+		  <tr>
+            <th align="center">SSNM</th>
+            <th align="center"><img height="128" src="./checkerboard_results/set_15/img_2010_003478_checkboard_SSNM.png"></th>
+            <th align="center"><img height="128" src="./checkerboard_results/set_15/img_2010_003854_checkboard_SSNM.png"></th>
+            <th align="center"><img height="128" src="./checkerboard_results/set_15/img_2008_005269_checkboard_SSNM.png"></th>
+            <th align="center"><img height="128" src="./checkerboard_results/set_15/img_2008_000657_checkboard_SSNM.png"></th>
+            <th align="center"><img height="128" src="./checkerboard_results/set_15/img_2008_008748_checkboard_SSNM.png"></th>
+            <th align="center"><img height="128" src="./checkerboard_results/set_15/img_2010_002438_checkboard_SSNM.png"></th>
+            </tr>
+            <tr>
+            <th align="center">DOCS</th>
+            <th align="center"><img height="128" src="./checkerboard_results/set_15/img_2010_003478_checkboard_DOCS.png"></th>
+            <th align="center"><img height="128" src="./checkerboard_results/set_15/img_2010_003854_checkboard_DOCS.png"></th>
+            <th align="center"><img height="128" src="./checkerboard_results/set_15/img_2008_005269_checkboard_DOCS.png"></th>
+            <th align="center"><img height="128" src="./checkerboard_results/set_15/img_2008_000657_checkboard_DOCS.png"></th>
+            <th align="center"><img height="128" src="./checkerboard_results/set_15/img_2008_008748_checkboard_DOCS.png"></th>
+            <th align="center"><img height="128" src="./checkerboard_results/set_15/img_2010_002438_checkboard_DOCS.png"></th>
+            </tr>
+            <tr>
+            <th align="center">Faktor etal.</th>
+            <th align="center"><img height="128" src="./checkerboard_results/set_15/img_2010_003478_checkboard_faktoretal.png"></th>
+            <th align="center"><img height="128" src="./checkerboard_results/set_15/img_2010_003854_checkboard_faktoretal.png"></th>
+            <th align="center"><img height="128" src="./checkerboard_results/set_15/img_2008_005269_checkboard_faktoretal.png"></th>
+            <th align="center"><img height="128" src="./checkerboard_results/set_15/img_2008_000657_checkboard_faktoretal.png"></th>
+            <th align="center"><img height="128" src="./checkerboard_results/set_15/img_2008_008748_checkboard_faktoretal.png"></th>
+            <th align="center"><img height="128" src="./checkerboard_results/set_15/img_2010_002438_checkboard_faktoretal.png"></th>
+            </tr>
+            <tr>
+            <th align="center">Ours</th>
+            <th align="center"><img height="128" src="./checkerboard_results/set_15/img_2010_003478_checkboard_ours.png"></th>
+            <th align="center"><img height="128" src="./checkerboard_results/set_15/img_2010_003854_checkboard_ours.png"></th>
+            <th align="center"><img height="128" src="./checkerboard_results/set_15/img_2008_005269_checkboard_ours.png"></th>
+            <th align="center"><img height="128" src="./checkerboard_results/set_15/img_2008_000657_checkboard_ours.png"></th>
+            <th align="center"><img height="128" src="./checkerboard_results/set_15/img_2008_008748_checkboard_ours.png"></th>
+            <th align="center"><img height="128" src="./checkerboard_results/set_15/img_2010_002438_checkboard_ours.png"></th>
+            </tr>
+        </table>
+        <button style="float: right;" type="button"><a href="#top">Back to Top</a></button> 
+        <hr>                
+        
+              
+        <h2>set_90</h2>
+        <table align="center">
+          <tr>
+            <th align="center">Image</th>
+            <th align="center"><img height="128" src="./checkerboard_results/set_90/2008_006843.jpg"></th>
+            <th align="center"><img height="128" src="./checkerboard_results/set_90/2010_001100.jpg"></th>
+            <th align="center"><img height="128" src="./checkerboard_results/set_90/2010_001421.jpg"></th>
+            <th align="center"><img height="128" src="./checkerboard_results/set_90/2008_004538.jpg"></th>
+            <th align="center"><img height="128" src="./checkerboard_results/set_90/2009_002672.jpg"></th>
+            <th align="center"><img height="128" src="./checkerboard_results/set_90/2009_004411.jpg"></th>
+            </tr>
+             <tr>
+            <th align="center">GT</th>
+            <th align="center"><img height="128" src="./checkerboard_results/set_90/img_2008_006843_checkboard_GT.png"></th>
+            <th align="center"><img height="128" src="./checkerboard_results/set_90/img_2010_001100_checkboard_GT.png"></th>
+            <th align="center"><img height="128" src="./checkerboard_results/set_90/img_2010_001421_checkboard_GT.png"></th>
+            <th align="center"><img height="128" src="./checkerboard_results/set_90/img_2008_004538_checkboard_GT.png"></th>
+            <th align="center"><img height="128" src="./checkerboard_results/set_90/img_2009_002672_checkboard_GT.png"></th>
+            <th align="center"><img height="128" src="./checkerboard_results/set_90/img_2009_004411_checkboard_GT.png"></th>
+            </tr>
+					<tr style="border-bottom:10px solid white" >
+				 <th colspan="100%"><hr style="border-bottom:1px dashed white"  ></th>
+            </tr>
+		  <tr>
+            <th align="center">SSNM</th>
+            <th align="center"><img height="128" src="./checkerboard_results/set_90/img_2008_006843_checkboard_SSNM.png"></th>
+            <th align="center"><img height="128" src="./checkerboard_results/set_90/img_2010_001100_checkboard_SSNM.png"></th>
+            <th align="center"><img height="128" src="./checkerboard_results/set_90/img_2010_001421_checkboard_SSNM.png"></th>
+            <th align="center"><img height="128" src="./checkerboard_results/set_90/img_2008_004538_checkboard_SSNM.png"></th>
+            <th align="center"><img height="128" src="./checkerboard_results/set_90/img_2009_002672_checkboard_SSNM.png"></th>
+            <th align="center"><img height="128" src="./checkerboard_results/set_90/img_2009_004411_checkboard_SSNM.png"></th>
+            </tr>
+            <tr>
+            <th align="center">DOCS</th>
+            <th align="center"><img height="128" src="./checkerboard_results/set_90/img_2008_006843_checkboard_DOCS.png"></th>
+            <th align="center"><img height="128" src="./checkerboard_results/set_90/img_2010_001100_checkboard_DOCS.png"></th>
+            <th align="center"><img height="128" src="./checkerboard_results/set_90/img_2010_001421_checkboard_DOCS.png"></th>
+            <th align="center"><img height="128" src="./checkerboard_results/set_90/img_2008_004538_checkboard_DOCS.png"></th>
+            <th align="center"><img height="128" src="./checkerboard_results/set_90/img_2009_002672_checkboard_DOCS.png"></th>
+            <th align="center"><img height="128" src="./checkerboard_results/set_90/img_2009_004411_checkboard_DOCS.png"></th>
+            </tr>
+            <tr>
+            <th align="center">Faktor etal.</th>
+            <th align="center"><img height="128" src="./checkerboard_results/set_90/img_2008_006843_checkboard_faktoretal.png"></th>
+            <th align="center"><img height="128" src="./checkerboard_results/set_90/img_2010_001100_checkboard_faktoretal.png"></th>
+            <th align="center"><img height="128" src="./checkerboard_results/set_90/img_2010_001421_checkboard_faktoretal.png"></th>
+            <th align="center"><img height="128" src="./checkerboard_results/set_90/img_2008_004538_checkboard_faktoretal.png"></th>
+            <th align="center"><img height="128" src="./checkerboard_results/set_90/img_2009_002672_checkboard_faktoretal.png"></th>
+            <th align="center"><img height="128" src="./checkerboard_results/set_90/img_2009_004411_checkboard_faktoretal.png"></th>
+            </tr>
+            <tr>
+            <th align="center">Ours</th>
+            <th align="center"><img height="128" src="./checkerboard_results/set_90/img_2008_006843_checkboard_ours.png"></th>
+            <th align="center"><img height="128" src="./checkerboard_results/set_90/img_2010_001100_checkboard_ours.png"></th>
+            <th align="center"><img height="128" src="./checkerboard_results/set_90/img_2010_001421_checkboard_ours.png"></th>
+            <th align="center"><img height="128" src="./checkerboard_results/set_90/img_2008_004538_checkboard_ours.png"></th>
+            <th align="center"><img height="128" src="./checkerboard_results/set_90/img_2009_002672_checkboard_ours.png"></th>
+            <th align="center"><img height="128" src="./checkerboard_results/set_90/img_2009_004411_checkboard_ours.png"></th>
+            </tr>
+        </table>
+        <button style="float: right;" type="button"><a href="#top">Back to Top</a></button> 
+        <hr> 
+       
+  <h2>set_214</h2>
+        <table align="center">
+          <tr>
+            <th align="center">Image</th>
+            <th align="center"><img height="128" src="./checkerboard_results/set_214/2008_006353.jpg"></th>
+            <th align="center"><img height="128" src="./checkerboard_results/set_214/2008_008359.jpg"></th>
+            <th align="center"><img height="128" src="./checkerboard_results/set_214/2008_003894.jpg"></th>
+            <th align="center"><img height="128" src="./checkerboard_results/set_214/2010_001481.jpg"></th>
+            <th align="center"><img height="128" src="./checkerboard_results/set_214/2008_005182.jpg"></th>
+            <th align="center"><img height="128" src="./checkerboard_results/set_214/2010_001448.jpg"></th>
+            </tr>
+             <tr>
+            <th align="center">GT</th>
+            <th align="center"><img height="128" src="./checkerboard_results/set_214/img_2008_006353_checkboard_GT.png"></th>
+            <th align="center"><img height="128" src="./checkerboard_results/set_214/img_2008_008359_checkboard_GT.png"></th>
+            <th align="center"><img height="128" src="./checkerboard_results/set_214/img_2008_003894_checkboard_GT.png"></th>
+            <th align="center"><img height="128" src="./checkerboard_results/set_214/img_2010_001481_checkboard_GT.png"></th>
+            <th align="center"><img height="128" src="./checkerboard_results/set_214/img_2008_005182_checkboard_GT.png"></th>
+            <th align="center"><img height="128" src="./checkerboard_results/set_214/img_2010_001448_checkboard_GT.png"></th>
+            </tr>
+					<tr style="border-bottom:10px solid white" >
+				 <th colspan="100%"><hr style="border-bottom:1px dashed white"  ></th>
+            </tr>
+		  <tr>
+            <th align="center">SSNM</th>
+            <th align="center"><img height="128" src="./checkerboard_results/set_214/img_2008_006353_checkboard_SSNM.png"></th>
+            <th align="center"><img height="128" src="./checkerboard_results/set_214/img_2008_008359_checkboard_SSNM.png"></th>
+            <th align="center"><img height="128" src="./checkerboard_results/set_214/img_2008_003894_checkboard_SSNM.png"></th>
+            <th align="center"><img height="128" src="./checkerboard_results/set_214/img_2010_001481_checkboard_SSNM.png"></th>
+            <th align="center"><img height="128" src="./checkerboard_results/set_214/img_2008_005182_checkboard_SSNM.png"></th>
+            <th align="center"><img height="128" src="./checkerboard_results/set_214/img_2010_001448_checkboard_SSNM.png"></th>
+            </tr>
+            <tr>
+            <th align="center">DOCS</th>
+            <th align="center"><img height="128" src="./checkerboard_results/set_214/img_2008_006353_checkboard_DOCS.png"></th>
+            <th align="center"><img height="128" src="./checkerboard_results/set_214/img_2008_008359_checkboard_DOCS.png"></th>
+            <th align="center"><img height="128" src="./checkerboard_results/set_214/img_2008_003894_checkboard_DOCS.png"></th>
+            <th align="center"><img height="128" src="./checkerboard_results/set_214/img_2010_001481_checkboard_DOCS.png"></th>
+            <th align="center"><img height="128" src="./checkerboard_results/set_214/img_2008_005182_checkboard_DOCS.png"></th>
+            <th align="center"><img height="128" src="./checkerboard_results/set_214/img_2010_001448_checkboard_DOCS.png"></th>
+            </tr>
+            <tr>
+            <th align="center">Faktor etal.</th>
+            <th align="center"><img height="128" src="./checkerboard_results/set_214/img_2008_006353_checkboard_faktoretal.png"></th>
+            <th align="center"><img height="128" src="./checkerboard_results/set_214/img_2008_008359_checkboard_faktoretal.png"></th>
+            <th align="center"><img height="128" src="./checkerboard_results/set_214/img_2008_003894_checkboard_faktoretal.png"></th>
+            <th align="center"><img height="128" src="./checkerboard_results/set_214/img_2010_001481_checkboard_faktoretal.png"></th>
+            <th align="center"><img height="128" src="./checkerboard_results/set_214/img_2008_005182_checkboard_faktoretal.png"></th>
+            <th align="center"><img height="128" src="./checkerboard_results/set_214/img_2010_001448_checkboard_faktoretal.png"></th>
+            </tr>
+            <tr>
+            <th align="center">Ours</th>
+            <th align="center"><img height="128" src="./checkerboard_results/set_214/img_2008_006353_checkboard_ours.png"></th>
+            <th align="center"><img height="128" src="./checkerboard_results/set_214/img_2008_008359_checkboard_ours.png"></th>
+            <th align="center"><img height="128" src="./checkerboard_results/set_214/img_2008_003894_checkboard_ours.png"></th>
+            <th align="center"><img height="128" src="./checkerboard_results/set_214/img_2010_001481_checkboard_ours.png"></th>
+            <th align="center"><img height="128" src="./checkerboard_results/set_214/img_2008_005182_checkboard_ours.png"></th>
+            <th align="center"><img height="128" src="./checkerboard_results/set_214/img_2010_001448_checkboard_ours.png"></th>
+            </tr>
+        </table>
+        <button style="float: right;" type="button"><a href="#top">Back to Top</a></button> 
+        <hr>                     
+               
+        <h2>set_151</h2>
+        <table align="center">
+          <tr>
+            <th align="center">Image</th>
+            <th align="center"><img height="128" src="./checkerboard_results/set_151/2008_008109.jpg"></th>
+            <th align="center"><img height="128" src="./checkerboard_results/set_151/2008_005938.jpg"></th>
+            <th align="center"><img height="128" src="./checkerboard_results/set_151/2008_008428.jpg"></th>
+            <th align="center"><img height="128" src="./checkerboard_results/set_151/2009_004606.jpg"></th>
+            <th align="center"><img height="128" src="./checkerboard_results/set_151/2008_008121.jpg"></th>
+            <th align="center"><img height="128" src="./checkerboard_results/set_151/2009_000012.jpg"></th>
+            </tr>
+             <tr>
+            <th align="center">GT</th>
+            <th align="center"><img height="128" src="./checkerboard_results/set_151/img_2008_008109_checkboard_GT.png"></th>
+            <th align="center"><img height="128" src="./checkerboard_results/set_151/img_2008_005938_checkboard_GT.png"></th>
+            <th align="center"><img height="128" src="./checkerboard_results/set_151/img_2008_008428_checkboard_GT.png"></th>
+            <th align="center"><img height="128" src="./checkerboard_results/set_151/img_2009_004606_checkboard_GT.png"></th>
+            <th align="center"><img height="128" src="./checkerboard_results/set_151/img_2008_008121_checkboard_GT.png"></th>
+            <th align="center"><img height="128" src="./checkerboard_results/set_151/img_2009_000012_checkboard_GT.png"></th>
+            </tr>
+					<tr style="border-bottom:10px solid white" >
+				 <th colspan="100%"><hr style="border-bottom:1px dashed white"  ></th>
+            </tr>
+		  <tr>
+            <th align="center">SSNM</th>
+            <th align="center"><img height="128" src="./checkerboard_results/set_151/img_2008_008109_checkboard_SSNM.png"></th>
+            <th align="center"><img height="128" src="./checkerboard_results/set_151/img_2008_005938_checkboard_SSNM.png"></th>
+            <th align="center"><img height="128" src="./checkerboard_results/set_151/img_2008_008428_checkboard_SSNM.png"></th>
+            <th align="center"><img height="128" src="./checkerboard_results/set_151/img_2009_004606_checkboard_SSNM.png"></th>
+            <th align="center"><img height="128" src="./checkerboard_results/set_151/img_2008_008121_checkboard_SSNM.png"></th>
+            <th align="center"><img height="128" src="./checkerboard_results/set_151/img_2009_000012_checkboard_SSNM.png"></th>
+            </tr>
+            <tr>
+            <th align="center">DOCS</th>
+            <th align="center"><img height="128" src="./checkerboard_results/set_151/img_2008_008109_checkboard_DOCS.png"></th>
+            <th align="center"><img height="128" src="./checkerboard_results/set_151/img_2008_005938_checkboard_DOCS.png"></th>
+            <th align="center"><img height="128" src="./checkerboard_results/set_151/img_2008_008428_checkboard_DOCS.png"></th>
+            <th align="center"><img height="128" src="./checkerboard_results/set_151/img_2009_004606_checkboard_DOCS.png"></th>
+            <th align="center"><img height="128" src="./checkerboard_results/set_151/img_2008_008121_checkboard_DOCS.png"></th>
+            <th align="center"><img height="128" src="./checkerboard_results/set_151/img_2009_000012_checkboard_DOCS.png"></th>
+            </tr>
+            <tr>
+            <th align="center">Faktor etal.</th>
+            <th align="center"><img height="128" src="./checkerboard_results/set_151/img_2008_008109_checkboard_faktoretal.png"></th>
+            <th align="center"><img height="128" src="./checkerboard_results/set_151/img_2008_005938_checkboard_faktoretal.png"></th>
+            <th align="center"><img height="128" src="./checkerboard_results/set_151/img_2008_008428_checkboard_faktoretal.png"></th>
+            <th align="center"><img height="128" src="./checkerboard_results/set_151/img_2009_004606_checkboard_faktoretal.png"></th>
+            <th align="center"><img height="128" src="./checkerboard_results/set_151/img_2008_008121_checkboard_faktoretal.png"></th>
+            <th align="center"><img height="128" src="./checkerboard_results/set_151/img_2009_000012_checkboard_faktoretal.png"></th>
+            </tr>
+            <tr>
+            <th align="center">Ours</th>
+            <th align="center"><img height="128" src="./checkerboard_results/set_151/img_2008_008109_checkboard_ours.png"></th>
+            <th align="center"><img height="128" src="./checkerboard_results/set_151/img_2008_005938_checkboard_ours.png"></th>
+            <th align="center"><img height="128" src="./checkerboard_results/set_151/img_2008_008428_checkboard_ours.png"></th>
+            <th align="center"><img height="128" src="./checkerboard_results/set_151/img_2009_004606_checkboard_ours.png"></th>
+            <th align="center"><img height="128" src="./checkerboard_results/set_151/img_2008_008121_checkboard_ours.png"></th>
+            <th align="center"><img height="128" src="./checkerboard_results/set_151/img_2009_000012_checkboard_ours.png"></th>
+            </tr>
+        </table>
+        <button style="float: right;" type="button"><a href="#top">Back to Top</a></button> 
+        <hr> 
+                        
+       
+        <h2>set_210</h2>
+        <table align="center">
+          <tr>
+            <th align="center">Image</th>
+            <th align="center"><img height="128" src="./checkerboard_results/set_210/2008_005843.jpg"></th>
+            <th align="center"><img height="128" src="./checkerboard_results/set_210/2008_007587.jpg"></th>
+            <th align="center"><img height="128" src="./checkerboard_results/set_210/2008_007229.jpg"></th>
+            <th align="center"><img height="128" src="./checkerboard_results/set_210/2010_003088.jpg"></th>
+            <th align="center"><img height="128" src="./checkerboard_results/set_210/2008_001020.jpg"></th>
+            <th align="center"><img height="128" src="./checkerboard_results/set_210/2008_007211.jpg"></th>
+            </tr>
+             <tr>
+            <th align="center">GT</th>
+            <th align="center"><img height="128" src="./checkerboard_results/set_210/img_2008_005843_checkboard_GT.png"></th>
+            <th align="center"><img height="128" src="./checkerboard_results/set_210/img_2008_007587_checkboard_GT.png"></th>
+            <th align="center"><img height="128" src="./checkerboard_results/set_210/img_2008_007229_checkboard_GT.png"></th>
+            <th align="center"><img height="128" src="./checkerboard_results/set_210/img_2010_003088_checkboard_GT.png"></th>
+            <th align="center"><img height="128" src="./checkerboard_results/set_210/img_2008_001020_checkboard_GT.png"></th>
+            <th align="center"><img height="128" src="./checkerboard_results/set_210/img_2008_007211_checkboard_GT.png"></th>
+            </tr>
+					<tr style="border-bottom:10px solid white" >
+				 <th colspan="100%"><hr style="border-bottom:1px dashed white"  ></th>
+            </tr>
+		  <tr>
+            <th align="center">SSNM</th>
+            <th align="center"><img height="128" src="./checkerboard_results/set_210/img_2008_005843_checkboard_SSNM.png"></th>
+            <th align="center"><img height="128" src="./checkerboard_results/set_210/img_2008_007587_checkboard_SSNM.png"></th>
+            <th align="center"><img height="128" src="./checkerboard_results/set_210/img_2008_007229_checkboard_SSNM.png"></th>
+            <th align="center"><img height="128" src="./checkerboard_results/set_210/img_2010_003088_checkboard_SSNM.png"></th>
+            <th align="center"><img height="128" src="./checkerboard_results/set_210/img_2008_001020_checkboard_SSNM.png"></th>
+            <th align="center"><img height="128" src="./checkerboard_results/set_210/img_2008_007211_checkboard_SSNM.png"></th>
+            </tr>
+            <tr>
+            <th align="center">DOCS</th>
+            <th align="center"><img height="128" src="./checkerboard_results/set_210/img_2008_005843_checkboard_DOCS.png"></th>
+            <th align="center"><img height="128" src="./checkerboard_results/set_210/img_2008_007587_checkboard_DOCS.png"></th>
+            <th align="center"><img height="128" src="./checkerboard_results/set_210/img_2008_007229_checkboard_DOCS.png"></th>
+            <th align="center"><img height="128" src="./checkerboard_results/set_210/img_2010_003088_checkboard_DOCS.png"></th>
+            <th align="center"><img height="128" src="./checkerboard_results/set_210/img_2008_001020_checkboard_DOCS.png"></th>
+            <th align="center"><img height="128" src="./checkerboard_results/set_210/img_2008_007211_checkboard_DOCS.png"></th>
+            </tr>
+            <tr>
+            <th align="center">Faktor etal.</th>
+            <th align="center"><img height="128" src="./checkerboard_results/set_210/img_2008_005843_checkboard_faktoretal.png"></th>
+            <th align="center"><img height="128" src="./checkerboard_results/set_210/img_2008_007587_checkboard_faktoretal.png"></th>
+            <th align="center"><img height="128" src="./checkerboard_results/set_210/img_2008_007229_checkboard_faktoretal.png"></th>
+            <th align="center"><img height="128" src="./checkerboard_results/set_210/img_2010_003088_checkboard_faktoretal.png"></th>
+            <th align="center"><img height="128" src="./checkerboard_results/set_210/img_2008_001020_checkboard_faktoretal.png"></th>
+            <th align="center"><img height="128" src="./checkerboard_results/set_210/img_2008_007211_checkboard_faktoretal.png"></th>
+            </tr>
+            <tr>
+            <th align="center">Ours</th>
+            <th align="center"><img height="128" src="./checkerboard_results/set_210/img_2008_005843_checkboard_ours.png"></th>
+            <th align="center"><img height="128" src="./checkerboard_results/set_210/img_2008_007587_checkboard_ours.png"></th>
+            <th align="center"><img height="128" src="./checkerboard_results/set_210/img_2008_007229_checkboard_ours.png"></th>
+            <th align="center"><img height="128" src="./checkerboard_results/set_210/img_2010_003088_checkboard_ours.png"></th>
+            <th align="center"><img height="128" src="./checkerboard_results/set_210/img_2008_001020_checkboard_ours.png"></th>
+            <th align="center"><img height="128" src="./checkerboard_results/set_210/img_2008_007211_checkboard_ours.png"></th>
+            </tr>
+        </table>
+        <button style="float: right;" type="button"><a href="#top">Back to Top</a></button> 
+        <hr> 
+                         
+        
+        <h2>set_28</h2>
+        <table align="center">
+          <tr>
+            <th align="center">Image</th>
+            <th align="center"><img height="128" src="./checkerboard_results/set_28/2010_006054.jpg"></th>
+            <th align="center"><img height="128" src="./checkerboard_results/set_28/2008_001022.jpg"></th>
+            <th align="center"><img height="128" src="./checkerboard_results/set_28/2010_001893.jpg"></th>
+            <th align="center"><img height="128" src="./checkerboard_results/set_28/2008_005404.jpg"></th>
+            <th align="center"><img height="128" src="./checkerboard_results/set_28/2009_002843.jpg"></th>
+            <th align="center"><img height="128" src="./checkerboard_results/set_28/2008_006919.jpg"></th>
+            </tr>
+             <tr>
+            <th align="center">GT</th>
+            <th align="center"><img height="128" src="./checkerboard_results/set_28/img_2010_006054_checkboard_GT.png"></th>
+            <th align="center"><img height="128" src="./checkerboard_results/set_28/img_2008_001022_checkboard_GT.png"></th>
+            <th align="center"><img height="128" src="./checkerboard_results/set_28/img_2010_001893_checkboard_GT.png"></th>
+            <th align="center"><img height="128" src="./checkerboard_results/set_28/img_2008_005404_checkboard_GT.png"></th>
+            <th align="center"><img height="128" src="./checkerboard_results/set_28/img_2009_002843_checkboard_GT.png"></th>
+            <th align="center"><img height="128" src="./checkerboard_results/set_28/img_2008_006919_checkboard_GT.png"></th>
+            </tr>
+					<tr style="border-bottom:10px solid white" >
+				 <th colspan="100%"><hr style="border-bottom:1px dashed white"  ></th>
+            </tr>
+		  <tr>
+            <th align="center">SSNM</th>
+            <th align="center"><img height="128" src="./checkerboard_results/set_28/img_2010_006054_checkboard_SSNM.png"></th>
+            <th align="center"><img height="128" src="./checkerboard_results/set_28/img_2008_001022_checkboard_SSNM.png"></th>
+            <th align="center"><img height="128" src="./checkerboard_results/set_28/img_2010_001893_checkboard_SSNM.png"></th>
+            <th align="center"><img height="128" src="./checkerboard_results/set_28/img_2008_005404_checkboard_SSNM.png"></th>
+            <th align="center"><img height="128" src="./checkerboard_results/set_28/img_2009_002843_checkboard_SSNM.png"></th>
+            <th align="center"><img height="128" src="./checkerboard_results/set_28/img_2008_006919_checkboard_SSNM.png"></th>
+            </tr>
+            <tr>
+            <th align="center">DOCS</th>
+            <th align="center"><img height="128" src="./checkerboard_results/set_28/img_2010_006054_checkboard_DOCS.png"></th>
+            <th align="center"><img height="128" src="./checkerboard_results/set_28/img_2008_001022_checkboard_DOCS.png"></th>
+            <th align="center"><img height="128" src="./checkerboard_results/set_28/img_2010_001893_checkboard_DOCS.png"></th>
+            <th align="center"><img height="128" src="./checkerboard_results/set_28/img_2008_005404_checkboard_DOCS.png"></th>
+            <th align="center"><img height="128" src="./checkerboard_results/set_28/img_2009_002843_checkboard_DOCS.png"></th>
+            <th align="center"><img height="128" src="./checkerboard_results/set_28/img_2008_006919_checkboard_DOCS.png"></th>
+            </tr>
+            <tr>
+            <th align="center">Faktor etal.</th>
+            <th align="center"><img height="128" src="./checkerboard_results/set_28/img_2010_006054_checkboard_faktoretal.png"></th>
+            <th align="center"><img height="128" src="./checkerboard_results/set_28/img_2008_001022_checkboard_faktoretal.png"></th>
+            <th align="center"><img height="128" src="./checkerboard_results/set_28/img_2010_001893_checkboard_faktoretal.png"></th>
+            <th align="center"><img height="128" src="./checkerboard_results/set_28/img_2008_005404_checkboard_faktoretal.png"></th>
+            <th align="center"><img height="128" src="./checkerboard_results/set_28/img_2009_002843_checkboard_faktoretal.png"></th>
+            <th align="center"><img height="128" src="./checkerboard_results/set_28/img_2008_006919_checkboard_faktoretal.png"></th>
+            </tr>
+            <tr>
+            <th align="center">Ours</th>
+            <th align="center"><img height="128" src="./checkerboard_results/set_28/img_2010_006054_checkboard_ours.png"></th>
+            <th align="center"><img height="128" src="./checkerboard_results/set_28/img_2008_001022_checkboard_ours.png"></th>
+            <th align="center"><img height="128" src="./checkerboard_results/set_28/img_2010_001893_checkboard_ours.png"></th>
+            <th align="center"><img height="128" src="./checkerboard_results/set_28/img_2008_005404_checkboard_ours.png"></th>
+            <th align="center"><img height="128" src="./checkerboard_results/set_28/img_2009_002843_checkboard_ours.png"></th>
+            <th align="center"><img height="128" src="./checkerboard_results/set_28/img_2008_006919_checkboard_ours.png"></th>
+            </tr>
+        </table>
+        <button style="float: right;" type="button"><a href="#top">Back to Top</a></button> 
+        <hr> 
+        
+  <h2>set_91</h2>
+        <table align="center">
+          <tr>
+            <th align="center">Image</th>
+            <th align="center"><img height="128" src="./checkerboard_results/set_91/2010_001633.jpg"></th>
+            <th align="center"><img height="128" src="./checkerboard_results/set_91/2008_003520.jpg"></th>
+            <th align="center"><img height="128" src="./checkerboard_results/set_91/2010_005394.jpg"></th>
+            <th align="center"><img height="128" src="./checkerboard_results/set_91/2010_000586.jpg"></th>
+            <th align="center"><img height="128" src="./checkerboard_results/set_91/2010_003481.jpg"></th>
+            <th align="center"><img height="128" src="./checkerboard_results/set_91/2010_004304.jpg"></th>
+            </tr>
+             <tr>
+            <th align="center">GT</th>
+            <th align="center"><img height="128" src="./checkerboard_results/set_91/img_2010_001633_checkboard_GT.png"></th>
+            <th align="center"><img height="128" src="./checkerboard_results/set_91/img_2008_003520_checkboard_GT.png"></th>
+            <th align="center"><img height="128" src="./checkerboard_results/set_91/img_2010_005394_checkboard_GT.png"></th>
+            <th align="center"><img height="128" src="./checkerboard_results/set_91/img_2010_000586_checkboard_GT.png"></th>
+            <th align="center"><img height="128" src="./checkerboard_results/set_91/img_2010_003481_checkboard_GT.png"></th>
+            <th align="center"><img height="128" src="./checkerboard_results/set_91/img_2010_004304_checkboard_GT.png"></th>
+            </tr>
+					<tr style="border-bottom:10px solid white" >
+				 <th colspan="100%"><hr style="border-bottom:1px dashed white"  ></th>
+            </tr>
+		  <tr>
+            <th align="center">SSNM</th>
+            <th align="center"><img height="128" src="./checkerboard_results/set_91/img_2010_001633_checkboard_SSNM.png"></th>
+            <th align="center"><img height="128" src="./checkerboard_results/set_91/img_2008_003520_checkboard_SSNM.png"></th>
+            <th align="center"><img height="128" src="./checkerboard_results/set_91/img_2010_005394_checkboard_SSNM.png"></th>
+            <th align="center"><img height="128" src="./checkerboard_results/set_91/img_2010_000586_checkboard_SSNM.png"></th>
+            <th align="center"><img height="128" src="./checkerboard_results/set_91/img_2010_003481_checkboard_SSNM.png"></th>
+            <th align="center"><img height="128" src="./checkerboard_results/set_91/img_2010_004304_checkboard_SSNM.png"></th>
+            </tr>
+            <tr>
+            <th align="center">DOCS</th>
+            <th align="center"><img height="128" src="./checkerboard_results/set_91/img_2010_001633_checkboard_DOCS.png"></th>
+            <th align="center"><img height="128" src="./checkerboard_results/set_91/img_2008_003520_checkboard_DOCS.png"></th>
+            <th align="center"><img height="128" src="./checkerboard_results/set_91/img_2010_005394_checkboard_DOCS.png"></th>
+            <th align="center"><img height="128" src="./checkerboard_results/set_91/img_2010_000586_checkboard_DOCS.png"></th>
+            <th align="center"><img height="128" src="./checkerboard_results/set_91/img_2010_003481_checkboard_DOCS.png"></th>
+            <th align="center"><img height="128" src="./checkerboard_results/set_91/img_2010_004304_checkboard_DOCS.png"></th>
+            </tr>
+            <tr>
+            <th align="center">Faktor etal.</th>
+            <th align="center"><img height="128" src="./checkerboard_results/set_91/img_2010_001633_checkboard_faktoretal.png"></th>
+            <th align="center"><img height="128" src="./checkerboard_results/set_91/img_2008_003520_checkboard_faktoretal.png"></th>
+            <th align="center"><img height="128" src="./checkerboard_results/set_91/img_2010_005394_checkboard_faktoretal.png"></th>
+            <th align="center"><img height="128" src="./checkerboard_results/set_91/img_2010_000586_checkboard_faktoretal.png"></th>
+            <th align="center"><img height="128" src="./checkerboard_results/set_91/img_2010_003481_checkboard_faktoretal.png"></th>
+            <th align="center"><img height="128" src="./checkerboard_results/set_91/img_2010_004304_checkboard_faktoretal.png"></th>
+            </tr>
+            <tr>
+            <th align="center">Ours</th>
+            <th align="center"><img height="128" src="./checkerboard_results/set_91/img_2010_001633_checkboard_ours.png"></th>
+            <th align="center"><img height="128" src="./checkerboard_results/set_91/img_2008_003520_checkboard_ours.png"></th>
+            <th align="center"><img height="128" src="./checkerboard_results/set_91/img_2010_005394_checkboard_ours.png"></th>
+            <th align="center"><img height="128" src="./checkerboard_results/set_91/img_2010_000586_checkboard_ours.png"></th>
+            <th align="center"><img height="128" src="./checkerboard_results/set_91/img_2010_003481_checkboard_ours.png"></th>
+            <th align="center"><img height="128" src="./checkerboard_results/set_91/img_2010_004304_checkboard_ours.png"></th>
+            </tr>
+        </table>
+        <button style="float: right;" type="button"><a href="#top">Back to Top</a></button> 
+        <hr> 
+         
+         
+        <h2>set_207</h2>
+        <table align="center">
+          <tr>
+            <th align="center">Image</th>
+            <th align="center"><img height="128" src="./checkerboard_results/set_207/2010_002023.jpg"></th>
+            <th align="center"><img height="128" src="./checkerboard_results/set_207/2010_003473.jpg"></th>
+            <th align="center"><img height="128" src="./checkerboard_results/set_207/2009_005215.jpg"></th>
+            <th align="center"><img height="128" src="./checkerboard_results/set_207/2009_002608.jpg"></th>
+            <th align="center"><img height="128" src="./checkerboard_results/set_207/2009_000122.jpg"></th>
+            <th align="center"><img height="128" src="./checkerboard_results/set_207/2008_002358.jpg"></th>
+            </tr>
+             <tr>
+            <th align="center">GT</th>
+            <th align="center"><img height="128" src="./checkerboard_results/set_207/img_2010_002023_checkboard_GT.png"></th>
+            <th align="center"><img height="128" src="./checkerboard_results/set_207/img_2010_003473_checkboard_GT.png"></th>
+            <th align="center"><img height="128" src="./checkerboard_results/set_207/img_2009_005215_checkboard_GT.png"></th>
+            <th align="center"><img height="128" src="./checkerboard_results/set_207/img_2009_002608_checkboard_GT.png"></th>
+            <th align="center"><img height="128" src="./checkerboard_results/set_207/img_2009_000122_checkboard_GT.png"></th>
+            <th align="center"><img height="128" src="./checkerboard_results/set_207/img_2008_002358_checkboard_GT.png"></th>
+            </tr>
+					<tr style="border-bottom:10px solid white" >
+				 <th colspan="100%"><hr style="border-bottom:1px dashed white"  ></th>
+            </tr>
+		  <tr>
+            <th align="center">SSNM</th>
+            <th align="center"><img height="128" src="./checkerboard_results/set_207/img_2010_002023_checkboard_SSNM.png"></th>
+            <th align="center"><img height="128" src="./checkerboard_results/set_207/img_2010_003473_checkboard_SSNM.png"></th>
+            <th align="center"><img height="128" src="./checkerboard_results/set_207/img_2009_005215_checkboard_SSNM.png"></th>
+            <th align="center"><img height="128" src="./checkerboard_results/set_207/img_2009_002608_checkboard_SSNM.png"></th>
+            <th align="center"><img height="128" src="./checkerboard_results/set_207/img_2009_000122_checkboard_SSNM.png"></th>
+            <th align="center"><img height="128" src="./checkerboard_results/set_207/img_2008_002358_checkboard_SSNM.png"></th>
+            </tr>
+            <tr>
+            <th align="center">DOCS</th>
+            <th align="center"><img height="128" src="./checkerboard_results/set_207/img_2010_002023_checkboard_DOCS.png"></th>
+            <th align="center"><img height="128" src="./checkerboard_results/set_207/img_2010_003473_checkboard_DOCS.png"></th>
+            <th align="center"><img height="128" src="./checkerboard_results/set_207/img_2009_005215_checkboard_DOCS.png"></th>
+            <th align="center"><img height="128" src="./checkerboard_results/set_207/img_2009_002608_checkboard_DOCS.png"></th>
+            <th align="center"><img height="128" src="./checkerboard_results/set_207/img_2009_000122_checkboard_DOCS.png"></th>
+            <th align="center"><img height="128" src="./checkerboard_results/set_207/img_2008_002358_checkboard_DOCS.png"></th>
+            </tr>
+            <tr>
+            <th align="center">Faktor etal.</th>
+            <th align="center"><img height="128" src="./checkerboard_results/set_207/img_2010_002023_checkboard_faktoretal.png"></th>
+            <th align="center"><img height="128" src="./checkerboard_results/set_207/img_2010_003473_checkboard_faktoretal.png"></th>
+            <th align="center"><img height="128" src="./checkerboard_results/set_207/img_2009_005215_checkboard_faktoretal.png"></th>
+            <th align="center"><img height="128" src="./checkerboard_results/set_207/img_2009_002608_checkboard_faktoretal.png"></th>
+            <th align="center"><img height="128" src="./checkerboard_results/set_207/img_2009_000122_checkboard_faktoretal.png"></th>
+            <th align="center"><img height="128" src="./checkerboard_results/set_207/img_2008_002358_checkboard_faktoretal.png"></th>
+            </tr>
+            <tr>
+            <th align="center">Ours</th>
+            <th align="center"><img height="128" src="./checkerboard_results/set_207/img_2010_002023_checkboard_ours.png"></th>
+            <th align="center"><img height="128" src="./checkerboard_results/set_207/img_2010_003473_checkboard_ours.png"></th>
+            <th align="center"><img height="128" src="./checkerboard_results/set_207/img_2009_005215_checkboard_ours.png"></th>
+            <th align="center"><img height="128" src="./checkerboard_results/set_207/img_2009_002608_checkboard_ours.png"></th>
+            <th align="center"><img height="128" src="./checkerboard_results/set_207/img_2009_000122_checkboard_ours.png"></th>
+            <th align="center"><img height="128" src="./checkerboard_results/set_207/img_2008_002358_checkboard_ours.png"></th>
+            </tr>
+        </table>
+        <button style="float: right;" type="button"><a href="#top">Back to Top</a></button> 
+        <hr> 
+         
+           
+        <h2>set_64</h2>
+        <table align="center">
+          <tr>
+            <th align="center">Image</th>
+            <th align="center"><img height="128" src="./checkerboard_results/set_64/2010_004211.jpg"></th>
+            <th align="center"><img height="128" src="./checkerboard_results/set_64/2009_002563.jpg"></th>
+            <th align="center"><img height="128" src="./checkerboard_results/set_64/2008_008585.jpg"></th>
+            <th align="center"><img height="128" src="./checkerboard_results/set_64/2008_006007.jpg"></th>
+            <th align="center"><img height="128" src="./checkerboard_results/set_64/2010_003764.jpg"></th>
+            <th align="center"><img height="128" src="./checkerboard_results/set_64/2010_001957.jpg"></th>
+            </tr>
+             <tr>
+            <th align="center">GT</th>
+            <th align="center"><img height="128" src="./checkerboard_results/set_64/img_2010_004211_checkboard_GT.png"></th>
+            <th align="center"><img height="128" src="./checkerboard_results/set_64/img_2009_002563_checkboard_GT.png"></th>
+            <th align="center"><img height="128" src="./checkerboard_results/set_64/img_2008_008585_checkboard_GT.png"></th>
+            <th align="center"><img height="128" src="./checkerboard_results/set_64/img_2008_006007_checkboard_GT.png"></th>
+            <th align="center"><img height="128" src="./checkerboard_results/set_64/img_2010_003764_checkboard_GT.png"></th>
+            <th align="center"><img height="128" src="./checkerboard_results/set_64/img_2010_001957_checkboard_GT.png"></th>
+            </tr>
+					<tr style="border-bottom:10px solid white" >
+				 <th colspan="100%"><hr style="border-bottom:1px dashed white"  ></th>
+            </tr>
+		  <tr>
+            <th align="center">SSNM</th>
+            <th align="center"><img height="128" src="./checkerboard_results/set_64/img_2010_004211_checkboard_SSNM.png"></th>
+            <th align="center"><img height="128" src="./checkerboard_results/set_64/img_2009_002563_checkboard_SSNM.png"></th>
+            <th align="center"><img height="128" src="./checkerboard_results/set_64/img_2008_008585_checkboard_SSNM.png"></th>
+            <th align="center"><img height="128" src="./checkerboard_results/set_64/img_2008_006007_checkboard_SSNM.png"></th>
+            <th align="center"><img height="128" src="./checkerboard_results/set_64/img_2010_003764_checkboard_SSNM.png"></th>
+            <th align="center"><img height="128" src="./checkerboard_results/set_64/img_2010_001957_checkboard_SSNM.png"></th>
+            </tr>
+            <tr>
+            <th align="center">DOCS</th>
+            <th align="center"><img height="128" src="./checkerboard_results/set_64/img_2010_004211_checkboard_DOCS.png"></th>
+            <th align="center"><img height="128" src="./checkerboard_results/set_64/img_2009_002563_checkboard_DOCS.png"></th>
+            <th align="center"><img height="128" src="./checkerboard_results/set_64/img_2008_008585_checkboard_DOCS.png"></th>
+            <th align="center"><img height="128" src="./checkerboard_results/set_64/img_2008_006007_checkboard_DOCS.png"></th>
+            <th align="center"><img height="128" src="./checkerboard_results/set_64/img_2010_003764_checkboard_DOCS.png"></th>
+            <th align="center"><img height="128" src="./checkerboard_results/set_64/img_2010_001957_checkboard_DOCS.png"></th>
+            </tr>
+            <tr>
+            <th align="center">Faktor etal.</th>
+            <th align="center"><img height="128" src="./checkerboard_results/set_64/img_2010_004211_checkboard_faktoretal.png"></th>
+            <th align="center"><img height="128" src="./checkerboard_results/set_64/img_2009_002563_checkboard_faktoretal.png"></th>
+            <th align="center"><img height="128" src="./checkerboard_results/set_64/img_2008_008585_checkboard_faktoretal.png"></th>
+            <th align="center"><img height="128" src="./checkerboard_results/set_64/img_2008_006007_checkboard_faktoretal.png"></th>
+            <th align="center"><img height="128" src="./checkerboard_results/set_64/img_2010_003764_checkboard_faktoretal.png"></th>
+            <th align="center"><img height="128" src="./checkerboard_results/set_64/img_2010_001957_checkboard_faktoretal.png"></th>
+            </tr>
+            <tr>
+            <th align="center">Ours</th>
+            <th align="center"><img height="128" src="./checkerboard_results/set_64/img_2010_004211_checkboard_ours.png"></th>
+            <th align="center"><img height="128" src="./checkerboard_results/set_64/img_2009_002563_checkboard_ours.png"></th>
+            <th align="center"><img height="128" src="./checkerboard_results/set_64/img_2008_008585_checkboard_ours.png"></th>
+            <th align="center"><img height="128" src="./checkerboard_results/set_64/img_2008_006007_checkboard_ours.png"></th>
+            <th align="center"><img height="128" src="./checkerboard_results/set_64/img_2010_003764_checkboard_ours.png"></th>
+            <th align="center"><img height="128" src="./checkerboard_results/set_64/img_2010_001957_checkboard_ours.png"></th>
+            </tr>
+        </table>
+        <button style="float: right;" type="button"><a href="#top">Back to Top</a></button> 
+        <hr> 
+         
+        
+        <h2>set_206</h2>
+        <table align="center">
+          <tr>
+            <th align="center">Image</th>
+            <th align="center"><img height="128" src="./checkerboard_results/set_206/2010_003526.jpg"></th>
+            <th align="center"><img height="128" src="./checkerboard_results/set_206/2010_003716.jpg"></th>
+            <th align="center"><img height="128" src="./checkerboard_results/set_206/2008_002784.jpg"></th>
+            <th align="center"><img height="128" src="./checkerboard_results/set_206/2008_008086.jpg"></th>
+            <th align="center"><img height="128" src="./checkerboard_results/set_206/2008_002970.jpg"></th>
+            <th align="center"><img height="128" src="./checkerboard_results/set_206/2010_004817.jpg"></th>
+            </tr>
+             <tr>
+            <th align="center">GT</th>
+            <th align="center"><img height="128" src="./checkerboard_results/set_206/img_2010_003526_checkboard_GT.png"></th>
+            <th align="center"><img height="128" src="./checkerboard_results/set_206/img_2010_003716_checkboard_GT.png"></th>
+            <th align="center"><img height="128" src="./checkerboard_results/set_206/img_2008_002784_checkboard_GT.png"></th>
+            <th align="center"><img height="128" src="./checkerboard_results/set_206/img_2008_008086_checkboard_GT.png"></th>
+            <th align="center"><img height="128" src="./checkerboard_results/set_206/img_2008_002970_checkboard_GT.png"></th>
+            <th align="center"><img height="128" src="./checkerboard_results/set_206/img_2010_004817_checkboard_GT.png"></th>
+            </tr>
+					<tr style="border-bottom:10px solid white" >
+				 <th colspan="100%"><hr style="border-bottom:1px dashed white"  ></th>
+            </tr>
+		  <tr>
+            <th align="center">SSNM</th>
+            <th align="center"><img height="128" src="./checkerboard_results/set_206/img_2010_003526_checkboard_SSNM.png"></th>
+            <th align="center"><img height="128" src="./checkerboard_results/set_206/img_2010_003716_checkboard_SSNM.png"></th>
+            <th align="center"><img height="128" src="./checkerboard_results/set_206/img_2008_002784_checkboard_SSNM.png"></th>
+            <th align="center"><img height="128" src="./checkerboard_results/set_206/img_2008_008086_checkboard_SSNM.png"></th>
+            <th align="center"><img height="128" src="./checkerboard_results/set_206/img_2008_002970_checkboard_SSNM.png"></th>
+            <th align="center"><img height="128" src="./checkerboard_results/set_206/img_2010_004817_checkboard_SSNM.png"></th>
+            </tr>
+            <tr>
+            <th align="center">DOCS</th>
+            <th align="center"><img height="128" src="./checkerboard_results/set_206/img_2010_003526_checkboard_DOCS.png"></th>
+            <th align="center"><img height="128" src="./checkerboard_results/set_206/img_2010_003716_checkboard_DOCS.png"></th>
+            <th align="center"><img height="128" src="./checkerboard_results/set_206/img_2008_002784_checkboard_DOCS.png"></th>
+            <th align="center"><img height="128" src="./checkerboard_results/set_206/img_2008_008086_checkboard_DOCS.png"></th>
+            <th align="center"><img height="128" src="./checkerboard_results/set_206/img_2008_002970_checkboard_DOCS.png"></th>
+            <th align="center"><img height="128" src="./checkerboard_results/set_206/img_2010_004817_checkboard_DOCS.png"></th>
+            </tr>
+            <tr>
+            <th align="center">Faktor etal.</th>
+            <th align="center"><img height="128" src="./checkerboard_results/set_206/img_2010_003526_checkboard_faktoretal.png"></th>
+            <th align="center"><img height="128" src="./checkerboard_results/set_206/img_2010_003716_checkboard_faktoretal.png"></th>
+            <th align="center"><img height="128" src="./checkerboard_results/set_206/img_2008_002784_checkboard_faktoretal.png"></th>
+            <th align="center"><img height="128" src="./checkerboard_results/set_206/img_2008_008086_checkboard_faktoretal.png"></th>
+            <th align="center"><img height="128" src="./checkerboard_results/set_206/img_2008_002970_checkboard_faktoretal.png"></th>
+            <th align="center"><img height="128" src="./checkerboard_results/set_206/img_2010_004817_checkboard_faktoretal.png"></th>
+            </tr>
+            <tr>
+            <th align="center">Ours</th>
+            <th align="center"><img height="128" src="./checkerboard_results/set_206/img_2010_003526_checkboard_ours.png"></th>
+            <th align="center"><img height="128" src="./checkerboard_results/set_206/img_2010_003716_checkboard_ours.png"></th>
+            <th align="center"><img height="128" src="./checkerboard_results/set_206/img_2008_002784_checkboard_ours.png"></th>
+            <th align="center"><img height="128" src="./checkerboard_results/set_206/img_2008_008086_checkboard_ours.png"></th>
+            <th align="center"><img height="128" src="./checkerboard_results/set_206/img_2008_002970_checkboard_ours.png"></th>
+            <th align="center"><img height="128" src="./checkerboard_results/set_206/img_2010_004817_checkboard_ours.png"></th>
+            </tr>
+        </table>
+        <button style="float: right;" type="button"><a href="#top">Back to Top</a></button> 
+        <hr> 
+         
+        
+        <h2>set_220</h2>
+        <table align="center">
+          <tr>
+            <th align="center">Image</th>
+            <th align="center"><img height="128" src="./checkerboard_results/set_220/2009_004535.jpg"></th>
+            <th align="center"><img height="128" src="./checkerboard_results/set_220/2009_005111.jpg"></th>
+            <th align="center"><img height="128" src="./checkerboard_results/set_220/2009_001972.jpg"></th>
+            <th align="center"><img height="128" src="./checkerboard_results/set_220/2009_004895.jpg"></th>
+            <th align="center"><img height="128" src="./checkerboard_results/set_220/2010_001583.jpg"></th>
+            <th align="center"><img height="128" src="./checkerboard_results/set_220/2008_005182.jpg"></th>
+            </tr>
+             <tr>
+            <th align="center">GT</th>
+            <th align="center"><img height="128" src="./checkerboard_results/set_220/img_2009_004535_checkboard_GT.png"></th>
+            <th align="center"><img height="128" src="./checkerboard_results/set_220/img_2009_005111_checkboard_GT.png"></th>
+            <th align="center"><img height="128" src="./checkerboard_results/set_220/img_2009_001972_checkboard_GT.png"></th>
+            <th align="center"><img height="128" src="./checkerboard_results/set_220/img_2009_004895_checkboard_GT.png"></th>
+            <th align="center"><img height="128" src="./checkerboard_results/set_220/img_2010_001583_checkboard_GT.png"></th>
+            <th align="center"><img height="128" src="./checkerboard_results/set_220/img_2008_005182_checkboard_GT.png"></th>
+            </tr>
+					<tr style="border-bottom:10px solid white" >
+				 <th colspan="100%"><hr style="border-bottom:1px dashed white"  ></th>
+            </tr>
+			<tr>
+            <th align="center">SSNM</th>
+            <th align="center"><img height="128" src="./checkerboard_results/set_220/img_2009_004535_checkboard_SSNM.png"></th>
+            <th align="center"><img height="128" src="./checkerboard_results/set_220/img_2009_005111_checkboard_SSNM.png"></th>
+            <th align="center"><img height="128" src="./checkerboard_results/set_220/img_2009_001972_checkboard_SSNM.png"></th>
+            <th align="center"><img height="128" src="./checkerboard_results/set_220/img_2009_004895_checkboard_SSNM.png"></th>
+            <th align="center"><img height="128" src="./checkerboard_results/set_220/img_2010_001583_checkboard_SSNM.png"></th>
+            <th align="center"><img height="128" src="./checkerboard_results/set_220/img_2008_005182_checkboard_SSNM.png"></th>
+            </tr>
+            <tr>
+            <th align="center">DOCS</th>
+            <th align="center"><img height="128" src="./checkerboard_results/set_220/img_2009_004535_checkboard_DOCS.png"></th>
+            <th align="center"><img height="128" src="./checkerboard_results/set_220/img_2009_005111_checkboard_DOCS.png"></th>
+            <th align="center"><img height="128" src="./checkerboard_results/set_220/img_2009_001972_checkboard_DOCS.png"></th>
+            <th align="center"><img height="128" src="./checkerboard_results/set_220/img_2009_004895_checkboard_DOCS.png"></th>
+            <th align="center"><img height="128" src="./checkerboard_results/set_220/img_2010_001583_checkboard_DOCS.png"></th>
+            <th align="center"><img height="128" src="./checkerboard_results/set_220/img_2008_005182_checkboard_DOCS.png"></th>
+            </tr>
+            <tr>
+            <th align="center">Faktor etal.</th>
+            <th align="center"><img height="128" src="./checkerboard_results/set_220/img_2009_004535_checkboard_faktoretal.png"></th>
+            <th align="center"><img height="128" src="./checkerboard_results/set_220/img_2009_005111_checkboard_faktoretal.png"></th>
+            <th align="center"><img height="128" src="./checkerboard_results/set_220/img_2009_001972_checkboard_faktoretal.png"></th>
+            <th align="center"><img height="128" src="./checkerboard_results/set_220/img_2009_004895_checkboard_faktoretal.png"></th>
+            <th align="center"><img height="128" src="./checkerboard_results/set_220/img_2010_001583_checkboard_faktoretal.png"></th>
+            <th align="center"><img height="128" src="./checkerboard_results/set_220/img_2008_005182_checkboard_faktoretal.png"></th>
+            </tr>
+            <tr>
+            <th align="center">Ours</th>
+            <th align="center"><img height="128" src="./checkerboard_results/set_220/img_2009_004535_checkboard_ours.png"></th>
+            <th align="center"><img height="128" src="./checkerboard_results/set_220/img_2009_005111_checkboard_ours.png"></th>
+            <th align="center"><img height="128" src="./checkerboard_results/set_220/img_2009_001972_checkboard_ours.png"></th>
+            <th align="center"><img height="128" src="./checkerboard_results/set_220/img_2009_004895_checkboard_ours.png"></th>
+            <th align="center"><img height="128" src="./checkerboard_results/set_220/img_2010_001583_checkboard_ours.png"></th>
+            <th align="center"><img height="128" src="./checkerboard_results/set_220/img_2008_005182_checkboard_ours.png"></th>
+            </tr>
+        </table>
+        <button style="float: right;" type="button"><a href="#top">Back to Top</a></button> 
+        <hr> 
+         
+        
+        <h2>References</h2>
+		<p>[1] <strong>Co-segmentation by Composition.</strong> Faktor et al. ICCV 2013</p>
+		<p>[2] <strong>Deep Object Co-Segmentation.</strong> Li et al. ACCV 2018</p>
+		<p>[3] <strong>Deep Object Co-Segmentation via Spatial-Semantic Network Modulation.</strong> Zhang et al. AAAI 2020</p>
+		<p>&nbsp;</p>
+	
+	<div style="text-align: center">
+  <button type="button"><a href="../../index.html">Back to home</a></button> 
+</div>
+</div>
+</body></html>

@@ -1,0 +1,267 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml"><head><meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
+
+<title>Deep ViT Features as Dense Visual Descriptors: Supplementary Material</title>
+<link href="../style.css" rel="stylesheet" type="text/css">
+</head>
+	
+<body>
+<div class="container">
+  <button type="button"><a href="../../index.html">Back to home</a></button> 
+  <h1 name="top" align="center">Co-segmentation Ablations on PASCAL- Co</h1>
+   <p align="left">We present  ablations on PASCAL-Co for 4 randomly chosen sets on several scenarios (see Tab. 1 bottom):&nbsp; DINO ResNet, Supervised Resnet, Supervised ViT&nbsp; and saliency baseline. Our method exhibits more fine-graned results without "speckle" artifacts.&nbsp;</p>
+    <p>&nbsp;</p>        
+      
+            
+        <h2>set_164</h2>
+        <table align="center">
+          <tr>
+            <th align="center">Image</th>
+            <th align="center"><img height="128" src="./ablation_results/set_164/2009_001203.jpg"></th>
+            <th align="center"><img height="128" src="./ablation_results/set_164/2008_000499.jpg"></th>
+            <th align="center"><img height="128" src="./ablation_results/set_164/2009_001172.jpg"></th>
+            <th align="center"><img height="128" src="./ablation_results/set_164/2010_000808.jpg"></th>
+            <th align="center"><img height="128" src="./ablation_results/set_164/2008_004539.jpg"></th>
+            <th align="center"><img height="128" src="./ablation_results/set_164/2008_007014.jpg"></th>
+            </tr>
+            <tr>
+            <th align="center">DINO Resnet</th>
+            <th align="center"><img height="128" src="./ablation_results/set_164/img_2009_001203_checkboard_dino_resnet.png"></th>
+            <th align="center"><img height="128" src="./ablation_results/set_164/img_2008_000499_checkboard_dino_resnet.png"></th>
+            <th align="center"><img height="128" src="./ablation_results/set_164/img_2009_001172_checkboard_dino_resnet.png"></th>
+            <th align="center"><img height="128" src="./ablation_results/set_164/img_2010_000808_checkboard_dino_resnet.png"></th>
+            <th align="center"><img height="128" src="./ablation_results/set_164/img_2008_004539_checkboard_dino_resnet.png"></th>
+            <th align="center"><img height="128" src="./ablation_results/set_164/img_2008_007014_checkboard_dino_resnet.png"></th>
+            </tr>
+            <tr>
+            <th align="center">Sup. Resnet</th>
+            <th align="center"><img height="128" src="./ablation_results/set_164/img_2009_001203_checkboard_sup_resnet.png"></th>
+            <th align="center"><img height="128" src="./ablation_results/set_164/img_2008_000499_checkboard_sup_resnet.png"></th>
+            <th align="center"><img height="128" src="./ablation_results/set_164/img_2009_001172_checkboard_sup_resnet.png"></th>
+            <th align="center"><img height="128" src="./ablation_results/set_164/img_2010_000808_checkboard_sup_resnet.png"></th>
+            <th align="center"><img height="128" src="./ablation_results/set_164/img_2008_004539_checkboard_sup_resnet.png"></th>
+            <th align="center"><img height="128" src="./ablation_results/set_164/img_2008_007014_checkboard_sup_resnet.png"></th>
+            </tr>
+            <tr>
+            <th align="center">Sup. ViT</th>
+            <th align="center"><img height="128" src="./ablation_results/set_164/img_2009_001203_checkboard_sup_vit.png"></th>
+            <th align="center"><img height="128" src="./ablation_results/set_164/img_2008_000499_checkboard_sup_vit.png"></th>
+            <th align="center"><img height="128" src="./ablation_results/set_164/img_2009_001172_checkboard_sup_vit.png"></th>
+            <th align="center"><img height="128" src="./ablation_results/set_164/img_2010_000808_checkboard_sup_vit.png"></th>
+            <th align="center"><img height="128" src="./ablation_results/set_164/img_2008_004539_checkboard_sup_vit.png"></th>
+            <th align="center"><img height="128" src="./ablation_results/set_164/img_2008_007014_checkboard_sup_vit.png"></th>
+            </tr>
+            <tr>
+            <th align="center">Saliency</th>
+            <th align="center"><img height="128" src="./ablation_results/set_164/img_2009_001203_checkboard_saliency.png"></th>
+            <th align="center"><img height="128" src="./ablation_results/set_164/img_2008_000499_checkboard_saliency.png"></th>
+            <th align="center"><img height="128" src="./ablation_results/set_164/img_2009_001172_checkboard_saliency.png"></th>
+            <th align="center"><img height="128" src="./ablation_results/set_164/img_2010_000808_checkboard_saliency.png"></th>
+            <th align="center"><img height="128" src="./ablation_results/set_164/img_2008_004539_checkboard_saliency.png"></th>
+            <th align="center"><img height="128" src="./ablation_results/set_164/img_2008_007014_checkboard_saliency.png"></th>
+            </tr>
+            <tr>
+            <th align="center">Ours</th>
+            <th align="center"><img height="128" src="./ablation_results/set_164/img_2009_001203_checkboard_ours.png"></th>
+            <th align="center"><img height="128" src="./ablation_results/set_164/img_2008_000499_checkboard_ours.png"></th>
+            <th align="center"><img height="128" src="./ablation_results/set_164/img_2009_001172_checkboard_ours.png"></th>
+            <th align="center"><img height="128" src="./ablation_results/set_164/img_2010_000808_checkboard_ours.png"></th>
+            <th align="center"><img height="128" src="./ablation_results/set_164/img_2008_004539_checkboard_ours.png"></th>
+            <th align="center"><img height="128" src="./ablation_results/set_164/img_2008_007014_checkboard_ours.png"></th>
+            </tr>
+        </table>
+        <button style="float: right;" type="button"><a href="#top">Back to Top</a></button> 
+        <hr> 
+         
+        
+        
+        <h2>set_138</h2>
+        <table align="center">
+          <tr>
+            <th align="center">Image</th>
+            <th align="center"><img height="128" src="./ablation_results/set_138/2010_001503.jpg"></th>
+            <th align="center"><img height="128" src="./ablation_results/set_138/2010_003102.jpg"></th>
+            <th align="center"><img height="128" src="./ablation_results/set_138/2010_003490.jpg"></th>
+            <th align="center"><img height="128" src="./ablation_results/set_138/2008_008169.jpg"></th>
+            <th align="center"><img height="128" src="./ablation_results/set_138/2009_002391.jpg"></th>
+            <th align="center"><img height="128" src="./ablation_results/set_138/2010_004283.jpg"></th>
+            </tr>
+            <tr>
+            <th align="center">DINO Resnet</th>
+            <th align="center"><img height="128" src="./ablation_results/set_138/img_2010_001503_checkboard_dino_resnet.png"></th>
+            <th align="center"><img height="128" src="./ablation_results/set_138/img_2010_003102_checkboard_dino_resnet.png"></th>
+            <th align="center"><img height="128" src="./ablation_results/set_138/img_2010_003490_checkboard_dino_resnet.png"></th>
+            <th align="center"><img height="128" src="./ablation_results/set_138/img_2008_008169_checkboard_dino_resnet.png"></th>
+            <th align="center"><img height="128" src="./ablation_results/set_138/img_2009_002391_checkboard_dino_resnet.png"></th>
+            <th align="center"><img height="128" src="./ablation_results/set_138/img_2010_004283_checkboard_dino_resnet.png"></th>
+            </tr>
+            <tr>
+            <th align="center">Sup. Resnet</th>
+            <th align="center"><img height="128" src="./ablation_results/set_138/img_2010_001503_checkboard_sup_resnet.png"></th>
+            <th align="center"><img height="128" src="./ablation_results/set_138/img_2010_003102_checkboard_sup_resnet.png"></th>
+            <th align="center"><img height="128" src="./ablation_results/set_138/img_2010_003490_checkboard_sup_resnet.png"></th>
+            <th align="center"><img height="128" src="./ablation_results/set_138/img_2008_008169_checkboard_sup_resnet.png"></th>
+            <th align="center"><img height="128" src="./ablation_results/set_138/img_2009_002391_checkboard_sup_resnet.png"></th>
+            <th align="center"><img height="128" src="./ablation_results/set_138/img_2010_004283_checkboard_sup_resnet.png"></th>
+            </tr>
+            <tr>
+            <th align="center">Sup. ViT</th>
+            <th align="center"><img height="128" src="./ablation_results/set_138/img_2010_001503_checkboard_sup_vit.png"></th>
+            <th align="center"><img height="128" src="./ablation_results/set_138/img_2010_003102_checkboard_sup_vit.png"></th>
+            <th align="center"><img height="128" src="./ablation_results/set_138/img_2010_003490_checkboard_sup_vit.png"></th>
+            <th align="center"><img height="128" src="./ablation_results/set_138/img_2008_008169_checkboard_sup_vit.png"></th>
+            <th align="center"><img height="128" src="./ablation_results/set_138/img_2009_002391_checkboard_sup_vit.png"></th>
+            <th align="center"><img height="128" src="./ablation_results/set_138/img_2010_004283_checkboard_sup_vit.png"></th>
+            </tr>
+            <tr>
+            <th align="center">Saliency</th>
+            <th align="center"><img height="128" src="./ablation_results/set_138/img_2010_001503_checkboard_saliency.png"></th>
+            <th align="center"><img height="128" src="./ablation_results/set_138/img_2010_003102_checkboard_saliency.png"></th>
+            <th align="center"><img height="128" src="./ablation_results/set_138/img_2010_003490_checkboard_saliency.png"></th>
+            <th align="center"><img height="128" src="./ablation_results/set_138/img_2008_008169_checkboard_saliency.png"></th>
+            <th align="center"><img height="128" src="./ablation_results/set_138/img_2009_002391_checkboard_saliency.png"></th>
+            <th align="center"><img height="128" src="./ablation_results/set_138/img_2010_004283_checkboard_saliency.png"></th>
+            </tr>
+            <tr>
+            <th align="center">Ours</th>
+            <th align="center"><img height="128" src="./ablation_results/set_138/img_2010_001503_checkboard_ours.png"></th>
+            <th align="center"><img height="128" src="./ablation_results/set_138/img_2010_003102_checkboard_ours.png"></th>
+            <th align="center"><img height="128" src="./ablation_results/set_138/img_2010_003490_checkboard_ours.png"></th>
+            <th align="center"><img height="128" src="./ablation_results/set_138/img_2008_008169_checkboard_ours.png"></th>
+            <th align="center"><img height="128" src="./ablation_results/set_138/img_2009_002391_checkboard_ours.png"></th>
+            <th align="center"><img height="128" src="./ablation_results/set_138/img_2010_004283_checkboard_ours.png"></th>
+            </tr>
+        </table>
+        <button style="float: right;" type="button"><a href="#top">Back to Top</a></button> 
+        <hr> 
+         
+        
+        
+        <h2>set_20</h2>
+        <table align="center">
+          <tr>
+            <th align="center">Image</th>
+            <th align="center"><img height="128" src="./ablation_results/set_20/2009_000177.jpg"></th>
+            <th align="center"><img height="128" src="./ablation_results/set_20/2009_000135.jpg"></th>
+            <th align="center"><img height="128" src="./ablation_results/set_20/2010_001951.jpg"></th>
+            <th align="center"><img height="128" src="./ablation_results/set_20/2010_001394.jpg"></th>
+            <th align="center"><img height="128" src="./ablation_results/set_20/2010_004865.jpg"></th>
+            <th align="center"><img height="128" src="./ablation_results/set_20/2009_000532.jpg"></th>
+            </tr>
+            <tr>
+            <th align="center">DINO Resnet</th>
+            <th align="center"><img height="128" src="./ablation_results/set_20/img_2009_000177_checkboard_dino_resnet.png"></th>
+            <th align="center"><img height="128" src="./ablation_results/set_20/img_2009_000135_checkboard_dino_resnet.png"></th>
+            <th align="center"><img height="128" src="./ablation_results/set_20/img_2010_001951_checkboard_dino_resnet.png"></th>
+            <th align="center"><img height="128" src="./ablation_results/set_20/img_2010_001394_checkboard_dino_resnet.png"></th>
+            <th align="center"><img height="128" src="./ablation_results/set_20/img_2010_004865_checkboard_dino_resnet.png"></th>
+            <th align="center"><img height="128" src="./ablation_results/set_20/img_2009_000532_checkboard_dino_resnet.png"></th>
+            </tr>
+            <tr>
+            <th align="center">Sup. Resnet</th>
+            <th align="center"><img height="128" src="./ablation_results/set_20/img_2009_000177_checkboard_sup_resnet.png"></th>
+            <th align="center"><img height="128" src="./ablation_results/set_20/img_2009_000135_checkboard_sup_resnet.png"></th>
+            <th align="center"><img height="128" src="./ablation_results/set_20/img_2010_001951_checkboard_sup_resnet.png"></th>
+            <th align="center"><img height="128" src="./ablation_results/set_20/img_2010_001394_checkboard_sup_resnet.png"></th>
+            <th align="center"><img height="128" src="./ablation_results/set_20/img_2010_004865_checkboard_sup_resnet.png"></th>
+            <th align="center"><img height="128" src="./ablation_results/set_20/img_2009_000532_checkboard_sup_resnet.png"></th>
+            </tr>
+            <tr>
+            <th align="center">Sup. ViT</th>
+            <th align="center"><img height="128" src="./ablation_results/set_20/img_2009_000177_checkboard_sup_vit.png"></th>
+            <th align="center"><img height="128" src="./ablation_results/set_20/img_2009_000135_checkboard_sup_vit.png"></th>
+            <th align="center"><img height="128" src="./ablation_results/set_20/img_2010_001951_checkboard_sup_vit.png"></th>
+            <th align="center"><img height="128" src="./ablation_results/set_20/img_2010_001394_checkboard_sup_vit.png"></th>
+            <th align="center"><img height="128" src="./ablation_results/set_20/img_2010_004865_checkboard_sup_vit.png"></th>
+            <th align="center"><img height="128" src="./ablation_results/set_20/img_2009_000532_checkboard_sup_vit.png"></th>
+            </tr>
+            <tr>
+            <th align="center">Saliency</th>
+            <th align="center"><img height="128" src="./ablation_results/set_20/img_2009_000177_checkboard_saliency.png"></th>
+            <th align="center"><img height="128" src="./ablation_results/set_20/img_2009_000135_checkboard_saliency.png"></th>
+            <th align="center"><img height="128" src="./ablation_results/set_20/img_2010_001951_checkboard_saliency.png"></th>
+            <th align="center"><img height="128" src="./ablation_results/set_20/img_2010_001394_checkboard_saliency.png"></th>
+            <th align="center"><img height="128" src="./ablation_results/set_20/img_2010_004865_checkboard_saliency.png"></th>
+            <th align="center"><img height="128" src="./ablation_results/set_20/img_2009_000532_checkboard_saliency.png"></th>
+            </tr>
+            <tr>
+            <th align="center">Ours</th>
+            <th align="center"><img height="128" src="./ablation_results/set_20/img_2009_000177_checkboard_ours.png"></th>
+            <th align="center"><img height="128" src="./ablation_results/set_20/img_2009_000135_checkboard_ours.png"></th>
+            <th align="center"><img height="128" src="./ablation_results/set_20/img_2010_001951_checkboard_ours.png"></th>
+            <th align="center"><img height="128" src="./ablation_results/set_20/img_2010_001394_checkboard_ours.png"></th>
+            <th align="center"><img height="128" src="./ablation_results/set_20/img_2010_004865_checkboard_ours.png"></th>
+            <th align="center"><img height="128" src="./ablation_results/set_20/img_2009_000532_checkboard_ours.png"></th>
+            </tr>
+        </table>
+        <button style="float: right;" type="button"><a href="#top">Back to Top</a></button> 
+        <hr> 
+         
+        
+        
+        <h2>set_27</h2>
+        <table align="center">
+          <tr>
+            <th align="center">Image</th>
+            <th align="center"><img height="128" src="./ablation_results/set_27/2010_002758.jpg"></th>
+            <th align="center"><img height="128" src="./ablation_results/set_27/2008_001842.jpg"></th>
+            <th align="center"><img height="128" src="./ablation_results/set_27/2010_001080.jpg"></th>
+            <th align="center"><img height="128" src="./ablation_results/set_27/2010_002697.jpg"></th>
+            <th align="center"><img height="128" src="./ablation_results/set_27/2009_001291.jpg"></th>
+            <th align="center"><img height="128" src="./ablation_results/set_27/2008_002327.jpg"></th>
+            </tr>
+            <tr>
+            <th align="center">DINO Resnet</th>
+            <th align="center"><img height="128" src="./ablation_results/set_27/img_2010_002758_checkboard_dino_resnet.png"></th>
+            <th align="center"><img height="128" src="./ablation_results/set_27/img_2008_001842_checkboard_dino_resnet.png"></th>
+            <th align="center"><img height="128" src="./ablation_results/set_27/img_2010_001080_checkboard_dino_resnet.png"></th>
+            <th align="center"><img height="128" src="./ablation_results/set_27/img_2010_002697_checkboard_dino_resnet.png"></th>
+            <th align="center"><img height="128" src="./ablation_results/set_27/img_2009_001291_checkboard_dino_resnet.png"></th>
+            <th align="center"><img height="128" src="./ablation_results/set_27/img_2008_002327_checkboard_dino_resnet.png"></th>
+            </tr>
+            <tr>
+            <th align="center">Sup. Resnet</th>
+            <th align="center"><img height="128" src="./ablation_results/set_27/img_2010_002758_checkboard_sup_resnet.png"></th>
+            <th align="center"><img height="128" src="./ablation_results/set_27/img_2008_001842_checkboard_sup_resnet.png"></th>
+            <th align="center"><img height="128" src="./ablation_results/set_27/img_2010_001080_checkboard_sup_resnet.png"></th>
+            <th align="center"><img height="128" src="./ablation_results/set_27/img_2010_002697_checkboard_sup_resnet.png"></th>
+            <th align="center"><img height="128" src="./ablation_results/set_27/img_2009_001291_checkboard_sup_resnet.png"></th>
+            <th align="center"><img height="128" src="./ablation_results/set_27/img_2008_002327_checkboard_sup_resnet.png"></th>
+            </tr>
+            <tr>
+            <th align="center">Sup. ViT</th>
+            <th align="center"><img height="128" src="./ablation_results/set_27/img_2010_002758_checkboard_sup_vit.png"></th>
+            <th align="center"><img height="128" src="./ablation_results/set_27/img_2008_001842_checkboard_sup_vit.png"></th>
+            <th align="center"><img height="128" src="./ablation_results/set_27/img_2010_001080_checkboard_sup_vit.png"></th>
+            <th align="center"><img height="128" src="./ablation_results/set_27/img_2010_002697_checkboard_sup_vit.png"></th>
+            <th align="center"><img height="128" src="./ablation_results/set_27/img_2009_001291_checkboard_sup_vit.png"></th>
+            <th align="center"><img height="128" src="./ablation_results/set_27/img_2008_002327_checkboard_sup_vit.png"></th>
+            </tr>
+            <tr>
+            <th align="center">Saliency</th>
+            <th align="center"><img height="128" src="./ablation_results/set_27/img_2010_002758_checkboard_saliency.png"></th>
+            <th align="center"><img height="128" src="./ablation_results/set_27/img_2008_001842_checkboard_saliency.png"></th>
+            <th align="center"><img height="128" src="./ablation_results/set_27/img_2010_001080_checkboard_saliency.png"></th>
+            <th align="center"><img height="128" src="./ablation_results/set_27/img_2010_002697_checkboard_saliency.png"></th>
+            <th align="center"><img height="128" src="./ablation_results/set_27/img_2009_001291_checkboard_saliency.png"></th>
+            <th align="center"><img height="128" src="./ablation_results/set_27/img_2008_002327_checkboard_saliency.png"></th>
+            </tr>
+            <tr>
+            <th align="center">Ours</th>
+            <th align="center"><img height="128" src="./ablation_results/set_27/img_2010_002758_checkboard_ours.png"></th>
+            <th align="center"><img height="128" src="./ablation_results/set_27/img_2008_001842_checkboard_ours.png"></th>
+            <th align="center"><img height="128" src="./ablation_results/set_27/img_2010_001080_checkboard_ours.png"></th>
+            <th align="center"><img height="128" src="./ablation_results/set_27/img_2010_002697_checkboard_ours.png"></th>
+            <th align="center"><img height="128" src="./ablation_results/set_27/img_2009_001291_checkboard_ours.png"></th>
+            <th align="center"><img height="128" src="./ablation_results/set_27/img_2008_002327_checkboard_ours.png"></th>
+            </tr>
+        </table>
+        <button style="float: right;" type="button"><a href="#top">Back to Top</a></button> 
+        <hr> 
+        
+	
+	<div style="text-align: center">
+  <button type="button"><a href="../../index.html">Back to home</a></button> 
+</div>
+</div>
+</body></html>
