@@ -38,16 +38,6 @@
       <table width="1000" border="0" align="center">
         <tbody>
 			<tr>&nbsp; </tr>
-          <!--<tr>
-			<td colspan="5" align="center"><video width="1000" playsinline autoplay muted loop><source src="./sm/assets/videos/arctic_fox_1_concat.mp4" type="video/mp4"></video></td>
-          </tr>
-			<tr>
-				  <td align="center"> <img src="./pics/216_left_corresp.png" width="224"></td> 
-				  <td align="center"> <img src="./pics/216_right_corresp.png" width="224"></td> 
-				  <td align="center"> &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; </td> 
-				  <td align="center"> <img src="./pics/24_left_corresp.png" width="224"></td> 
-				  <td align="center"> <img src="./pics/24_right_corresp.png" width="224"></td> 
-          </tr>-->
 			<tr align="center"><img src="./pics/teaser.png" width="1000"></tr>
 			
 			<tr>&nbsp; </tr>
@@ -57,31 +47,7 @@
           <p>We leverage Deep Features extracted from a pre-trained Vision Transformer (ViT) as dense visual descriptors. We demonstrate that such features, when extracted from a self-supervised ViT model (DINO-ViT), exhibit several striking properties: (i) the features encode powerful high level information at high spatial resolution--i.e., capture semantic object parts at fine spatial granularity, and (ii) the encoded semantic information is shared across related, yet different object categories (i.e. super-categories).  These properties allow us to design powerful dense ViT Descriptors that facilitate a variety of applications, including co-segmentation, part co-segmentation and correspondences -- all achieved by applying lightweight methodologies to deep ViT features (e.g., binning / clustering).   Our methods, extensively evaluated  qualitatively and quantitatively, achieve state-of-the-art part segmentation results,  and competitive results with recent supervised methods trained specifically for co-segmentation and correspondences.
           We take these applications further to the realm of inter-class object co-segmentation and part co-segmentation -- demonstrating how objects from related categories can be commonly segmented into semantic parts, under significant  pose and appearance changes.<br>
           </p>
-          
-          <!--<p class="section">&nbsp;</p>
-          <table width="200" border="0" align="center" id="video">
-            <tbody>
-              <tr>
-                <td><iframe width="900" height="506" src="https://www.youtube.com/embed/aQhakPFC4oQ" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
-                </td>
-              </tr>
-            </tbody>
-          </table>
-          <p class="section" id="recresults">Video Decomposition</p>
-          <table width="940" border="0">
-            <tbody>
-				<tr> Our model successfully manages to decompose the videos and produce foreground and background atlases which can be used later for editing. </tr>
-				
-				<tr>
-	            <td colspan="4" align="center"><img src="./Layered_Neural_Atlases_for_Consistent_Video_Editing_files/results/boat.gif" width="940" alt="" style="margin-top:10px"></td>
-	          </tr>
-				<tr>
-	            <td colspan="4" align="center"><img src="./Layered_Neural_Atlases_for_Consistent_Video_Editing_files/results/motorbike.gif" width="940" alt="" style="margin-top:30px"></td>
-	          </tr>
-				
-	      </tbody>
-          </table>-->
-		
+       		
 		<p class="section">&nbsp;</p>
 	    <p class="section"><b>Part Co-segmentation examples</b></p>
 		<table width="940" border="0">
@@ -125,19 +91,46 @@
             <tbody>
 				<tr>We leverage Deep ViT features to find semantically corresponding points between images from different classes, under significant variations in appearance, pose and scale.</tr>
 				<tr>
-				  <td align="center"> <img src="./pics/24_left_corresp.png" width="224"></td> 
-				  <td align="center"> <img src="./pics/24_right_corresp.png" width="224"></td> 
+				  <td align="center"> <img src="./pics/24_left_corresp.png" width="200"></td> 
+				  <td align="center"> <img src="./pics/24_right_corresp.png" width="200"></td> 
 				  <td align="center"> &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; </td> 
-				  <td align="center"> <img src="./pics/23_left_corresp.png" width="224"></td> 
-				  <td align="center"> <img src="./pics/23_right_corresp.png" width="224"></td> 
+				  <td align="center"> <img src="./pics/23_left_corresp.png" width="200"></td> 
+				  <td align="center"> <img src="./pics/23_right_corresp.png" width="200"></td> 
 	            </tr>
 				<tr>
-				  <td align="center"> <img src="./pics/216_left_corresp.png" width="224"></td> 
-				  <td align="center"> <img src="./pics/216_right_corresp.png" width="224"></td> 
+				  <td align="center"> <img src="./pics/216_left_corresp.png" width="200"></td> 
+				  <td align="center"> <img src="./pics/216_right_corresp.png" width="200"></td> 
 				  <td align="center"> &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; </td> 
-				  <td align="center"> <img src="./pics/183_left_corresp.png" width="224"></td> 
-				  <td align="center"> <img src="./pics/183_right_corresp.png" width="224"></td> 
+				  <td align="center"> <img src="./pics/183_left_corresp.png" width="200"></td> 
+				  <td align="center"> <img src="./pics/183_right_corresp.png" width="200"></td> 
 	            </tr>
+	      </tbody>
+      </table>
+	
+	<p class="section"><b>Video Part Co-segmentation examples</b></p>
+		<table>
+            <tbody>
+				<tr>We apply our part co-segmentation method on a collection of frames instead of a set of images, to recieve temporally consistent part co-segmentation. <em>No temporal information is used.</em></tr>
+		  <tr>
+			<th align="center">Original Video</th>
+			<th align="center">Part Co-segmentation</th>
+		  </tr>
+		  <tr>
+			<th class="spair" colspan="2"><video width="800" playsinline autoplay muted loop><source src="./sm/assets/videos/arctic_fox_1_concat.mp4" type="video/mp4"></video></th>
+		  </tr>
+		  <tr>
+			<th class="spair" colspan="2"><video width="800" playsinline autoplay muted loop><source src="./sm/assets/videos/snowboard_concat.mp4" type="video/mp4"></video></th>
+		  </tr>
+	      </tbody>
+      </table>
+	
+	<p class="section"><b>PCA Visualization</b></p>
+		<table>
+            <tbody>
+				<tr>We apply principal component analysis (PCA) on spatial descriptors across layers from a supervised ViT and a DINO-trained ViT. We find that early layers contain positionally biased representations, that gradually become more semantic in deeper layers. Both ViTs produce semantic representations with high granularity, that cause semantic object parts to emerge. However, DINO ViT representations are less noisy that supervised ViT representations.</tr>
+		  <tr>
+			<th class="spair" colspan="2"> <td align="center"> <img src="./pics/pca.png" width="1000"></td> </th>
+		  </tr>
 	      </tbody>
       </table>
 		
@@ -162,7 +155,7 @@
               <tr>
                 <td width="250"><img src="./pics/sm_illustration.png" alt="" height="150"></td>
                 <td align="left">
-                  <p>[<a href="./sm/index.html" target="_blank" rel="noopener noreferrer">supplementary page</a>]</p>
+                  <p>[<a href="./sm/index.html">supplementary page</a>]</p>
                 </td>
               </tr>
             </tbody>
