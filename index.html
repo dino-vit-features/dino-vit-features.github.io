@@ -14,16 +14,18 @@
 <p class="author">
     <span class="author"><a target="_blank" href="https://www.linkedin.com/in/shir-amir-859537138">Shir Amir</a>&nbsp;<sup>1</sup></span>
     <span class="author"><a target="_blank" href="https://yossigandelsman.github.io/">Yossi Gandelsman&nbsp;</a><sup>2</sup></span>
-	<span class="author"><a target="_blank" href="https://www.weizmann.ac.il/math/bagon/home">Shai Bagon</a>&nbsp;<sup>1</sup></span>
+	<span class="author"><a target="_blank" href="https://www.weizmann.ac.il/math/bagon/home">Shai Bagon</a>&nbsp;<sup>3</sup></span>
     <span class="author"><a target="_blank" href="https://www.weizmann.ac.il/math/dekel/">Tali Dekel</a>&nbsp;<sup>1</sup></span>
   </p>
   <table border="0" align="center" class="affiliations" width="1200px">
       <tbody align="center">
     <tr>
-        <td style="text-align: right; width: 22%"><img src="./pics/wis_logo.jpg" height="48" alt=""></td>
-        <td style="text-align: left; width:20%; ">&nbsp;<sup>1</sup>&nbsp;<a href="https://www.weizmann.ac.il/pages/">Weizmann Institute of Science</a></td>
-		<td style="text-align: right; width:20%"><img src="./pics/BAIR_Logo_BlueType_Tag.png" height="48" alt=""></td>
-        <td style="text-align: left">&nbsp;<sup>2</sup>&nbsp;<a href="https://bair.berkeley.edu/">Berkeley Artificial Intelligence Research</a></td>
+        <td style="text-align: right; width: 5%"><img src="./pics/wis_logo.jpg" height="48" alt=""></td>
+        <td style="text-align: left; width:25%; ">&nbsp;<sup>1</sup>&nbsp;<a href="https://www.weizmann.ac.il/pages/">Weizmann Institute of Science</a></td>
+		<td style="text-align: right; width:5%"><img src="./pics/BAIR_Logo_BlueType_Tag.png" height="48" alt=""></td>
+        <td style="text-align: left; width:30%">&nbsp;<sup>2</sup>&nbsp;<a href="https://bair.berkeley.edu/">Berkeley Artificial Intelligence Research</a></td>
+		<td style="text-align: right; width:5%"><img src="./pics/waic_logo.png" height="48" alt=""></td>
+        <td style="text-align: left; width:30%">&nbsp;<sup>2</sup>&nbsp;<a href="https://www.weizmann.ac.il/math/waic/home">Weizmann Artificial Intelligence Center</a></td>
       </tr>
     </tbody></table>
     <table width="999" border="0" align="center" class="menu">
@@ -46,22 +48,35 @@
           <p>We leverage Deep Features extracted from a pre-trained Vision Transformer (ViT) as dense visual descriptors. We demonstrate that such features, when extracted from a self-supervised ViT model (DINO-ViT), exhibit several striking properties: (i) the features encode powerful high level information at high spatial resolution--i.e., capture semantic object parts at fine spatial granularity, and (ii) the encoded semantic information is shared across related, yet different object categories (i.e. super-categories).  These properties allow us to design powerful dense ViT Descriptors that facilitate a variety of applications, including co-segmentation, part co-segmentation and correspondences -- all achieved by applying lightweight methodologies to deep ViT features (e.g., binning / clustering).   Our methods, extensively evaluated  qualitatively and quantitatively, achieve state-of-the-art part segmentation results,  and competitive results with recent supervised methods trained specifically for co-segmentation and correspondences.
           We take these applications further to the realm of inter-class object co-segmentation and part co-segmentation -- demonstrating how objects from related categories can be commonly segmented into semantic parts, under significant  pose and appearance changes.<br>
           </p>
-       		
+		
+	    <p class="section">&nbsp;</p>
+	    <p class="section"><b>PCA Visualization</b></p>
+		<table>
+            <tbody>
+				<tr>We apply principal component analysis (PCA) on spatial descriptors across layers from a supervised ViT and a DINO-trained ViT. We find that early layers contain positionally biased representations, that gradually become more semantic in deeper layers. Both ViTs produce semantic representations with high granularity, that cause semantic object parts to emerge. However, DINO ViT representations are less noisy that supervised ViT representations.</tr>
+		  <tr>
+			<th class="spair" colspan="2"> <td align="center"> <a href="./sm/assets/PCA/results.html"><img src="./pics/pca.png" width="1000"></a> </td> </th>
+		  </tr>
+	      </tbody>
+      </table>
+	
 		<p class="section">&nbsp;</p>
 	    <p class="section"><b>Part Co-segmentation examples</b></p>
-		<table width="940" border="0">
+	    We apply clustering on Deep ViT spatial features to co-segment common objects among a set of images, and then further co-segment the common regions into parts. The parts remain consistent under variations in appearance, pose, scale, and under different yet related classes.
+		<table align="center" width="940" border="0">
             <tbody>
 				<tr>We leverage Deep ViT spatial features to co-segment common objects among a set of images, and then further co-segment the common regions into parts. The parts remain consistent under variations in appearance, pose, scale, and under different yet related classes.</tr>
 				<tr>
-				  <td colspan="4" align="center">  <img src="./pics/part_co_seg.png" width="1050" alt="" style="margin-top:10px"></td> 
+				  <td colspan="4" align="center"> <a href="./sm/assets/small_sets/results.html"><img src="./pics/part_co_seg.png" width="1050" alt="" style="margin-top:10px"></a></td> 
 	          </tr>
 	      </tbody>
       </table>
 		<p> &nbsp; &nbsp; &nbsp; &nbsp;&nbsp;</p>
-		
-	<table>
-        <tbody>
-				<tr>The method can be applied on as little as a pair of images and as much as thousands of images. </tr>
+	
+	The method can be applied on as little as a pair of images and as much as thousands of images.
+	<a href="./sm/assets/AFHQ/results.html">
+	<table align="center">
+        <tbody align="center">
 				<tr>
 				  <td align="center"> <img src="./pics/flickr_cat_000372.png" width="128"></td> 
 				  <td align="center"> <img src="./pics/flickr_cat_000372_crf_recolored_checker.png" width="128"></td> 
@@ -84,55 +99,48 @@
 	            </tr>
 	      </tbody>
       </table>
-		
+	</a>
+	<p class="section">&nbsp;</p>
 	<p class="section"><b>Point Correpondences examples</b></p>
-		<table>
+	We leverage Deep ViT features to automatically detect semantically corresponding points between images from different classes, under significant variations in appearance, pose and scale.
+	<table align="center">
             <tbody>
-				<tr>We leverage Deep ViT features to find semantically corresponding points between images from different classes, under significant variations in appearance, pose and scale.</tr>
 				<tr>
-				  <td align="center"> <img src="./pics/24_left_corresp.png" width="200"></td> 
-				  <td align="center"> <img src="./pics/24_right_corresp.png" width="200"></td> 
+				  <td align="center"> <a href="./sm/assets/sparse_corresps/results.html"><img src="./pics/24_left_corresp.png" width="200"></a></td> 
+				  <td align="center"> <a href="./sm/assets/sparse_corresps/results.html"><img src="./pics/24_right_corresp.png" width="200"></a></td> 
 				  <td align="center"> &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; </td> 
-				  <td align="center"> <img src="./pics/23_left_corresp.png" width="200"></td> 
-				  <td align="center"> <img src="./pics/23_right_corresp.png" width="200"></td> 
+				  <td align="center"> <a href="./sm/assets/sparse_corresps/results.html"><img src="./pics/23_left_corresp.png" width="200"></a></td> 
+				  <td align="center"> <a href="./sm/assets/sparse_corresps/results.html"><img src="./pics/23_right_corresp.png" width="200"></a></td> 
 	            </tr>
 				<tr>
-				  <td align="center"> <img src="./pics/216_left_corresp.png" width="200"></td> 
-				  <td align="center"> <img src="./pics/216_right_corresp.png" width="200"></td> 
+				  <td align="center"> <a href="./sm/assets/sparse_corresps/results.html"><img src="./pics/216_left_corresp.png" width="200"></a></td> 
+				  <td align="center"> <a href="./sm/assets/sparse_corresps/results.html"><img src="./pics/216_right_corresp.png" width="200"></a></td> 
 				  <td align="center"> &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; </td> 
-				  <td align="center"> <img src="./pics/183_left_corresp.png" width="200"></td> 
-				  <td align="center"> <img src="./pics/183_right_corresp.png" width="200"></td> 
+				  <td align="center"> <a href="./sm/assets/sparse_corresps/results.html"><img src="./pics/183_left_corresp.png" width="200"></a></td> 
+				  <td align="center"> <a href="./sm/assets/sparse_corresps/results.html"><img src="./pics/183_right_corresp.png" width="200"></a></td> 
 	            </tr>
 	      </tbody>
       </table>
 	
+	
+	<p class="section">&nbsp;</p>
 	<p class="section"><b>Video Part Co-segmentation examples</b></p>
-		<table>
+	We apply our part co-segmentation method on a collection of frames instead of a set of images, to recieve temporally consistent part co-segmentation. <em>No temporal information is used.</em>
+	<table align="center">
             <tbody>
-				<tr>We apply our part co-segmentation method on a collection of frames instead of a set of images, to recieve temporally consistent part co-segmentation. <em>No temporal information is used.</em></tr>
 		  <tr>
 			<th align="center">Original Video</th>
 			<th align="center">Part Co-segmentation</th>
 		  </tr>
 		  <tr>
-			<th class="spair" colspan="2"><video width="800" playsinline autoplay muted loop><source src="./sm/assets/videos/arctic_fox_1_concat.mp4" type="video/mp4"></video></th>
+			<th class="spair" colspan="2">	<a href="./sm/assets/videos/results.html">	<video width="100%" playsinline autoplay muted loop><source src="./sm/assets/videos/arctic_fox_1_concat.mp4" type="video/mp4"></a></video></th>
 		  </tr>
 		  <tr>
-			<th class="spair" colspan="2"><video width="800" playsinline autoplay muted loop><source src="./sm/assets/videos/snowboard_concat.mp4" type="video/mp4"></video></th>
+			<th class="spair" colspan="2">	<a href="./sm/assets/videos/results.html">	<video width="100%" playsinline autoplay muted loop><source src="./sm/assets/videos/snowboard_concat.mp4" type="video/mp4"></a></video></th>
 		  </tr>
 	      </tbody>
       </table>
-	
-	<p class="section"><b>PCA Visualization</b></p>
-		<table>
-            <tbody>
-				<tr>We apply principal component analysis (PCA) on spatial descriptors across layers from a supervised ViT and a DINO-trained ViT. We find that early layers contain positionally biased representations, that gradually become more semantic in deeper layers. Both ViTs produce semantic representations with high granularity, that cause semantic object parts to emerge. However, DINO ViT representations are less noisy that supervised ViT representations.</tr>
-		  <tr>
-			<th class="spair" colspan="2"> <td align="center"> <img src="./pics/pca.png" width="1000"></td> </th>
-		  </tr>
-	      </tbody>
-      </table>
-		
+				
 		<p class="section">&nbsp;</p>
           <p class="section" id="paper"><b>Paper</b></p>
           <table width="940" border="0">
@@ -173,6 +181,8 @@
           </table>
           <p class="section">&nbsp;</p>          
           <p>&nbsp;</p>
+	 <p><b>Acknowledgments</b></p>
+	<p>We thank <a href="http://people.csail.mit.edu/mrub/">Miki Rubinstein</a>, <a href="https://www.weizmann.ac.il/math/meirav/">Meirav Galun</a> and <a href="https://nivha.github.io/">Niv Haim</a> for their useful comments. </p>
 </div>
 
 
