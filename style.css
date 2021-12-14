@@ -135,3 +135,11 @@ table.data td {
 	padding-bottom: 5px;
 	vertical-align: top;
 }
+
+code {
+  font-family: Consolas,"courier new";
+  color: crimson;
+  background-color: #f1f1f1;
+  padding: 2px;
+  font-size: 105%;
+}
