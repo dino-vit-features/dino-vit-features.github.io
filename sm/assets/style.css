@@ -12,6 +12,35 @@ body {
 	padding-left: 1em;
 	padding-right: 1em;
 	padding-bottom: 1em;
+	font-size: large;
+}
+
+.column4 {
+  float: left;
+  width: 25%;
+}
+
+/* Clear floats after the columns */
+.row:after {
+  content: "";
+  display: table;
+  clear: both;
+}
+
+.float{
+	position:fixed;
+	width:120px;
+	height:60px;
+	bottom:40px;
+	right:40px;
+	background-color:rgb(51, 255, 0);
+	color:#FFF;
+	border-radius:50px;
+	text-align:center;
+}
+
+.my-float{
+	margin-top:50px;
 }
 
 th.afhq {

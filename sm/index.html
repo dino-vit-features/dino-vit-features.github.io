@@ -11,63 +11,1674 @@
 
 <body>
   <div class="container">
-    <button type="button"><a href="../index.html">Back to website</a></button> 
+    <button type="button"><a href="../index.html">Back to website</a></button>
     <h1 name="top" align="center">Deep ViT Features as Dense Visual Descriptors</h1>
-    <h2 align="center">Shir Amir &nbsp; Yossi Gandelsman &nbsp; Shai Bagon &nbsp; Tali Dekel</h2>
     <h2 align="center">Supplementary Material</h2>
 
     <p align="center">&nbsp;</p>
-	
-	<table align="left">
-	   <tr>
-        <th align="center"><img width="200" src="./assets/AFHQ/AFHQ/pixabay_dog_002801_crf_overlay_checkerboard.png"></th>
-        <th align="center"><img width="200" src="./assets/AFHQ/AFHQ/pixabay_cat_003204_crf_overlay_checkerboard.png"></th>
-        <th align="left">		   
-        <a>Part Co-segmentation:</a>
-	    <p></p>
-	    <a href="./assets/AFHQ/results.html">AFHQ (Fig. 10)</a>
-	    <br>
-	    <a href="./assets/videos/results.html">Video Results</a>
-	    <br>
-	    <a href="./assets/small_sets/results.html">Small Sets (Fig. 9)</a>	   
-		</th>
-      </tr>
-	  </table><table align="left">
-	  <tr>
-        <th align="center"><img width="200" src="./assets/sparse_corresps/1/ours/left_corresp.png"></th>
-        <th align="center"><img width="200" src="./assets/sparse_corresps/1/ours/right_corresp.png"></th>
-        <th align="left">		   
-        <a>Point Correspondences:</a>
-	    <p></p>
-	    <a href="assets/sparse_corresps/results.html">Sparse Correspondences (Fig. 13)</a>
-	    <br>
-	    <a href="assets/spair71k/results.html">Spair71k Results (Tab. 3)</a>
-		</th>
-      </tr>
-		 </table><table align="left">
-	  <tr>
-        <th align="center"><img width="200" src="./assets/pascalco/checkerboard_results/set_15/img_2010_003478_checkboard_ours.png"></th>
-        <th align="center"><img width="200" src="./assets/pascalco/checkerboard_results/set_15/img_2008_000657_checkboard_ours.png"></th>
-        <th align="left">		   
-        <a>Co-segmentation:</a>
-	    <p></p>
-	    <a href="./assets/pascalco/results.html">Pascal-Co (Fig. 8)</a>
-	    <br>
-		 <a href="./assets/pascalco_ablations/results.html">Pascal-Co Ablation (Tab. 1 bottom)</a>
-	    <br>
-		 <a href="./assets/Internet300/results.html">Internet300 (Tab. 1)</a>
-	    <br>
-	    <a href="./assets/MSRC/results.html">MSRC (Tab. 1)</a>
-		<br>
-	    <a href="./assets/PASCAL_VOC/results.html">Pascal VOC (Tab. 1)</a>
-		</th>
-      </tr>
-	    <tr><th><br/><a href="./assets/resolution increase/results.html">Resolution Increase</a></th>
-			<th><br/><a href="./assets/PCA/results.html">PCA Analysis</a></th>
-			<th><br/><a href="./assets/position_bias/results.html">Position Bias</a></th>
-   	    </tr>
+  
+  <div class="row">
+    <div class="column4">
+      Part Co-segmentation:
+      <ul>
+        <li><a href="./assets/small_sets/results.html">Image Pairs</a></li>
+        <li><a href="./assets/videos/results.html">Videos</a></li>
+        <li><a href="./assets/AFHQ/results.html">AFHQ - across classes</a></li>
+         <li><a href="./assets/CUB/results.html">CUB - comparison</a></li>
+      </ul>
+      </div>
+	  <div class="column4">	
+	  Observations and details:
+	  <ul>
+      <li><a href="./assets/sm.pdf" target="_blank" rel="noopener noreferrer">Technical Details PDF</a></li>
+      <li><a href="./assets/PCA/results.html">PCA Analysis</a></li>
+      <li><a href="./assets/position_bias/results.html">Positional Bias</a></li>
+      <li><a href="./assets/resolution increase/results.html">Resolution Increase</a></li>
+	  </ul>
+	  </div>		
+	  <div class="column4">
+		Semantic Correspondences:
+		<ul>
+      <li><a href="assets/sparse_corresps/results.html">Sparse Correspondences</a></li>
+      <li><a href="assets/spair71k/results.html">Spair71k Results</a></li>
+		</ul>
+	  </div>
+	  <div class="column4">
+		Co-segmentation:
+		<ul>
+      <li><a href="./assets/pascalco/results.html">Pascal-Co</a></li>
+		  <li><a href="./assets/pascalco_ablations/results.html">Saliency Baselines</a></li>
+		  <li><a href="./assets/Internet300/results.html">Internet300</a></li>
+	    <li><a href="./assets/MSRC/results.html">MSRC</a></li>
+	    <li><a href="./assets/PASCAL_VOC/results.html">Pascal VOC</a></li>
+		</ul>
+	  </div>
+	</div> 
 
-	  </table>
+  <p align="center" style="color:rgb(51, 255, 0)">Scroll down to observe results. Further results and information appear in links above. 
+    Click on an image to see it in full resolution.</p>
+
+  <button class="float"><a style="font-size: large" href="#top">back to top</a></button>
+   
+  <div id="small_sets">
+   <h1 align="center">Pair Part Co-segmentation</h1>
+   <p align="left">We apply our part co-segmentation method in an extreme setting - 
+     given a <strong><em>only a pair</em></strong> of images with varations in pose, scale, appearance, quantity and background clutter. (See Fig. 6).</p>
+    <p>&nbsp;</p>
+	<table align="center">
+	  <tr>
+        <th><a href="./assets/small_sets/12589676HighRes_5347e631-39c0-418a-b69d-b6b6e1bbff6f.jpg"><img height="256" src="./assets/small_sets/12589676HighRes_5347e631-39c0-418a-b69d-b6b6e1bbff6f.jpg"></a></th>
+        <th><img height="256" src="./assets/small_sets/highland-beef-scottish-galloway-horns-black-shaggy-wild-cow-beef.jpg"></th>
+   		<th>&nbsp;&nbsp;&nbsp;&nbsp;</th>
+        <th><img height="256" src="./assets/small_sets/12589676HighRes_5347e631-39c0-418a-b69d-b6b6e1bbff6f_crf_overlay_checkerboard_3.png"></th>
+        <th><img height="256" src="./assets/small_sets/highland-beef-scottish-galloway-horns-black-shaggy-wild-cow-beef_crf_overlay_checkerboard_3.png"></th>
+	  </tr>
+	</table>
+	<hr>
+	<table align="center">
+	  <tr>
+        <th><img height="170" src="./assets/small_sets/DSC_0359.jpeg"></th>
+        <th><img height="170" src="./assets/small_sets/I0000ruta1unmME0.jpeg"></th>
+   		<th>&nbsp;&nbsp;&nbsp;</th>
+        <th><img height="170" src="./assets/small_sets/DSC_0359_crf_overlay_checkerboard_3.png"></th>
+        <th><img height="170" src="./assets/small_sets/I0000ruta1unmME0_crf_overlay_checkerboard_3.png"></th>
+	  </tr>
+	</table>
+	<hr>
+	<table align="center">
+	  <tr>
+        <th><img height="175" src="./assets/small_sets/6YLP5FD2DJA5LLESWYCX5BZRYE.jpg"></th>
+        <th><img height="175" src="./assets/small_sets/history-of-the-easter-bunny.jpg"></th>
+   		<th>&nbsp;&nbsp;&nbsp;&nbsp;</th>
+        <th><img height="175" src="./assets/small_sets/6YLP5FD2DJA5LLESWYCX5BZRYE_crf_overlay_checkerboard_3.png"></th>
+        <th><img height="175" src="./assets/small_sets/history-of-the-easter-bunny_crf_overlay_checkerboard_3.png"></th>
+	  </tr>
+	</table>
+	<hr>	
+	<table align="center">
+	  <tr>
+        <th><img height="200" src="./assets/small_sets/Mug_of_Tea.JPG"></th>
+        <th><img height="200" src="./assets/small_sets/Turkish-Golden-Coffee-Cups-and-Saucers-Serving-Set-Ceramic-Coffee-Mugs-Best-for-Home-Decor-Demistasse.jpg"></th>
+   		<th>&nbsp;&nbsp;&nbsp;&nbsp;</th>
+        <th><img height="200" src="./assets/small_sets/Mug_of_Tea_crf_overlay_checkerboard_3.png"></th>
+        <th><img height="200" src="./assets/small_sets/Turkish-Golden-Coffee-Cups-and-Saucers-Serving-Set-Ceramic-Coffee-Mugs-Best-for-Home-Decor-Demistasse_crf_overlay_checkerboard_3.png"></th>
+	  </tr>
+	</table>
+	<hr>
+	<table align="center">
+	  <tr>
+        <th><img height="230" src="./assets/small_sets/DSCF3942-e1506792877643_resized.png"></th>
+        <th><img height="230" src="./assets/small_sets/main-qimg-ae4ce2dde7964e2936981e3686b19f8f_resized.png"></th>
+   		<th>&nbsp;&nbsp;&nbsp;&nbsp;</th>
+        <th><img height="230" src="./assets/small_sets/DSCF3942-e1506792877643_vis.png"></th>
+        <th><img height="230" src="./assets/small_sets/main-qimg-ae4ce2dde7964e2936981e3686b19f8f_vis.png"></th>
+	  </tr>
+	</table>
+	<hr>
+	<table align="center">
+	  <tr>
+        <th><img height="300" src="./assets/small_sets/A_classic_Black_pair_of_Converse_All_Stars_resting_on_the_Black_&_White_Ed._Shoebox_(1998-2002).JPG"></th>
+        <th><img height="300" src="./assets/small_sets/19021a8a7ac20adf79bdbf36c435dfd3.jpg"></th>
+   		<th>&nbsp;&nbsp;&nbsp;&nbsp;</th>
+        <th><img height="300" src="./assets/small_sets/A_classic_Black_pair_of_Converse_All_Stars_resting_on_the_Black_&_White_Ed._Shoebox_(1998-2002)_crf_overlay_checkerboard_3.png"></th>
+        <th><img height="300" src="./assets/small_sets/19021a8a7ac20adf79bdbf36c435dfd3_crf_overlay_checkerboard_3.png"></th>
+	  </tr>
+	</table>
+	<hr>
+    <table align="center">
+      <tr>
+        <th><img height="190" src="./assets/small_sets/18hri8wuqv_Medium_WW2149666_1_.jpeg"></th>
+        <th><img height="190" src="./assets/small_sets/istockphoto-1211371429-170667a.jpeg"></th>
+   		<th>&nbsp;&nbsp;</th>
+        <th><img height="190" src="./assets/small_sets/18hri8wuqv_Medium_WW2149666_1__crf_overlay_checkerboard_3.png"></th>
+        <th><img height="190" src="./assets/small_sets/istockphoto-1211371429-170667a_crf_overlay_checkerboard_3.png"></th>
+	  </tr>
+    </table>
+	<hr>
+	<table align="center">
+	  <tr>
+        <th><img height="300" src="./assets/small_sets/768px-Kingfisher_beer_bottle_image.jpg"></th>
+        <th><img height="300" src="./assets/small_sets/aa3ee8bf66e0ae18345b39f6a1367ad4.jpg"></th>
+   		<th>&nbsp;&nbsp;&nbsp;&nbsp;</th>
+        <th><img height="300" src="./assets/small_sets/768px-Kingfisher_beer_bottle_image_crf_overlay_checkerboard_3.png"></th>
+        <th><img height="300" src="./assets/small_sets/aa3ee8bf66e0ae18345b39f6a1367ad4_crf_overlay_checkerboard_3.png"></th>
+	  </tr>
+	</table>
+	<hr>
+  <table align="center">
+	  <tr>
+        <th><img height="210" src="./assets/small_sets/original_A_resized_resized.png"></th>
+        <th><img height="210" src="./assets/small_sets/original_Bt_resized_resized.png"></th>
+   		<th>&nbsp;&nbsp;&nbsp;&nbsp;</th>
+        <th><img height="210" src="./assets/small_sets/original_A_resized_vis - Copy (2).png"></th>
+        <th><img height="210" src="./assets/small_sets/original_Bt_resized_vis - Copy (2).png"></th>
+	  </tr>
+	</table>
+	<hr>
+	<table align="center">
+	  <tr>
+        <th><img height="190" src="./assets/small_sets/1599728553-1_1.jpeg"></th>
+        <th><img height="190" src="./assets/small_sets/Olaf-the-Snowman-Cupcakes-01.jpg"></th>
+   		<th>&nbsp;&nbsp;&nbsp;&nbsp;</th>
+        <th><img height="190" src="./assets/small_sets/1599728553-1_1_crf_overlay_checkerboard_3.png"></th>
+        <th><img height="190" src="./assets/small_sets/Olaf-the-Snowman-Cupcakes-01_crf_overlay_checkerboard_3.png"></th>
+	  </tr>
+	</table>
+	<hr>
+	<table align="center">
+	  <tr>
+        <th><img height="205" src="./assets/small_sets/6ebf0bc0529e32789ddc1e89ad6fa808.jpg"></th>
+        <th><img height="205" src="./assets/small_sets/image-asset.jpeg"></th>
+   		<th>&nbsp;&nbsp;&nbsp;&nbsp;</th>
+        <th><img height="205" src="./assets/small_sets/6ebf0bc0529e32789ddc1e89ad6fa808_crf_overlay_checkerboard_3.png"></th>
+        <th><img height="205" src="./assets/small_sets/image-asset_crf_overlay_checkerboard_3.png"></th>
+	  </tr>
+	</table>
+	<hr>
+	<table align="center">
+	  <tr>
+        <th><img height="200" src="./assets/small_sets/Cute-Porcelain-Animal-Pendants-by-Jessie-Chadderdon-05.jpg"></th>
+        <th><img height="200" src="./assets/small_sets/VIER PFOTEN_2016-06-15_074-3303x2285.jpg"></th>
+   		<th>&nbsp;&nbsp;&nbsp;&nbsp;</th>
+        <th><img height="200" src="./assets/small_sets/Cute-Porcelain-Animal-Pendants-by-Jessie-Chadderdon-05_crf_overlay_checkerboard.png"></th>
+        <th><img height="200" src="./assets/small_sets/VIER PFOTEN_2016-06-15_074-3303x2285_crf_overlay_checkerboard.png"></th>
+	  </tr>
+	</table>
+	<hr>
+	<table align="center">
+	  <tr>
+        <th><img height="260" src="./assets/small_sets/d662162945be5e31e43591915ab1963a - Copy (2)_resized.png"></th>
+        <th><img height="260" src="./assets/small_sets/d662162945be5e31e43591915ab1963a - Copy_resized.png"></th>
+   		<th>&nbsp;&nbsp;&nbsp;&nbsp;</th>
+        <th><img height="260" src="./assets/small_sets/d662162945be5e31e43591915ab1963a - Copy (4)_vis - Copy.png"></th>
+        <th><img height="260" src="./assets/small_sets/d662162945be5e31e43591915ab1963a - Copy_vis - Copy (3).png"></th>
+	  </tr>
+	</table>
+	<hr>
+	<table align="center">
+	  <tr>
+        <th><img height="230" src="./assets/small_sets/white-6-6-strings-double-neck-electric-guitar.jpg"></th>
+        <th><img height="230" src="./assets/small_sets/guitar.jpg"></th>
+   		<th>&nbsp;&nbsp;&nbsp;&nbsp;</th>
+        <th><img height="230" src="./assets/small_sets/white-6-6-strings-double-neck-electric-guitar_crf_overlay_checkerboard_3.png"></th>
+        <th><img height="230" src="./assets/small_sets/guitar.png"></th>
+	  </tr>
+	</table>
+	<hr>
+	<table align="center">
+	  <tr>
+        <th><img height="260" src="./assets/small_sets/be26a58da207c035cf4cf926f64b506c.jpg"></th>
+        <th><img height="260" src="./assets/small_sets/Image from iOS (4).jpg"></th>
+   		<th>&nbsp;&nbsp;&nbsp;&nbsp;</th>
+        <th><img height="260" src="./assets/small_sets/be26a58da207c035cf4cf926f64b506c_crf_overlay_checkerboard_3.png"></th>
+        <th><img height="260" src="./assets/small_sets/Image from iOS (4)_crf_overlay_checkerboard_3.png"></th>
+	  </tr>
+	</table>
+	<hr>
+	<table align="center">
+	  <tr>
+        <th><img height="160" src="./assets/small_sets/gettyimages-487926161_custom-d78dfee66417c0af3753254a794a6cc7388ee8c1-s1100-c50_resized.png"></th>
+        <th><img height="160" src="./assets/small_sets/orca-killer-whale-whale-mammal_resized.png"></th>
+   		<th>&nbsp;&nbsp;&nbsp;&nbsp;</th>
+        <th><img height="160" src="./assets/small_sets/gettyimages-487926161_custom-d78dfee66417c0af3753254a794a6cc7388ee8c1-s1100-c50_vis - Copy (3).png"></th>
+        <th><img height="160" src="./assets/small_sets/orca-killer-whale-whale-mammal_vis - Copy (3).png"></th>
+	  </tr>
+	</table>
+	<hr>
+	<table align="center">
+	  <tr>
+        <th><img height="195" src="./assets/small_sets/_104304494_mediaitem104304493_resized.png"></th>
+        <th><img height="195" src="./assets/small_sets/Detective_Pikachu-172562537-large_resized.png"></th>
+   		<th>&nbsp;&nbsp;&nbsp;&nbsp;</th>
+        <th><img height="195" src="./assets/small_sets/_104304494_mediaitem104304493_vis - Copy (2).png"></th>
+        <th><img height="195" src="./assets/small_sets/Detective_Pikachu-172562537-large_vis - Copy (2).png"></th>
+	  </tr>
+	</table>
+	<hr>
+  <table align="center">
+	  <tr>
+        <th><img height="185" src="./assets/small_sets/Hummer-Limo-Services-in-Charlotte-Hummer-Limo-Charlotte.jpg"></th>
+        <th><img height="185" src="./assets/small_sets/Smart_Fortwo_I_Coup__(1998–2003)_front_MJ.JPG"></th>
+   		<th>&nbsp;&nbsp;&nbsp;&nbsp;</th>
+        <th><img height="185" src="./assets/small_sets/Hummer-Limo-Services-in-Charlotte-Hummer-Limo-Charlotte_crf_overlay_checkerboard_3.png"></th>
+        <th><img height="185" src="./assets/small_sets/Smart_Fortwo_I_Coup__(1998–2003)_front_MJ_crf_overlay_checkerboard_3.png"></th>
+	  </tr>
+	</table>
+	<hr>
+  </table>
+</div>
+	
+<div id="videos">
+ <h1 align="center">Video Part Segmentation</h1>
+   <p align="left">
+	   We apply our part co-segmentation method (Sec. 5.1 in paper) to video frames — we treat the frames from each video as a collection of images, and apply our method <strong>without any changes.  No temporal information is used. </strong> Notice the consistency of object parts through time under large motion varaitions and occlusions in DAVIS and in camouflaged examples in MoCA. </p>
+	
+    <p>&nbsp;</p>
+
+	<h2 align="center">MoCA examples</h2>
+	<table align="center">
+      <tr>
+        <th align="center">Original Video</th>
+        <th align="center">Part Co-segmentation</th>
+      </tr>
+	  <tr>
+        <th class="spair" colspan="2"><video width="800" playsinline autoplay muted loop><source src="./assets/videos/arctic_fox_1_concat.mp4" type="video/mp4"></video></th>
+      </tr>
+	  <tr>
+        <th class="spair" colspan="2"><video width="800" playsinline autoplay muted loop><source src="./assets/videos/snow_leopard_1_concat.mp4" type="video/mp4"></video></th>
+      </tr>
+	    <tr>
+        <th class="spair" colspan="2"><video width="800" playsinline autoplay muted loop><source src="./assets/videos/snowy_owl_0_concat.mp4" type="video/mp4"></video></th>
+      </tr>
+	  <tr>
+        <th class="spair" colspan="2"><video width="800" playsinline autoplay muted loop><source src="./assets/videos/goat_0_concat.mp4" type="video/mp4"></video></th>
+      </tr>
+	  <tr>
+        <th class="spair" colspan="2"><video width="800" playsinline autoplay muted loop><source src="./assets/videos/polar_bear_cub_concat.mp4" type="video/mp4"></video></th>
+      </tr>
+    </table>
+	
+    <h2 align="center">DAVIS examples</h2>
+	<table align="center">
+      <tr>
+        <th align="center">Original Video</th>
+        <th align="center">Part Co-segmentation</th>
+      </tr>
+	  <tr>
+        <th class="spair" colspan="2"><video width="800" playsinline autoplay muted loop><source src="./assets/videos/snowboard_concat.mp4" type="video/mp4"></video></th>
+      </tr>
+	  <tr>
+        <th class="spair" colspan="2"><video width="800" playsinline autoplay muted loop><source src="./assets/videos/horsejump-high_concat.mp4" type="video/mp4"></video></th>
+      </tr>
+	   <tr>
+        <th class="spair" colspan="2"><video width="800" playsinline autoplay muted loop><source src="./assets/videos/motocross-bumps_concat.mp4" type="video/mp4"></video></th>
+      </tr>
+	   <tr>
+        <th class="spair" colspan="2"><video width="800" playsinline autoplay muted loop><source src="./assets/videos/camel_concat.mp4" type="video/mp4"></video></th>
+      </tr>
+	  <tr>
+        <th class="spair" colspan="2"><video width="800" playsinline autoplay muted loop><source src="./assets/videos/blackswan_concat.mp4" type="video/mp4"></video></th>
+      </tr>
+	  <tr>
+        <th class="spair" colspan="2"><video width="800" playsinline autoplay muted loop><source src="./assets/videos/motocross-jump_concat.mp4" type="video/mp4"></video></th>
+      </tr>
+	  <tr>
+        <th class="spair" colspan="2"><video width="800" playsinline autoplay muted loop><source src="./assets/videos/bear_concat.mp4" type="video/mp4"></video></th>
+      </tr>
+	  <tr>
+        <th class="spair" colspan="2"><video width="800" playsinline autoplay muted loop><source src="./assets/videos/bus_concat.mp4" type="video/mp4"></video></th>
+      </tr>
+    </table>
+  </div>
+	
+<div id="AFHQ">
+  <h1 align="center">AFHQ Results</h1>
+	
+  <p align="left">Randomly chosen part co-segmentation results on the AFHQ&nbsp; test set (see Fig. 7). 
+    Our method produces consistent parts across different animals with difference in appearance and pose.
+     (e.g. the method <em>chose</em> to separate: <a style="color:#ff7f0e">ears</a>,  <a style="color:#1f77b4">forehead</a>, 
+     <a style="color:#2ca02c">muzzle</a>, <a style="color:#d62728">around the eyes</a>, <a style="color: #9467bd">whiskers</a>, 
+     <a style="color:#8c564b">chest</a>, <a style="color:#e377c2">torso</a>, <a style="color:#7f7f7f">temples</a>, 
+     <a style="color:#bcbd22">eyes, nose and mouth</a>, <a style="color: #17becf">hairline</a>).&nbsp;&nbsp;</p>
+     <table>       
+      <tr>
+      <th>Original</th>
+      <th>Our Result</th>
+      <th>&nbsp;&nbsp;&nbsp;&nbsp;</th>
+      <th>Original</th>
+      <th>Our Result</th>
+      <th>&nbsp;&nbsp;&nbsp;&nbsp;</th>
+      <th>Original</th>
+      <th>Our Result</th>
+</tr>
+      <tr>
+      <th class="afhq"><img width="200" src="./assets/AFHQ/AFHQ/pixabay_dog_001816.png"></th>
+      <th class="afhq"><img width="200" src="./assets/AFHQ/AFHQ/pixabay_dog_001816_crf_overlay_checkerboard.png"></th>
+      <th>&nbsp;&nbsp;&nbsp;&nbsp;</th>
+      <th class="afhq"><img width="200" src="./assets/AFHQ/AFHQ/flickr_wild_003586.png"></th>
+      <th class="afhq"><img width="200" src="./assets/AFHQ/AFHQ/flickr_wild_003586_crf_overlay_checkerboard.png"></th>
+      <th>&nbsp;&nbsp;&nbsp;&nbsp;</th>
+      <th class="afhq"><img width="200" src="./assets/AFHQ/AFHQ/flickr_wild_002747.png"></th>
+      <th class="afhq"><img width="200" src="./assets/AFHQ/AFHQ/flickr_wild_002747_crf_overlay_checkerboard.png"></th>
+      </tr>
+  
+      
+  
+      <tr>
+      <th>Original</th>
+      <th>Our Result</th>
+      <th>&nbsp;&nbsp;&nbsp;&nbsp;</th>
+      <th>Original</th>
+      <th>Our Result</th>
+      <th>&nbsp;&nbsp;&nbsp;&nbsp;</th>
+      <th>Original</th>
+      <th>Our Result</th>
+      </tr>
+      <tr>
+      <th class="afhq"><img width="200" src="./assets/AFHQ/AFHQ/pixabay_cat_001143.png"></th>
+      <th class="afhq"><img width="200" src="./assets/AFHQ/AFHQ/pixabay_cat_001143_crf_overlay_checkerboard.png"></th>
+      <th>&nbsp;&nbsp;&nbsp;&nbsp;</th>
+      <th class="afhq"><img width="200" src="./assets/AFHQ/AFHQ/flickr_wild_000306.png"></th>
+      <th class="afhq"><img width="200" src="./assets/AFHQ/AFHQ/flickr_wild_000306_crf_overlay_checkerboard.png"></th>
+      <th>&nbsp;&nbsp;&nbsp;&nbsp;</th>
+      <th class="afhq"><img width="200" src="./assets/AFHQ/AFHQ/pixabay_wild_000776.png"></th>
+      <th class="afhq"><img width="200" src="./assets/AFHQ/AFHQ/pixabay_wild_000776_crf_overlay_checkerboard.png"></th>
+      </tr>
+  
+      
+  
+      <tr>
+      <th>Original</th>
+      <th>Our Result</th>
+      <th>&nbsp;&nbsp;&nbsp;&nbsp;</th>
+      <th>Original</th>
+      <th>Our Result</th>
+      <th>&nbsp;&nbsp;&nbsp;&nbsp;</th>
+      <th>Original</th>
+      <th>Our Result</th>
+      </tr>
+      <tr>
+      <th class="afhq"><img width="200" src="./assets/AFHQ/AFHQ/pixabay_cat_003455.png"></th>
+      <th class="afhq"><img width="200" src="./assets/AFHQ/AFHQ/pixabay_cat_003455_crf_overlay_checkerboard.png"></th>
+      <th>&nbsp;&nbsp;&nbsp;&nbsp;</th>
+      <th class="afhq"><img width="200" src="./assets/AFHQ/AFHQ/pixabay_wild_000217.png"></th>
+      <th class="afhq"><img width="200" src="./assets/AFHQ/AFHQ/pixabay_wild_000217_crf_overlay_checkerboard.png"></th>
+      <th>&nbsp;&nbsp;&nbsp;&nbsp;</th>
+      <th class="afhq"><img width="200" src="./assets/AFHQ/AFHQ/pixabay_dog_002801.png"></th>
+      <th class="afhq"><img width="200" src="./assets/AFHQ/AFHQ/pixabay_dog_002801_crf_overlay_checkerboard.png"></th>
+      </tr>
+  
+      
+  
+      <tr>
+      <th>Original</th>
+      <th>Our Result</th>
+      <th>&nbsp;&nbsp;&nbsp;&nbsp;</th>
+      <th>Original</th>
+      <th>Our Result</th>
+      <th>&nbsp;&nbsp;&nbsp;&nbsp;</th>
+      <th>Original</th>
+      <th>Our Result</th>
+      </tr>
+      <tr>
+      <th class="afhq"><img width="200" src="./assets/AFHQ/AFHQ/pixabay_wild_000414.png"></th>
+      <th class="afhq"><img width="200" src="./assets/AFHQ/AFHQ/pixabay_wild_000414_crf_overlay_checkerboard.png"></th>
+      <th>&nbsp;&nbsp;&nbsp;&nbsp;</th>
+      <th class="afhq"><img width="200" src="./assets/AFHQ/AFHQ/pixabay_cat_002928.png"></th>
+      <th class="afhq"><img width="200" src="./assets/AFHQ/AFHQ/pixabay_cat_002928_crf_overlay_checkerboard.png"></th>
+      <th>&nbsp;&nbsp;&nbsp;&nbsp;</th>
+      <th class="afhq"><img width="200" src="./assets/AFHQ/AFHQ/pixabay_dog_000507.png"></th>
+      <th class="afhq"><img width="200" src="./assets/AFHQ/AFHQ/pixabay_dog_000507_crf_overlay_checkerboard.png"></th>
+      </tr>
+  
+      
+  
+      <tr>
+      <th>Original</th>
+      <th>Our Result</th>
+      <th>&nbsp;&nbsp;&nbsp;&nbsp;</th>
+      <th>Original</th>
+      <th>Our Result</th>
+      <th>&nbsp;&nbsp;&nbsp;&nbsp;</th>
+      <th>Original</th>
+      <th>Our Result</th>
+      </tr>
+      <tr>
+      <th class="afhq"><img width="200" src="./assets/AFHQ/AFHQ/pixabay_cat_001635.png"></th>
+      <th class="afhq"><img width="200" src="./assets/AFHQ/AFHQ/pixabay_cat_001635_crf_overlay_checkerboard.png"></th>
+      <th>&nbsp;&nbsp;&nbsp;&nbsp;</th>
+      <th class="afhq"><img width="200" src="./assets/AFHQ/AFHQ/pixabay_cat_003204.png"></th>
+      <th class="afhq"><img width="200" src="./assets/AFHQ/AFHQ/pixabay_cat_003204_crf_overlay_checkerboard.png"></th>
+      <th>&nbsp;&nbsp;&nbsp;&nbsp;</th>
+      <th class="afhq"><img width="200" src="./assets/AFHQ/AFHQ/pixabay_dog_000357.png"></th>
+      <th class="afhq"><img width="200" src="./assets/AFHQ/AFHQ/pixabay_dog_000357_crf_overlay_checkerboard.png"></th>
+      </tr>
+  
+      
+  
+      <tr>
+      <th>Original</th>
+      <th>Our Result</th>
+      <th>&nbsp;&nbsp;&nbsp;&nbsp;</th>
+      <th>Original</th>
+      <th>Our Result</th>
+      <th>&nbsp;&nbsp;&nbsp;&nbsp;</th>
+      <th>Original</th>
+      <th>Our Result</th>
+      </tr>
+      <tr>
+      <th class="afhq"><img width="200" src="./assets/AFHQ/AFHQ/pixabay_cat_003723.png"></th>
+      <th class="afhq"><img width="200" src="./assets/AFHQ/AFHQ/pixabay_cat_003723_crf_overlay_checkerboard.png"></th>
+      <th>&nbsp;&nbsp;&nbsp;&nbsp;</th>
+      <th class="afhq"><img width="200" src="./assets/AFHQ/AFHQ/flickr_wild_002226.png"></th>
+      <th class="afhq"><img width="200" src="./assets/AFHQ/AFHQ/flickr_wild_002226_crf_overlay_checkerboard.png"></th>
+      <th>&nbsp;&nbsp;&nbsp;&nbsp;</th>
+      <th class="afhq"><img width="200" src="./assets/AFHQ/AFHQ/pixabay_cat_001536.png"></th>
+      <th class="afhq"><img width="200" src="./assets/AFHQ/AFHQ/pixabay_cat_001536_crf_overlay_checkerboard.png"></th>
+      </tr>
+  
+      
+  
+      <tr>
+      <th>Original</th>
+      <th>Our Result</th>
+      <th>&nbsp;&nbsp;&nbsp;&nbsp;</th>
+      <th>Original</th>
+      <th>Our Result</th>
+      <th>&nbsp;&nbsp;&nbsp;&nbsp;</th>
+      <th>Original</th>
+      <th>Our Result</th>
+      </tr>
+      <tr>
+      <th class="afhq"><img width="200" src="./assets/AFHQ/AFHQ/flickr_wild_001460.png"></th>
+      <th class="afhq"><img width="200" src="./assets/AFHQ/AFHQ/flickr_wild_001460_crf_overlay_checkerboard.png"></th>
+      <th>&nbsp;&nbsp;&nbsp;&nbsp;</th>
+      <th class="afhq"><img width="200" src="./assets/AFHQ/AFHQ/flickr_dog_000896.png"></th>
+      <th class="afhq"><img width="200" src="./assets/AFHQ/AFHQ/flickr_dog_000896_crf_overlay_checkerboard.png"></th>
+      <th>&nbsp;&nbsp;&nbsp;&nbsp;</th>
+      <th class="afhq"><img width="200" src="./assets/AFHQ/AFHQ/flickr_cat_000575.png"></th>
+      <th class="afhq"><img width="200" src="./assets/AFHQ/AFHQ/flickr_cat_000575_crf_overlay_checkerboard.png"></th>
+      </tr>
+  
+      
+  
+      <tr>
+      <th>Original</th>
+      <th>Our Result</th>
+      <th>&nbsp;&nbsp;&nbsp;&nbsp;</th>
+      <th>Original</th>
+      <th>Our Result</th>
+      <th>&nbsp;&nbsp;&nbsp;&nbsp;</th>
+      <th>Original</th>
+      <th>Our Result</th>
+      </tr>
+      <tr>
+      <th class="afhq"><img width="200" src="./assets/AFHQ/AFHQ/pixabay_wild_000958.png"></th>
+      <th class="afhq"><img width="200" src="./assets/AFHQ/AFHQ/pixabay_wild_000958_crf_overlay_checkerboard.png"></th>
+      <th>&nbsp;&nbsp;&nbsp;&nbsp;</th>
+      <th class="afhq"><img width="200" src="./assets/AFHQ/AFHQ/pixabay_dog_003751.png"></th>
+      <th class="afhq"><img width="200" src="./assets/AFHQ/AFHQ/pixabay_dog_003751_crf_overlay_checkerboard.png"></th>
+      <th>&nbsp;&nbsp;&nbsp;&nbsp;</th>
+      <th class="afhq"><img width="200" src="./assets/AFHQ/AFHQ/pixabay_dog_002979.png"></th>
+      <th class="afhq"><img width="200" src="./assets/AFHQ/AFHQ/pixabay_dog_002979_crf_overlay_checkerboard.png"></th>
+      </tr>
+  
+      
+  
+      <tr>
+      <th>Original</th>
+      <th>Our Result</th>
+      <th>&nbsp;&nbsp;&nbsp;&nbsp;</th>
+      <th>Original</th>
+      <th>Our Result</th>
+      <th>&nbsp;&nbsp;&nbsp;&nbsp;</th>
+      <th>Original</th>
+      <th>Our Result</th>
+      </tr>
+      <tr>
+      <th class="afhq"><img width="200" src="./assets/AFHQ/AFHQ/pixabay_cat_000040.png"></th>
+      <th class="afhq"><img width="200" src="./assets/AFHQ/AFHQ/pixabay_cat_000040_crf_overlay_checkerboard.png"></th>
+      <th>&nbsp;&nbsp;&nbsp;&nbsp;</th>
+      <th class="afhq"><img width="200" src="./assets/AFHQ/AFHQ/pixabay_dog_003376.png"></th>
+      <th class="afhq"><img width="200" src="./assets/AFHQ/AFHQ/pixabay_dog_003376_crf_overlay_checkerboard.png"></th>
+      <th>&nbsp;&nbsp;&nbsp;&nbsp;</th>
+      <th class="afhq"><img width="200" src="./assets/AFHQ/AFHQ/pixabay_cat_000901.png"></th>
+      <th class="afhq"><img width="200" src="./assets/AFHQ/AFHQ/pixabay_cat_000901_crf_overlay_checkerboard.png"></th>
+      </tr>
+  
+      
+  
+      <tr>
+      <th>Original</th>
+      <th>Our Result</th>
+      <th>&nbsp;&nbsp;&nbsp;&nbsp;</th>
+      <th>Original</th>
+      <th>Our Result</th>
+      <th>&nbsp;&nbsp;&nbsp;&nbsp;</th>
+      <th>Original</th>
+      <th>Our Result</th>
+      </tr>
+      <tr>
+      <th class="afhq"><img width="200" src="./assets/AFHQ/AFHQ/pixabay_cat_004562.png"></th>
+      <th class="afhq"><img width="200" src="./assets/AFHQ/AFHQ/pixabay_cat_004562_crf_overlay_checkerboard.png"></th>
+      <th>&nbsp;&nbsp;&nbsp;&nbsp;</th>
+      <th class="afhq"><img width="200" src="./assets/AFHQ/AFHQ/flickr_cat_000283.png"></th>
+      <th class="afhq"><img width="200" src="./assets/AFHQ/AFHQ/flickr_cat_000283_crf_overlay_checkerboard.png"></th>
+      <th>&nbsp;&nbsp;&nbsp;&nbsp;</th>
+      <th class="afhq"><img width="200" src="./assets/AFHQ/AFHQ/flickr_dog_000059.png"></th>
+      <th class="afhq"><img width="200" src="./assets/AFHQ/AFHQ/flickr_dog_000059_crf_overlay_checkerboard.png"></th>
+      </tr>
+  
+      
+  
+      <tr>
+      <th>Original</th>
+      <th>Our Result</th>
+      <th>&nbsp;&nbsp;&nbsp;&nbsp;</th>
+      <th>Original</th>
+      <th>Our Result</th>
+      <th>&nbsp;&nbsp;&nbsp;&nbsp;</th>
+      <th>Original</th>
+      <th>Our Result</th>
+      </tr>
+      <tr>
+      <th class="afhq"><img width="200" src="./assets/AFHQ/AFHQ/pixabay_cat_002009.png"></th>
+      <th class="afhq"><img width="200" src="./assets/AFHQ/AFHQ/pixabay_cat_002009_crf_overlay_checkerboard.png"></th>
+      <th>&nbsp;&nbsp;&nbsp;&nbsp;</th>
+      <th class="afhq"><img width="200" src="./assets/AFHQ/AFHQ/pixabay_dog_003095.png"></th>
+      <th class="afhq"><img width="200" src="./assets/AFHQ/AFHQ/pixabay_dog_003095_crf_overlay_checkerboard.png"></th>
+      <th>&nbsp;&nbsp;&nbsp;&nbsp;</th>
+      <th class="afhq"><img width="200" src="./assets/AFHQ/AFHQ/pixabay_wild_000564.png"></th>
+      <th class="afhq"><img width="200" src="./assets/AFHQ/AFHQ/pixabay_wild_000564_crf_overlay_checkerboard.png"></th>
+      </tr>
+  
+      
+  
+      <tr>
+      <th>Original</th>
+      <th>Our Result</th>
+      <th>&nbsp;&nbsp;&nbsp;&nbsp;</th>
+      <th>Original</th>
+      <th>Our Result</th>
+      <th>&nbsp;&nbsp;&nbsp;&nbsp;</th>
+      <th>Original</th>
+      <th>Our Result</th>
+      </tr>
+      <tr>
+      <th class="afhq"><img width="200" src="./assets/AFHQ/AFHQ/pixabay_cat_001084.png"></th>
+      <th class="afhq"><img width="200" src="./assets/AFHQ/AFHQ/pixabay_cat_001084_crf_overlay_checkerboard.png"></th>
+      <th>&nbsp;&nbsp;&nbsp;&nbsp;</th>
+      <th class="afhq"><img width="200" src="./assets/AFHQ/AFHQ/pixabay_cat_001367.png"></th>
+      <th class="afhq"><img width="200" src="./assets/AFHQ/AFHQ/pixabay_cat_001367_crf_overlay_checkerboard.png"></th>
+      <th>&nbsp;&nbsp;&nbsp;&nbsp;</th>
+      <th class="afhq"><img width="200" src="./assets/AFHQ/AFHQ/pixabay_cat_003874.png"></th>
+      <th class="afhq"><img width="200" src="./assets/AFHQ/AFHQ/pixabay_cat_003874_crf_overlay_checkerboard.png"></th>
+      </tr>
+  
+      
+  
+      <tr>
+      <th>Original</th>
+      <th>Our Result</th>
+      <th>&nbsp;&nbsp;&nbsp;&nbsp;</th>
+      <th>Original</th>
+      <th>Our Result</th>
+      <th>&nbsp;&nbsp;&nbsp;&nbsp;</th>
+      <th>Original</th>
+      <th>Our Result</th>
+      </tr>
+      <tr>
+      <th class="afhq"><img width="200" src="./assets/AFHQ/AFHQ/flickr_wild_003234.png"></th>
+      <th class="afhq"><img width="200" src="./assets/AFHQ/AFHQ/flickr_wild_003234_crf_overlay_checkerboard.png"></th>
+      <th>&nbsp;&nbsp;&nbsp;&nbsp;</th>
+      <th class="afhq"><img width="200" src="./assets/AFHQ/AFHQ/pixabay_dog_000982.png"></th>
+      <th class="afhq"><img width="200" src="./assets/AFHQ/AFHQ/pixabay_dog_000982_crf_overlay_checkerboard.png"></th>
+      <th>&nbsp;&nbsp;&nbsp;&nbsp;</th>
+      <th class="afhq"><img width="200" src="./assets/AFHQ/AFHQ/pixabay_wild_000664.png"></th>
+      <th class="afhq"><img width="200" src="./assets/AFHQ/AFHQ/pixabay_wild_000664_crf_overlay_checkerboard.png"></th>
+      </tr>
+  
+      
+  
+      <tr>
+      <th>Original</th>
+      <th>Our Result</th>
+      <th>&nbsp;&nbsp;&nbsp;&nbsp;</th>
+      <th>Original</th>
+      <th>Our Result</th>
+      <th>&nbsp;&nbsp;&nbsp;&nbsp;</th>
+      <th>Original</th>
+      <th>Our Result</th>
+      </tr>
+      <tr>
+      <th class="afhq"><img width="200" src="./assets/AFHQ/AFHQ/flickr_wild_003796.png"></th>
+      <th class="afhq"><img width="200" src="./assets/AFHQ/AFHQ/flickr_wild_003796_crf_overlay_checkerboard.png"></th>
+      <th>&nbsp;&nbsp;&nbsp;&nbsp;</th>
+      <th class="afhq"><img width="200" src="./assets/AFHQ/AFHQ/pixabay_wild_000684.png"></th>
+      <th class="afhq"><img width="200" src="./assets/AFHQ/AFHQ/pixabay_wild_000684_crf_overlay_checkerboard.png"></th>
+      <th>&nbsp;&nbsp;&nbsp;&nbsp;</th>
+      <th class="afhq"><img width="200" src="./assets/AFHQ/AFHQ/pixabay_cat_000760.png"></th>
+      <th class="afhq"><img width="200" src="./assets/AFHQ/AFHQ/pixabay_cat_000760_crf_overlay_checkerboard.png"></th>
+      </tr>
+  
+      
+  
+      <tr>
+      <th>Original</th>
+      <th>Our Result</th>
+      <th>&nbsp;&nbsp;&nbsp;&nbsp;</th>
+      <th>Original</th>
+      <th>Our Result</th>
+      <th>&nbsp;&nbsp;&nbsp;&nbsp;</th>
+      <th>Original</th>
+      <th>Our Result</th>
+      </tr>
+      <tr>
+      <th class="afhq"><img width="200" src="./assets/AFHQ/AFHQ/flickr_cat_000418.png"></th>
+      <th class="afhq"><img width="200" src="./assets/AFHQ/AFHQ/flickr_cat_000418_crf_overlay_checkerboard.png"></th>
+      <th>&nbsp;&nbsp;&nbsp;&nbsp;</th>
+      <th class="afhq"><img width="200" src="./assets/AFHQ/AFHQ/flickr_wild_000629.png"></th>
+      <th class="afhq"><img width="200" src="./assets/AFHQ/AFHQ/flickr_wild_000629_crf_overlay_checkerboard.png"></th>
+      <th>&nbsp;&nbsp;&nbsp;&nbsp;</th>
+      <th class="afhq"><img width="200" src="./assets/AFHQ/AFHQ/flickr_dog_000695.png"></th>
+      <th class="afhq"><img width="200" src="./assets/AFHQ/AFHQ/flickr_dog_000695_crf_overlay_checkerboard.png"></th>
+      </tr>
+  
+      
+  
+      <tr>
+      <th>Original</th>
+      <th>Our Result</th>
+      <th>&nbsp;&nbsp;&nbsp;&nbsp;</th>
+      <th>Original</th>
+      <th>Our Result</th>
+      <th>&nbsp;&nbsp;&nbsp;&nbsp;</th>
+      <th>Original</th>
+      <th>Our Result</th>
+      </tr>
+      <tr>
+      <th class="afhq"><img width="200" src="./assets/AFHQ/AFHQ/pixabay_dog_002616.png"></th>
+      <th class="afhq"><img width="200" src="./assets/AFHQ/AFHQ/pixabay_dog_002616_crf_overlay_checkerboard.png"></th>
+      <th>&nbsp;&nbsp;&nbsp;&nbsp;</th>
+      <th class="afhq"><img width="200" src="./assets/AFHQ/AFHQ/flickr_dog_000856.png"></th>
+      <th class="afhq"><img width="200" src="./assets/AFHQ/AFHQ/flickr_dog_000856_crf_overlay_checkerboard.png"></th>
+      <th>&nbsp;&nbsp;&nbsp;&nbsp;</th>
+      <th class="afhq"><img width="200" src="./assets/AFHQ/AFHQ/flickr_wild_003669.png"></th>
+      <th class="afhq"><img width="200" src="./assets/AFHQ/AFHQ/flickr_wild_003669_crf_overlay_checkerboard.png"></th>
+      </tr>
+
+</table>
+</div>
+
+<div id="CUB">
+  <h1 align="center">
+    CUB Comparison 
+   </h1>
+   <p align="left">
+    We apply our part co-segmentation on CUB test set (Sec. 5.1, Fig. 8). 
+    We compare to the recent SOTA part-segmentation methods SCOPS [1] and Choudhury et al. [2],
+     both of were <strong>trained on CUB</strong> specifically for this task, using ground-truth foreground/background masks.
+   </p>
+   <p>
+   </p>
+   <table align="center">
+    <tr>
+     <th>
+      Original
+     </th>
+     <th>
+      SCOPS
+     </th>
+     <th>
+      Choudhury et al.
+     </th>
+     <th>
+      Ours
+     </th>
+    </tr>
+    <tr>
+    <td> <img src="./assets/CUB/images/Bronzed_Cowbird_0031_24139_orig.jpg" width="256"/></td>
+    <td> <img src="./assets/CUB/images/Bronzed_Cowbird_0031_24139_scops.jpg" width="256"/></td>
+    <td> <img src="./assets/CUB/images/Bronzed_Cowbird_0031_24139_unsup.jpg" width="256"/></td>
+    <td> <img src="./assets/CUB/images/Bronzed_Cowbird_0031_24139_ours.jpg" width="256"/></td>
+    </tr>
+   </table>
+   <hr/>
+   <table align="center">
+    <tr>
+     <th>
+      Original
+     </th>
+     <th>
+      SCOPS
+     </th>
+     <th>
+      Choudhury et al.
+     </th>
+     <th>
+      Ours
+     </th>
+    </tr>
+    <tr>
+    <td> <img src="./assets/CUB/images/Tropical_Kingbird_0005_69662_orig.jpg" width="256"/></td>
+    <td> <img src="./assets/CUB/images/Tropical_Kingbird_0005_69662_scops.jpg" width="256"/></td>
+    <td> <img src="./assets/CUB/images/Tropical_Kingbird_0005_69662_unsup.jpg" width="256"/></td>
+    <td> <img src="./assets/CUB/images/Tropical_Kingbird_0005_69662_ours.jpg" width="256"/></td>
+    </tr>
+   </table>
+   <hr/>
+   <table align="center">
+    <tr>
+     <th>
+      Original
+     </th>
+     <th>
+      SCOPS
+     </th>
+     <th>
+      Choudhury et al.
+     </th>
+     <th>
+      Ours
+     </th>
+    </tr>
+    <tr>
+    <td> <img src="./assets/CUB/images/Red_Headed_Woodpecker_0086_182715_orig.jpg" width="256"/></td>
+    <td> <img src="./assets/CUB/images/Red_Headed_Woodpecker_0086_182715_scops.jpg" width="256"/></td>
+    <td> <img src="./assets/CUB/images/Red_Headed_Woodpecker_0086_182715_unsup.jpg" width="256"/></td>
+    <td> <img src="./assets/CUB/images/Red_Headed_Woodpecker_0086_182715_ours.jpg" width="256"/></td>
+    </tr>
+   </table>
+   <hr/>
+   <table align="center">
+    <tr>
+     <th>
+      Original
+     </th>
+     <th>
+      SCOPS
+     </th>
+     <th>
+      Choudhury et al.
+     </th>
+     <th>
+      Ours
+     </th>
+    </tr>
+    <tr>
+    <td> <img src="./assets/CUB/images/Least_Flycatcher_0050_30189_orig.jpg" width="256"/></td>
+    <td> <img src="./assets/CUB/images/Least_Flycatcher_0050_30189_scops.jpg" width="256"/></td>
+    <td> <img src="./assets/CUB/images/Least_Flycatcher_0050_30189_unsup.jpg" width="256"/></td>
+    <td> <img src="./assets/CUB/images/Least_Flycatcher_0050_30189_ours.jpg" width="256"/></td>
+    </tr>
+   </table>
+   <hr/>
+   <table align="center">
+    <tr>
+     <th>
+      Original
+     </th>
+     <th>
+      SCOPS
+     </th>
+     <th>
+      Choudhury et al.
+     </th>
+     <th>
+      Ours
+     </th>
+    </tr>
+    <tr>
+    <td> <img src="./assets/CUB/images/Evening_Grosbeak_0077_38160_orig.jpg" width="256"/></td>
+    <td> <img src="./assets/CUB/images/Evening_Grosbeak_0077_38160_scops.jpg" width="256"/></td>
+    <td> <img src="./assets/CUB/images/Evening_Grosbeak_0077_38160_unsup.jpg" width="256"/></td>
+    <td> <img src="./assets/CUB/images/Evening_Grosbeak_0077_38160_ours.jpg" width="256"/></td>
+    </tr>
+   </table>
+   <hr/>
+   <table align="center">
+    <tr>
+     <th>
+      Original
+     </th>
+     <th>
+      SCOPS
+     </th>
+     <th>
+      Choudhury et al.
+     </th>
+     <th>
+      Ours
+     </th>
+    </tr>
+    <tr>
+    <td> <img src="./assets/CUB/images/Mockingbird_0022_80552_orig.jpg" width="256"/></td>
+    <td> <img src="./assets/CUB/images/Mockingbird_0022_80552_scops.jpg" width="256"/></td>
+    <td> <img src="./assets/CUB/images/Mockingbird_0022_80552_unsup.jpg" width="256"/></td>
+    <td> <img src="./assets/CUB/images/Mockingbird_0022_80552_ours.jpg" width="256"/></td>
+    </tr>
+   </table>
+   <hr/>
+   <table align="center">
+    <tr>
+     <th>
+      Original
+     </th>
+     <th>
+      SCOPS
+     </th>
+     <th>
+      Choudhury et al.
+     </th>
+     <th>
+      Ours
+     </th>
+    </tr>
+    <tr>
+    <td> <img src="./assets/CUB/images/Cape_Glossy_Starling_0072_129386_orig.jpg" width="256"/></td>
+    <td> <img src="./assets/CUB/images/Cape_Glossy_Starling_0072_129386_scops.jpg" width="256"/></td>
+    <td> <img src="./assets/CUB/images/Cape_Glossy_Starling_0072_129386_unsup.jpg" width="256"/></td>
+    <td> <img src="./assets/CUB/images/Cape_Glossy_Starling_0072_129386_ours.jpg" width="256"/></td>
+    </tr>
+   </table>
+   <hr/>
+   <table align="center">
+    <tr>
+     <th>
+      Original
+     </th>
+     <th>
+      SCOPS
+     </th>
+     <th>
+      Choudhury et al.
+     </th>
+     <th>
+      Ours
+     </th>
+    </tr>
+    <tr>
+    <td> <img src="./assets/CUB/images/White_Eyed_Vireo_0091_159045_orig.jpg" width="256"/></td>
+    <td> <img src="./assets/CUB/images/White_Eyed_Vireo_0091_159045_scops.jpg" width="256"/></td>
+    <td> <img src="./assets/CUB/images/White_Eyed_Vireo_0091_159045_unsup.jpg" width="256"/></td>
+    <td> <img src="./assets/CUB/images/White_Eyed_Vireo_0091_159045_ours.jpg" width="256"/></td>
+    </tr>
+   </table>
+   <hr/>
+   <table align="center">
+    <tr>
+     <th>
+      Original
+     </th>
+     <th>
+      SCOPS
+     </th>
+     <th>
+      Choudhury et al.
+     </th>
+     <th>
+      Ours
+     </th>
+    </tr>
+    <tr>
+    <td> <img src="./assets/CUB/images/Florida_Jay_0011_64920_orig.jpg" width="256"/></td>
+    <td> <img src="./assets/CUB/images/Florida_Jay_0011_64920_scops.jpg" width="256"/></td>
+    <td> <img src="./assets/CUB/images/Florida_Jay_0011_64920_unsup.jpg" width="256"/></td>
+    <td> <img src="./assets/CUB/images/Florida_Jay_0011_64920_ours.jpg" width="256"/></td>
+    </tr>
+   </table>
+   <hr/>
+   <table align="center">
+    <tr>
+     <th>
+      Original
+     </th>
+     <th>
+      SCOPS
+     </th>
+     <th>
+      Choudhury et al.
+     </th>
+     <th>
+      Ours
+     </th>
+    </tr>
+    <tr>
+    <td> <img src="./assets/CUB/images/Forsters_Tern_0043_151332_orig.jpg" width="256"/></td>
+    <td> <img src="./assets/CUB/images/Forsters_Tern_0043_151332_scops.jpg" width="256"/></td>
+    <td> <img src="./assets/CUB/images/Forsters_Tern_0043_151332_unsup.jpg" width="256"/></td>
+    <td> <img src="./assets/CUB/images/Forsters_Tern_0043_151332_ours.jpg" width="256"/></td>
+    </tr>
+   </table>
+   <hr/>
+   <table align="center">
+    <tr>
+     <th>
+      Original
+     </th>
+     <th>
+      SCOPS
+     </th>
+     <th>
+      Choudhury et al.
+     </th>
+     <th>
+      Ours
+     </th>
+    </tr>
+    <tr>
+    <td> <img src="./assets/CUB/images/Florida_Jay_0058_64997_orig.jpg" width="256"/></td>
+    <td> <img src="./assets/CUB/images/Florida_Jay_0058_64997_scops.jpg" width="256"/></td>
+    <td> <img src="./assets/CUB/images/Florida_Jay_0058_64997_unsup.jpg" width="256"/></td>
+    <td> <img src="./assets/CUB/images/Florida_Jay_0058_64997_ours.jpg" width="256"/></td>
+    </tr>
+   </table>
+   <hr/>
+   <table align="center">
+    <tr>
+     <th>
+      Original
+     </th>
+     <th>
+      SCOPS
+     </th>
+     <th>
+      Choudhury et al.
+     </th>
+     <th>
+      Ours
+     </th>
+    </tr>
+    <tr>
+    <td> <img src="./assets/CUB/images/Long_Tailed_Jaeger_0055_61046_orig.jpg" width="256"/></td>
+    <td> <img src="./assets/CUB/images/Long_Tailed_Jaeger_0055_61046_scops.jpg" width="256"/></td>
+    <td> <img src="./assets/CUB/images/Long_Tailed_Jaeger_0055_61046_unsup.jpg" width="256"/></td>
+    <td> <img src="./assets/CUB/images/Long_Tailed_Jaeger_0055_61046_ours.jpg" width="256"/></td>
+    </tr>
+   </table>
+   <hr/>
+   <table align="center">
+    <tr>
+     <th>
+      Original
+     </th>
+     <th>
+      SCOPS
+     </th>
+     <th>
+      Choudhury et al.
+     </th>
+     <th>
+      Ours
+     </th>
+    </tr>
+    <tr>
+    <td> <img src="./assets/CUB/images/Northern_Fulmar_0008_43647_orig.jpg" width="256"/></td>
+    <td> <img src="./assets/CUB/images/Northern_Fulmar_0008_43647_scops.jpg" width="256"/></td>
+    <td> <img src="./assets/CUB/images/Northern_Fulmar_0008_43647_unsup.jpg" width="256"/></td>
+    <td> <img src="./assets/CUB/images/Northern_Fulmar_0008_43647_ours.jpg" width="256"/></td>
+    </tr>
+   </table>
+   <hr/>
+   <table align="center">
+    <tr>
+     <th>
+      Original
+     </th>
+     <th>
+      SCOPS
+     </th>
+     <th>
+      Choudhury et al.
+     </th>
+     <th>
+      Ours
+     </th>
+    </tr>
+    <tr>
+    <td> <img src="./assets/CUB/images/Horned_Lark_0064_74864_orig.jpg" width="256"/></td>
+    <td> <img src="./assets/CUB/images/Horned_Lark_0064_74864_scops.jpg" width="256"/></td>
+    <td> <img src="./assets/CUB/images/Horned_Lark_0064_74864_unsup.jpg" width="256"/></td>
+    <td> <img src="./assets/CUB/images/Horned_Lark_0064_74864_ours.jpg" width="256"/></td>
+    </tr>
+   </table>
+   <hr/>
+   <table align="center">
+    <tr>
+     <th>
+      Original
+     </th>
+     <th>
+      SCOPS
+     </th>
+     <th>
+      Choudhury et al.
+     </th>
+     <th>
+      Ours
+     </th>
+    </tr>
+    <tr>
+    <td> <img src="./assets/CUB/images/Rufous_Hummingbird_0021_58408_orig.jpg" width="256"/></td>
+    <td> <img src="./assets/CUB/images/Rufous_Hummingbird_0021_58408_scops.jpg" width="256"/></td>
+    <td> <img src="./assets/CUB/images/Rufous_Hummingbird_0021_58408_unsup.jpg" width="256"/></td>
+    <td> <img src="./assets/CUB/images/Rufous_Hummingbird_0021_58408_ours.jpg" width="256"/></td>
+    </tr>
+   </table>
+   <hr/>
+   <table align="center">
+    <tr>
+     <th>
+      Original
+     </th>
+     <th>
+      SCOPS
+     </th>
+     <th>
+      Choudhury et al.
+     </th>
+     <th>
+      Ours
+     </th>
+    </tr>
+    <tr>
+    <td> <img src="./assets/CUB/images/Mockingbird_0051_79599_orig.jpg" width="256"/></td>
+    <td> <img src="./assets/CUB/images/Mockingbird_0051_79599_scops.jpg" width="256"/></td>
+    <td> <img src="./assets/CUB/images/Mockingbird_0051_79599_unsup.jpg" width="256"/></td>
+    <td> <img src="./assets/CUB/images/Mockingbird_0051_79599_ours.jpg" width="256"/></td>
+    </tr>
+   </table>
+   <hr/>
+   <table align="center">
+    <tr>
+     <th>
+      Original
+     </th>
+     <th>
+      SCOPS
+     </th>
+     <th>
+      Choudhury et al.
+     </th>
+     <th>
+      Ours
+     </th>
+    </tr>
+    <tr>
+    <td> <img src="./assets/CUB/images/Ruby_Throated_Hummingbird_0066_57518_orig.jpg" width="256"/></td>
+    <td> <img src="./assets/CUB/images/Ruby_Throated_Hummingbird_0066_57518_scops.jpg" width="256"/></td>
+    <td> <img src="./assets/CUB/images/Ruby_Throated_Hummingbird_0066_57518_unsup.jpg" width="256"/></td>
+    <td> <img src="./assets/CUB/images/Ruby_Throated_Hummingbird_0066_57518_ours.jpg" width="256"/></td>
+    </tr>
+   </table>
+   <hr/>
+   <table align="center">
+    <tr>
+     <th>
+      Original
+     </th>
+     <th>
+      SCOPS
+     </th>
+     <th>
+      Choudhury et al.
+     </th>
+     <th>
+      Ours
+     </th>
+    </tr>
+    <tr>
+    <td> <img src="./assets/CUB/images/Red_Winged_Blackbird_0045_4526_orig.jpg" width="256"/></td>
+    <td> <img src="./assets/CUB/images/Red_Winged_Blackbird_0045_4526_scops.jpg" width="256"/></td>
+    <td> <img src="./assets/CUB/images/Red_Winged_Blackbird_0045_4526_unsup.jpg" width="256"/></td>
+    <td> <img src="./assets/CUB/images/Red_Winged_Blackbird_0045_4526_ours.jpg" width="256"/></td>
+    </tr>
+   </table>
+   <hr/>
+   <table align="center">
+    <tr>
+     <th>
+      Original
+     </th>
+     <th>
+      SCOPS
+     </th>
+     <th>
+      Choudhury et al.
+     </th>
+     <th>
+      Ours
+     </th>
+    </tr>
+    <tr>
+    <td> <img src="./assets/CUB/images/Magnolia_Warbler_0079_165783_orig.jpg" width="256"/></td>
+    <td> <img src="./assets/CUB/images/Magnolia_Warbler_0079_165783_scops.jpg" width="256"/></td>
+    <td> <img src="./assets/CUB/images/Magnolia_Warbler_0079_165783_unsup.jpg" width="256"/></td>
+    <td> <img src="./assets/CUB/images/Magnolia_Warbler_0079_165783_ours.jpg" width="256"/></td>
+    </tr>
+   </table>
+   <hr/>
+   <table align="center">
+    <tr>
+     <th>
+      Original
+     </th>
+     <th>
+      SCOPS
+     </th>
+     <th>
+      Choudhury et al.
+     </th>
+     <th>
+      Ours
+     </th>
+    </tr>
+    <tr>
+    <td> <img src="./assets/CUB/images/Ovenbird_0058_93078_orig.jpg" width="256"/></td>
+    <td> <img src="./assets/CUB/images/Ovenbird_0058_93078_scops.jpg" width="256"/></td>
+    <td> <img src="./assets/CUB/images/Ovenbird_0058_93078_unsup.jpg" width="256"/></td>
+    <td> <img src="./assets/CUB/images/Ovenbird_0058_93078_ours.jpg" width="256"/></td>
+    </tr>
+   </table>
+   <hr/>
+   <table align="center">
+    <tr>
+     <th>
+      Original
+     </th>
+     <th>
+      SCOPS
+     </th>
+     <th>
+      Choudhury et al.
+     </th>
+     <th>
+      Ours
+     </th>
+    </tr>
+    <tr>
+    <td> <img src="./assets/CUB/images/Pigeon_Guillemot_0029_39889_orig.jpg" width="256"/></td>
+    <td> <img src="./assets/CUB/images/Pigeon_Guillemot_0029_39889_scops.jpg" width="256"/></td>
+    <td> <img src="./assets/CUB/images/Pigeon_Guillemot_0029_39889_unsup.jpg" width="256"/></td>
+    <td> <img src="./assets/CUB/images/Pigeon_Guillemot_0029_39889_ours.jpg" width="256"/></td>
+    </tr>
+   </table>
+   <hr/>
+   <table align="center">
+    <tr>
+     <th>
+      Original
+     </th>
+     <th>
+      SCOPS
+     </th>
+     <th>
+      Choudhury et al.
+     </th>
+     <th>
+      Ours
+     </th>
+    </tr>
+    <tr>
+    <td> <img src="./assets/CUB/images/Baltimore_Oriole_0041_87367_orig.jpg" width="256"/></td>
+    <td> <img src="./assets/CUB/images/Baltimore_Oriole_0041_87367_scops.jpg" width="256"/></td>
+    <td> <img src="./assets/CUB/images/Baltimore_Oriole_0041_87367_unsup.jpg" width="256"/></td>
+    <td> <img src="./assets/CUB/images/Baltimore_Oriole_0041_87367_ours.jpg" width="256"/></td>
+    </tr>
+   </table>
+   <hr/>
+   <table align="center">
+    <tr>
+     <th>
+      Original
+     </th>
+     <th>
+      SCOPS
+     </th>
+     <th>
+      Choudhury et al.
+     </th>
+     <th>
+      Ours
+     </th>
+    </tr>
+    <tr>
+    <td> <img src="./assets/CUB/images/Parakeet_Auklet_0031_795960_orig.jpg" width="256"/></td>
+    <td> <img src="./assets/CUB/images/Parakeet_Auklet_0031_795960_scops.jpg" width="256"/></td>
+    <td> <img src="./assets/CUB/images/Parakeet_Auklet_0031_795960_unsup.jpg" width="256"/></td>
+    <td> <img src="./assets/CUB/images/Parakeet_Auklet_0031_795960_ours.jpg" width="256"/></td>
+    </tr>
+   </table>
+   <hr/>
+   <table align="center">
+    <tr>
+     <th>
+      Original
+     </th>
+     <th>
+      SCOPS
+     </th>
+     <th>
+      Choudhury et al.
+     </th>
+     <th>
+      Ours
+     </th>
+    </tr>
+    <tr>
+    <td> <img src="./assets/CUB/images/Dark_Eyed_Junco_0024_68961_orig.jpg" width="256"/></td>
+    <td> <img src="./assets/CUB/images/Dark_Eyed_Junco_0024_68961_scops.jpg" width="256"/></td>
+    <td> <img src="./assets/CUB/images/Dark_Eyed_Junco_0024_68961_unsup.jpg" width="256"/></td>
+    <td> <img src="./assets/CUB/images/Dark_Eyed_Junco_0024_68961_ours.jpg" width="256"/></td>
+    </tr>
+   </table>
+   <hr/>
+   <table align="center">
+    <tr>
+     <th>
+      Original
+     </th>
+     <th>
+      SCOPS
+     </th>
+     <th>
+      Choudhury et al.
+     </th>
+     <th>
+      Ours
+     </th>
+    </tr>
+    <tr>
+    <td> <img src="./assets/CUB/images/Brown_Creeper_0001_24449_orig.jpg" width="256"/></td>
+    <td> <img src="./assets/CUB/images/Brown_Creeper_0001_24449_scops.jpg" width="256"/></td>
+    <td> <img src="./assets/CUB/images/Brown_Creeper_0001_24449_unsup.jpg" width="256"/></td>
+    <td> <img src="./assets/CUB/images/Brown_Creeper_0001_24449_ours.jpg" width="256"/></td>
+    </tr>
+   </table>
+   <hr/>
+   <table align="center">
+    <tr>
+     <th>
+      Original
+     </th>
+     <th>
+      SCOPS
+     </th>
+     <th>
+      Choudhury et al.
+     </th>
+     <th>
+      Ours
+     </th>
+    </tr>
+    <tr>
+    <td> <img src="./assets/CUB/images/Elegant_Tern_0099_150682_orig.jpg" width="256"/></td>
+    <td> <img src="./assets/CUB/images/Elegant_Tern_0099_150682_scops.jpg" width="256"/></td>
+    <td> <img src="./assets/CUB/images/Elegant_Tern_0099_150682_unsup.jpg" width="256"/></td>
+    <td> <img src="./assets/CUB/images/Elegant_Tern_0099_150682_ours.jpg" width="256"/></td>
+    </tr>
+   </table>
+   <hr/>
+   <table align="center">
+    <tr>
+     <th>
+      Original
+     </th>
+     <th>
+      SCOPS
+     </th>
+     <th>
+      Choudhury et al.
+     </th>
+     <th>
+      Ours
+     </th>
+    </tr>
+    <tr>
+    <td> <img src="./assets/CUB/images/Field_Sparrow_0090_113613_orig.jpg" width="256"/></td>
+    <td> <img src="./assets/CUB/images/Field_Sparrow_0090_113613_scops.jpg" width="256"/></td>
+    <td> <img src="./assets/CUB/images/Field_Sparrow_0090_113613_unsup.jpg" width="256"/></td>
+    <td> <img src="./assets/CUB/images/Field_Sparrow_0090_113613_ours.jpg" width="256"/></td>
+    </tr>
+   </table>
+   <hr/>
+   <table align="center">
+    <tr>
+     <th>
+      Original
+     </th>
+     <th>
+      SCOPS
+     </th>
+     <th>
+      Choudhury et al.
+     </th>
+     <th>
+      Ours
+     </th>
+    </tr>
+    <tr>
+    <td> <img src="./assets/CUB/images/Baltimore_Oriole_0127_87560_orig.jpg" width="256"/></td>
+    <td> <img src="./assets/CUB/images/Baltimore_Oriole_0127_87560_scops.jpg" width="256"/></td>
+    <td> <img src="./assets/CUB/images/Baltimore_Oriole_0127_87560_unsup.jpg" width="256"/></td>
+    <td> <img src="./assets/CUB/images/Baltimore_Oriole_0127_87560_ours.jpg" width="256"/></td>
+    </tr>
+   </table>
+   <hr/>
+   <table align="center">
+    <tr>
+     <th>
+      Original
+     </th>
+     <th>
+      SCOPS
+     </th>
+     <th>
+      Choudhury et al.
+     </th>
+     <th>
+      Ours
+     </th>
+    </tr>
+    <tr>
+    <td> <img src="./assets/CUB/images/Yellow_Bellied_Flycatcher_0017_795490_orig.jpg" width="256"/></td>
+    <td> <img src="./assets/CUB/images/Yellow_Bellied_Flycatcher_0017_795490_scops.jpg" width="256"/></td>
+    <td> <img src="./assets/CUB/images/Yellow_Bellied_Flycatcher_0017_795490_unsup.jpg" width="256"/></td>
+    <td> <img src="./assets/CUB/images/Yellow_Bellied_Flycatcher_0017_795490_ours.jpg" width="256"/></td>
+    </tr>
+   </table>
+   <hr/>
+   <table align="center">
+    <tr>
+     <th>
+      Original
+     </th>
+     <th>
+      SCOPS
+     </th>
+     <th>
+      Choudhury et al.
+     </th>
+     <th>
+      Ours
+     </th>
+    </tr>
+    <tr>
+    <td> <img src="./assets/CUB/images/Fish_Crow_0067_26124_orig.jpg" width="256"/></td>
+    <td> <img src="./assets/CUB/images/Fish_Crow_0067_26124_scops.jpg" width="256"/></td>
+    <td> <img src="./assets/CUB/images/Fish_Crow_0067_26124_unsup.jpg" width="256"/></td>
+    <td> <img src="./assets/CUB/images/Fish_Crow_0067_26124_ours.jpg" width="256"/></td>
+    </tr>
+   </table>
+   <hr/>
+   <h2>
+    References
+   </h2>
+   <p>
+    [1]
+    <strong>
+     Unsupervised Part Discovery from Contrastive Reconstruction.
+    </strong>
+    Choudhury et al. NeurIPS 2021
+   </p>
+   <p>
+    [2]
+    <strong>
+     SCOPS: Self-Supervised Co-Part Segmentation
+    </strong>
+    Hung et al. CVPR 2019
+   </p>
+   <hr>
+</div>
+
+<div id="sparse_corresps">
+  <h1 align="center">Sparse Correspondences</h1>
+   <p align="left">We apply our sparse correspondences algorithm on several examples (see Fig. 10), and compare to NBB [1]. 
+   Our method is more robust to changes in pose, scale, appearance and non-rigid deformations.</p>
+    <p>&nbsp;</p>
+	<table align="center">
+	  <tr>
+        <th align="center" colspan="2">NBB</th>
+  		<th>&nbsp;&nbsp;&nbsp;&nbsp;</th>
+        <th align="center" colspan="2">Ours</th>
+      </tr>
+	  <tr>
+        <th><img width="280" src="./assets/sparse_corresps/183/nbb/left_corresp.png"></th>
+        <th><img width="280" src="./assets/sparse_corresps/183/nbb/right_corresp.png"></th>
+   		<th>&nbsp;&nbsp;&nbsp;&nbsp;</th>
+        <th><img width="280" src="./assets/sparse_corresps/183/ours/left_corresp.png"></th>
+        <th><img width="280" src="./assets/sparse_corresps/183/ours/right_corresp.png"></th>
+	  </tr>
+	</table><hr><table align="center">
+	<tr>
+        <th align="center" colspan="2">NBB</th>
+  		<th>&nbsp;&nbsp;&nbsp;&nbsp;</th>
+        <th align="center" colspan="2">Ours</th>
+      </tr>
+	  <tr>
+        <th><img width="280" src="./assets/sparse_corresps/1/nbb/left_corresp.png"></th>
+        <th><img width="280" src="./assets/sparse_corresps/1/nbb/right_corresp.png"></th>
+   		<th>&nbsp;&nbsp;&nbsp;&nbsp;</th>
+        <th><img width="280" src="./assets/sparse_corresps/1/ours/left_corresp.png"></th>
+        <th><img width="280" src="./assets/sparse_corresps/1/ours/right_corresp.png"></th>
+	  </tr>
+	</table><hr><table align="center">
+	<tr>
+        <th align="center" colspan="2">NBB</th>
+  		<th>&nbsp;&nbsp;&nbsp;&nbsp;</th>
+        <th align="center" colspan="2">Ours</th>
+      </tr>
+	  <tr>
+        <th><img width="280" src="./assets/sparse_corresps/24/nbb/left_corresp.png"></th>
+        <th><img width="280" src="./assets/sparse_corresps/24/nbb/right_corresp.png"></th>
+   		<th>&nbsp;&nbsp;&nbsp;&nbsp;</th>
+        <th><img width="280" src="./assets/sparse_corresps/24/ours/left_corresp.png"></th>
+        <th><img width="280" src="./assets/sparse_corresps/24/ours/right_corresp.png"></th>
+	  </tr>
+	</table><hr><table align="center">
+	<tr>
+        <th align="center" colspan="2">NBB</th>
+  		<th>&nbsp;&nbsp;&nbsp;&nbsp;</th>
+        <th align="center" colspan="2">Ours</th>
+      </tr>
+	  <tr>
+        <th><img width="280" src="./assets/sparse_corresps/53/nbb/left_corresp.png"></th>
+        <th><img width="280" src="./assets/sparse_corresps/53/nbb/right_corresp.png"></th>
+   		<th>&nbsp;&nbsp;&nbsp;&nbsp;</th>
+        <th><img width="280" src="./assets/sparse_corresps/53/ours/left_corresp.png"></th>
+        <th><img width="280" src="./assets/sparse_corresps/53/ours/right_corresp.png"></th>
+	  </tr>
+	</table><hr><table align="center">
+	<tr>
+        <th align="center" colspan="2">NBB</th>
+  		<th>&nbsp;&nbsp;&nbsp;&nbsp;</th>
+        <th align="center" colspan="2">Ours</th>
+      </tr>
+	  <tr>
+        <th><img width="280" src="./assets/sparse_corresps/98/nbb/left_corresp.png"></th>
+        <th><img width="280" src="./assets/sparse_corresps/98/nbb/right_corresp.png"></th>
+   		<th>&nbsp;&nbsp;&nbsp;&nbsp;</th>
+        <th><img width="280" src="./assets/sparse_corresps/98/ours/left_corresp.png"></th>
+        <th><img width="280" src="./assets/sparse_corresps/98/ours/right_corresp.png"></th>
+	  </tr>
+	</table><hr><table align="center">
+		<tr>
+        <th align="center" colspan="2">NBB</th>
+  		<th>&nbsp;&nbsp;&nbsp;&nbsp;</th>
+        <th align="center" colspan="2">Ours</th>
+      </tr>
+	  <tr>
+        <th><img width="280" src="./assets/sparse_corresps/216/nbb/left_corresp.png"></th>
+        <th><img width="280" src="./assets/sparse_corresps/216/nbb/right_corresp.png"></th>
+   		<th>&nbsp;&nbsp;&nbsp;&nbsp;</th>
+        <th><img width="280" src="./assets/sparse_corresps/216/ours/left_corresp.png"></th>
+        <th><img width="280" src="./assets/sparse_corresps/216/ours/right_corresp.png"></th>
+	  </tr>
+	</table><hr><table align="center">
+		<tr>
+        <th align="center" colspan="2">NBB</th>
+  		<th>&nbsp;&nbsp;&nbsp;&nbsp;</th>
+        <th align="center" colspan="2">Ours</th>
+      </tr>
+	  <tr>
+        <th><img width="280" src="./assets/sparse_corresps/91/nbb/left_corresp.png"></th>
+        <th><img width="280" src="./assets/sparse_corresps/91/nbb/right_corresp.png"></th>
+   		<th>&nbsp;&nbsp;&nbsp;&nbsp;</th>
+        <th><img width="280" src="./assets/sparse_corresps/91/ours/left_corresp.png"></th>
+        <th><img width="280" src="./assets/sparse_corresps/91/ours/right_corresp.png"></th>
+	  </tr>
+	</table><hr><table align="center">
+	<tr>
+        <th align="center" colspan="2">NBB</th>
+  		<th>&nbsp;&nbsp;&nbsp;&nbsp;</th>
+        <th align="center" colspan="2">Ours</th>
+      </tr>
+      <tr>
+        <th><img width="280" src="./assets/sparse_corresps/190/nbb/left_corresp.png"></th>
+        <th><img width="280" src="./assets/sparse_corresps/190/nbb/right_corresp.png"></th>
+   		<th>&nbsp;&nbsp;&nbsp;&nbsp;</th>
+        <th><img width="280" src="./assets/sparse_corresps/190/ours/left_corresp.png"></th>
+        <th><img width="280" src="./assets/sparse_corresps/190/ours/right_corresp.png"></th>
+	  </tr>
+	</table><hr><table align="center">
+	<tr>
+        <th align="center" colspan="2">NBB</th>
+  		<th>&nbsp;&nbsp;&nbsp;&nbsp;</th>
+        <th align="center" colspan="2">Ours</th>
+      </tr>
+	  <tr>
+        <th><img width="280" src="./assets/sparse_corresps/117/nbb/left_corresp.png"></th>
+        <th><img width="280" src="./assets/sparse_corresps/117/nbb/right_corresp.png"></th>
+   		<th>&nbsp;&nbsp;&nbsp;&nbsp;</th>
+        <th><img width="280" src="./assets/sparse_corresps/117/ours/left_corresp.png"></th>
+        <th><img width="280" src="./assets/sparse_corresps/117/ours/right_corresp.png"></th>
+	  </tr>
+	</table><hr><table align="center">
+	<tr>
+        <th align="center" colspan="2">NBB</th>
+  		<th>&nbsp;&nbsp;&nbsp;&nbsp;</th>
+        <th align="center" colspan="2">Ours</th>
+      </tr>
+	  <tr>
+        <th><img width="280" src="./assets/sparse_corresps/124/nbb/left_corresp - Copy.png"></th>
+        <th><img width="280" src="./assets/sparse_corresps/124/nbb/right_corresp - Copy.png"></th>
+   		<th>&nbsp;&nbsp;&nbsp;&nbsp;</th>
+        <th><img width="280" src="./assets/sparse_corresps/124/ours/left_corresp - Copy.png"></th>
+        <th><img width="280" src="./assets/sparse_corresps/124/ours/right_corresp - Copy.png"></th>
+	  </tr>
+	</table><hr><table align="center">
+	<tr>
+        <th align="center" colspan="2">NBB</th>
+  		<th>&nbsp;&nbsp;&nbsp;&nbsp;</th>
+        <th align="center" colspan="2">Ours</th>
+      </tr>
+	  <tr>
+        <th><img width="280" src="./assets/sparse_corresps/149/nbb/left_corresp.png"></th>
+        <th><img width="280" src="./assets/sparse_corresps/149/nbb/right_corresp.png"></th>
+   		<th>&nbsp;&nbsp;&nbsp;&nbsp;</th>
+        <th><img width="280" src="./assets/sparse_corresps/149/ours/left_corresp.png"></th>
+        <th><img width="280" src="./assets/sparse_corresps/149/ours/right_corresp.png"></th>
+	  </tr>
+	</table><hr><table align="center">
+	<tr>
+        <th align="center" colspan="2">NBB</th>
+  		<th>&nbsp;&nbsp;&nbsp;&nbsp;</th>
+        <th align="center" colspan="2">Ours</th>
+      </tr>
+	  <tr>
+        <th><img width="280" src="./assets/sparse_corresps/182/nbb/left_corresp.png"></th>
+        <th><img width="280" src="./assets/sparse_corresps/182/nbb/right_corresp.png"></th>
+   		<th>&nbsp;&nbsp;&nbsp;&nbsp;</th>
+        <th><img width="280" src="./assets/sparse_corresps/182/ours/left_corresp.png"></th>
+        <th><img width="280" src="./assets/sparse_corresps/182/ours/right_corresp.png"></th>
+	  </tr>
+	</table><hr><table align="center">
+		<tr>
+        <th align="center" colspan="2">NBB</th>
+  		<th>&nbsp;&nbsp;&nbsp;&nbsp;</th>
+        <th align="center" colspan="2">Ours</th>
+      </tr>
+	  <tr>
+        <th><img width="280" src="./assets/sparse_corresps/23/nbb/left_corresp.png"></th>
+        <th><img width="280" src="./assets/sparse_corresps/23/nbb/right_corresp.png"></th>
+   		<th>&nbsp;&nbsp;&nbsp;&nbsp;</th>
+        <th><img width="280" src="./assets/sparse_corresps/23/ours/left_corresp.png"></th>
+        <th><img width="280" src="./assets/sparse_corresps/23/ours/right_corresp.png"></th>
+	  </tr>
+	</table><hr><table align="center">
+		<tr>
+        <th align="center" colspan="2">NBB</th>
+  		<th>&nbsp;&nbsp;&nbsp;&nbsp;</th>
+        <th align="center" colspan="2">Ours</th>
+      </tr>
+	  <tr>
+        <th><img width="280" src="./assets/sparse_corresps/33/nbb/left_corresp.png"></th>
+        <th><img width="280" src="./assets/sparse_corresps/33/nbb/right_corresp.png"></th>
+   		<th>&nbsp;&nbsp;&nbsp;&nbsp;</th>
+        <th><img width="280" src="./assets/sparse_corresps/33/ours/left_corresp.png"></th>
+        <th><img width="280" src="./assets/sparse_corresps/33/ours/right_corresp.png"></th>
+	  </tr>
+	</table><hr><table align="center">
+		<tr>
+        <th align="center" colspan="2">NBB</th>
+  		<th>&nbsp;&nbsp;&nbsp;&nbsp;</th>
+        <th align="center" colspan="2">Ours</th>
+      </tr>
+	  <tr>
+        <th><img width="280" src="./assets/sparse_corresps/54/nbb/left_corresp.png"></th>
+        <th><img width="280" src="./assets/sparse_corresps/54/nbb/right_corresp.png"></th>
+   		<th>&nbsp;&nbsp;&nbsp;&nbsp;</th>
+        <th><img width="280" src="./assets/sparse_corresps/54/ours/left_corresp.png"></th>
+        <th><img width="280" src="./assets/sparse_corresps/54/ours/right_corresp.png"></th>
+	  </tr>
+	</table><hr><table align="center">
+		<tr>
+        <th align="center" colspan="2">NBB</th>
+  		<th>&nbsp;&nbsp;&nbsp;&nbsp;</th>
+        <th align="center" colspan="2">Ours</th>
+      </tr>
+	  <tr>
+        <th><img width="280" src="./assets/sparse_corresps/64/nbb/left_corresp.png"></th>
+        <th><img width="280" src="./assets/sparse_corresps/64/nbb/right_corresp.png"></th>
+   		<th>&nbsp;&nbsp;&nbsp;&nbsp;</th>
+        <th><img width="280" src="./assets/sparse_corresps/64/ours/left_corresp.png"></th>
+        <th><img width="280" src="./assets/sparse_corresps/64/ours/right_corresp.png"></th>
+	  </tr>
+	</table><hr><table align="center">
+		<tr>
+        <th align="center" colspan="2">NBB</th>
+  		<th>&nbsp;&nbsp;&nbsp;&nbsp;</th>
+        <th align="center" colspan="2">Ours</th>
+      </tr>
+	  <tr>
+        <th><img width="280" src="./assets/sparse_corresps/84/nbb/left_corresp.png"></th>
+        <th><img width="280" src="./assets/sparse_corresps/84/nbb/right_corresp.png"></th>
+   		<th>&nbsp;&nbsp;&nbsp;&nbsp;</th>
+        <th><img width="280" src="./assets/sparse_corresps/84/ours/left_corresp.png"></th>
+        <th><img width="280" src="./assets/sparse_corresps/84/ours/right_corresp.png"></th>
+	  </tr>
+	</table><hr><table align="center">
+		<tr>
+        <th align="center" colspan="2">NBB</th>
+  		<th>&nbsp;&nbsp;&nbsp;&nbsp;</th>
+        <th align="center" colspan="2">Ours</th>
+      </tr>
+	  <tr>
+        <th><img width="280" src="./assets/sparse_corresps/87/nbb/left_corresp.png"></th>
+        <th><img width="280" src="./assets/sparse_corresps/87/nbb/right_corresp.png"></th>
+   		<th>&nbsp;&nbsp;&nbsp;&nbsp;</th>
+        <th><img width="280" src="./assets/sparse_corresps/87/ours/left_corresp.png"></th>
+        <th><img width="280" src="./assets/sparse_corresps/87/ours/right_corresp.png"></th>
+	  </tr>
+	</table><hr><table align="center">
+		<tr>
+        <th align="center" colspan="2">NBB</th>
+  		<th>&nbsp;&nbsp;&nbsp;&nbsp;</th>
+        <th align="center" colspan="2">Ours</th>
+      </tr>
+	  <tr>
+        <th><img width="280" src="./assets/sparse_corresps/165/nbb/left_corresp.png"></th>
+        <th><img width="280" src="./assets/sparse_corresps/165/nbb/right_corresp.png"></th>
+   		<th>&nbsp;&nbsp;&nbsp;&nbsp;</th>
+        <th><img width="280" src="./assets/sparse_corresps/165/ours/left_corresp.png"></th>
+        <th><img width="280" src="./assets/sparse_corresps/165/ours/right_corresp.png"></th>
+	  </tr>
+	</table><hr><table align="center">
+		<tr>
+        <th align="center" colspan="2">NBB</th>
+  		<th>&nbsp;&nbsp;&nbsp;&nbsp;</th>
+        <th align="center" colspan="2">Ours</th>
+      </tr>
+	  <tr>
+        <th><img width="280" src="./assets/sparse_corresps/173/nbb/left_corresp.png"></th>
+        <th><img width="280" src="./assets/sparse_corresps/173/nbb/right_corresp.png"></th>
+   		<th>&nbsp;&nbsp;&nbsp;&nbsp;</th>
+        <th><img width="280" src="./assets/sparse_corresps/173/ours/left_corresp.png"></th>
+        <th><img width="280" src="./assets/sparse_corresps/173/ours/right_corresp.png"></th>
+	  </tr>
+    </table>
+  </div>
+
   </div>
 
 </body>
